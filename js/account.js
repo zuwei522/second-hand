@@ -1,7 +1,7 @@
 var account = {
     signup: function (usrname, passwd) {
         if (usrname == "" || passwd == "") {    // 确保用户名与密码为非空
-            document.getElementById("msg").innerHTML = '用户名或密码不能为空！ε=( o｀ω′)ノ';
+            document.getElementById("msg-signup").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 用户名或密码不能为空！</div>';
             return;
         }
         if (localStorage.getItem('users') == null) {
@@ -14,7 +14,7 @@ var account = {
             const users = JSON.parse(users_string);// 将存储在 localStorage 中的字符串 json 对象转换为 js 对象
             // console.log(users);
             if (users[usrname]) { // 确保注册时用户名不重复
-                document.getElementById("msg").innerHTML = '用户名已存在！';
+                document.getElementById("msg-signup").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 该用户名已存在，请换一个再试试！</div>';
                 return;
             }
 
@@ -43,11 +43,11 @@ var account = {
 
     login: function (usrname, passwd, target) {
         if (usrname == "" || passwd == "") {    // 确保用户名与密码为非空
-            document.getElementById("msg").innerHTML = '用户名或密码不能为空！ε=( o｀ω′)ノ';
+            document.getElementById("msg-login").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 用户名或密码不能为空！</div>';
             return;
         }
         if (localStorage.getItem("users") == null) {
-            document.getElementById("msg").innerHTML = '用户名或密码错误，请重试（；´д｀）ゞ';
+            document.getElementById("msg-login").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 用户名或密码错误，请重试！</div>';
             return;
         }
 
@@ -62,10 +62,10 @@ var account = {
                 document.getElementById("msg").innerHTML = ' ';
                 window.location.href = target;
             } else {
-                document.getElementById("msg").innerHTML = '用户名或密码错误，请重试（；´д｀）ゞ';
+                document.getElementById("msg-login").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 用户名或密码错误，请重试！</div>';
             }
         } else {
-            document.getElementById("msg").innerHTML = '用户名或密码错误，请重试（；´д｀）ゞ';
+            document.getElementById("msg-login").innerHTML = '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>错误!</strong> 用户名或密码错误，请重试！</div>';
         }
 
         // if (localStorage.getItem("usrname") == undefined) {
