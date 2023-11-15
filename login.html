@@ -9,7 +9,26 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/account.js"></script>
+    <style>
+        /* 必填红点 */
+        .red-star::before {
+            content: "*";
+            color: red;
+        }
+
+        .red-text {
+            color: red;
+            font-size: 80%;
+        }
+
+        /* .form-control-wrong:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #ff8880;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        } */
+    </style>
 </head>
 
 <body>
@@ -53,90 +72,84 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div id="signin-page" class="container tab-pane active"><br>
-                        <div id="msg-login"></div>
+                        <div id="login-msg"></div>
                         <!-- <form> -->
                         <div class="form-group">
-                            <label for="usrname-login">用户名:</label>
-                            <input type="text" class="form-control" placeholder="请输入用户名" id="usrname-login" required>
+                            <label for="login-usrname">用户名:</label>
+                            <input type="text" class="form-control" placeholder="请输入用户名" id="login-usrname" required>
+                            <p class="red-text"></p>
                         </div>
                         <div class="form-group">
-                            <label for="passwd-login">密码:</label>
-                            <input type="password" class="form-control" placeholder="请输入密码" id="passwd-login" required>
+                            <label for="login-passwd">密码:</label>
+                            <input type="password" class="form-control" placeholder="请输入密码" id="login-passwd" required>
+                            <p class="red-text"></p>
                         </div>
                         <div class="form-group form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox"> 记住密码
                             </label>
                         </div>
-                        <button class="btn btn-primary"
-                            onclick="account.login(document.getElementById('usrname-login').value, document.getElementById('passwd-login').value, './')">登录</button>
+                        <button class="btn btn-primary" id="login-btn">登录</button>
                         <!-- </form> -->
                     </div>
                     <div id="signup-page" class="container tab-pane fade"><br>
-                        <div id="msg-signup"></div>
+                        <div id="signup-msg"></div>
                         <!-- <form action=""> -->
-                        <div class="form-group">
-                            <label for="usrname-signup">用户名:</label>
+                        <div class="form-group red-star">
+                            <label for="signup-usrname">用户名:</label>
                             <!-- 5-15位非数字开头的字母与数字组合，可使用下划线 -->
-                            <input type="text" class="form-control" placeholder="请输入用户名" id="usrname-signup" required
-                                pattern="[a-zA-Z][a-zA-Z0-9_]{4,15}" onblur="account.checkInputOnblur('usrname-signup','用户名仅能为<strong>5-15位非数字开头的字母与数字组合</strong>，可使用下划线。')">
-                            <div id="usrname-signup-msg"></div>
+                            <input type="text" class="form-control" placeholder="请输入用户名" id="signup-usrname" required
+                                pattern="[a-zA-Z][a-zA-Z0-9_]{3,15}">
+                            <p class="red-text"></p>
                         </div>
-                        <div class="form-group">
-                            <label for="phone-signup">手机号:</label>
-                            <input type="tel" class="form-control" placeholder="请输入手机号" id="phone-signup" required
+
+                        <div class="form-group red-star">
+                            <label for="signup-phone">手机号:</label>
+                            <input type="tel" class="form-control" placeholder="请输入手机号" id="signup-phone" required
                                 pattern="(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}">
+                            <p class="red-text"></p>
                         </div>
+
                         <div class="form-group">
-                            <label for="qq-signup">QQ:</label>
-                            <input type="num" class="form-control" placeholder="请输入QQ号" id="qq-signup" required
+                            <label for="signup-qq">QQ:</label>
+                            <input type="num" class="form-control" placeholder="请输入QQ号" id="signup-qq"
                                 pattern="[1-9][0-9]\d{4,9}">
+                            <p class="red-text"></p>
                         </div>
-                        <div class="form-group">
-                            <label for="passwd-signup">密码:</label>
+
+                        <div class="form-group red-star">
+                            <label for="signup-passwd">密码:</label>
                             <!-- 8-16个字符，至少1个大写字母，1个小写字母和1个数字 -->
-                            <input type="password" class="form-control" placeholder="请输入密码" id="passwd-signup" required
+                            <input type="password" class="form-control" placeholder="请输入密码" id="signup-passwd" required
                                 pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}">
+                            <p class="red-text"></p>
                         </div>
-                        <div class="form-group">
-                            <label for="passwd-signup-twice">确认密码:</label>
-                            <input type="password" class="form-control" placeholder="请输入确认密码" id="passwd-signup-twice"
+
+                        <div class="form-group red-star">
+                            <label for="signup-passwd-twice">确认密码:</label>
+                            <input type="password" class="form-control" placeholder="请输入确认密码" id="signup-passwd-twice"
                                 required>
+                            <p class="red-text"></p>
                         </div>
-                        <button class="btn btn-primary"
-                            onclick="account.signup(document.getElementById('usrname-signup').value, document.getElementById('passwd-signup').value)">立即注册</button>
+                        <button class="btn btn-primary" id="signup-btn">立即注册</button>
                         <!-- </form> -->
                     </div>
                     <div id="find-passwd" class="container tab-pane fade"><br>
-                        <h3>暂不支持找回</h3>
-                        <p>Sorry<( _ _ )>.</p>
+                        <h3>请联系管理员找回账号</h3>
+                        <p>QQ：123456789</p>
+                        <details>
+                            <summary>开发者选项</summary>
+                            <button class="btn btn-primary" onclick="localStorage.removeItem('users');localStorage.removeItem('token');console.log('已清除用户数据')">清除用户数据</button>
+                        </details>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <table>
-        <tr>
-            <td><label for="userName">用户名：</label></td>
-            <td><input type="text" id="userName" placeholder="请输入用户名" required></td>
-        </tr>
-        <tr>
-            <td><label for="">密码：</label></td>
-            <td><input type="password" id="passwd" placeholder="请输入密码" required></td>
-        </tr>
-        <tr>
-            <td id="msg" colspan="2" style="color: red;">&nbsp;</td>
-        </tr>
-        <tr>
-            <td><button id="signup"
-                    onclick="account.signup(document.getElementById('userName').value, document.getElementById('passwd').value)">立即注册</button>
-            </td>
-            <td><button id="login"
-                    onclick="account.login(document.getElementById('userName').value, document.getElementById('passwd').value, './')">登录</button>
-            </td>
-        </tr>
-    </table> -->
+    <script src="./js/md5.min.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/signup.js"></script>
 </body>
 
 </html>
