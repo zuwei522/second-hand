@@ -1,0 +1,55 @@
+/* 导航栏 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    backdrop-filter: blur(3px);
+}
+
+.navbar-nav .nav-link {
+    /* color: #128AFA; */
+    color: #fff;
+    text-shadow: 0 0 8px #000;
+    /* 设置导航栏链接文字颜色为白色 */
+}
+
+.navbar-nav .nav-link:hover {
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    text-shadow: 0 0 10px #128AFA;
+    color: #128AFA;
+    /* 设置导航栏链接鼠标悬停时的背景色和透明度 */
+}
+
+nav {
+    transition-duration: 0.5s;
+    /* visibility:hidden; */
+}
+
+/* 打字机效果 */
+.typing {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-effect {
+    width: 485px;
+    animation: typing 1s steps(10), effect 5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    /* font-family: monospace; */
+    font-size: 3rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes effect {
+    50% {
+        border-color: transparent;
+    }
+}
