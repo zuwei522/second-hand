@@ -9,18 +9,69 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        /* 背景图片 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(./image/netAuth.jpg) no-repeat center 0px;
+            /* background: url(https://www.loliapi.com/acg/) no-repeat center 0px; */
+            background-size: cover;
+            background-position: center 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+        }
+
+        .on {
+            background-color: rgba(255, 255, 255, 1) !important;
+            color: black;
+        }
+
+        .on-text {
+            color: #36414d !important;
+        }
+
+        .on-text:hover {
+            color: #128AFA !important;
+        }
+    </style>
+    <script>
+        $().ready(function () {
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();//获取当前滑动的位置
+                console.log('当前滑动的位置' + scrollTop);
+                if (scrollTop > 0) {
+                    $("nav").addClass("on");
+                    $("nav").addClass("fixed-top");
+                    $('.nav-link').addClass("on-text");
+                } else {
+                    $("nav").removeClass("on");
+                    $("nav").removeClass("fixed-top");
+                    $('.nav-link').removeClass("on-text");
+                }
+
+            })
+        })
+
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light"><!--fixed-top-->
+    <nav class="navbar navbar-expand-sm"><!--fixed-top-->
         <a class="navbar-brand" href="./">
             <img src="./image/logo.png" alt="logo" height="60px">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
@@ -38,6 +89,20 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="typing-effect-1 mt-5">校园二手</h1>
+                <h1 class="typing-effect-2">物品交易平台</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary mt-4 ml-3">立即发布</button>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 

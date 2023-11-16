@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'RoGSan';
+    src: url(../font/RoGSanSrfStd-Bd_latin.woff2)format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFF;
+    backdrop-filter: blur(3px);
+}
+
+.navbar-nav .nav-link {
+    transition-duration: 0.5s;
+    color: #FFF;
+    text-shadow: 0 0 8px #000;
+    /* 设置导航栏链接文字颜色为白色 */
+}
+
+.navbar-nav .nav-link:hover{
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    text-shadow: 0 0 10px #128AFA;
+    color: #128AFA;
+    /* 设置导航栏链接鼠标悬停时的背景色和透明度 */
+}
+
+nav {
+    transition-duration: 0.5s;
+    /* visibility:hidden; */
+}
+
+/* 打字机效果 */
+.typing {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-effect-1 {
+    width: 195px;
+    animation: typing 1s steps(4), effect 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'RoGSan';
+    font-size: 3rem;
+}
+
+.typing-effect-2 {
+    width: 290px;
+    animation: typing 2s steps(6), effect 0.6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'RoGSan';
+    font-size: 3rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes effect {
+    50% {
+        border-color: transparent;
+    }
+}
