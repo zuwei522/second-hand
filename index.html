@@ -36,7 +36,13 @@
             color: black;
         }
 
-        
+        .on-text {
+            color: #36414d !important;
+        }
+
+        .on-text:hover {
+            color: #128AFA !important;
+        }
     </style>
     <script>
         $().ready(function () {
@@ -46,10 +52,11 @@
                 if (scrollTop > 0) {
                     $("nav").addClass("on");
                     $("nav").addClass("fixed-top");
+                    $('.nav-link').addClass("on-text");
                 } else {
                     $("nav").removeClass("on");
                     $("nav").removeClass("fixed-top");
-
+                    $('.nav-link').removeClass("on-text");
                 }
 
             })
@@ -85,11 +92,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="typing-effect mt-5">校园二手物品交易平台</h1>
+                <h1 class="typing-effect-1 mt-5">校园二手</h1>
+                <h1 class="typing-effect-2">物品交易平台</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary mt-4 ml-3">立即发布</button>
             </div>
         </div>
     </div>
-    <br>1<br>2<br>3<br>4<br>5<br>6<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 

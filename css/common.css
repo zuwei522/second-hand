@@ -1,18 +1,25 @@
+@font-face {
+    font-family: 'RoGSan';
+    src: url(../font/RoGSanSrfStd-Bd_latin.woff2)format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 导航栏 */
 .navbar {
     background-color: rgba(255, 255, 255, 0.3);
-    color: #fff;
+    color: #FFF;
     backdrop-filter: blur(3px);
 }
 
 .navbar-nav .nav-link {
-    /* color: #128AFA; */
-    color: #fff;
+    transition-duration: 0.5s;
+    color: #FFF;
     text-shadow: 0 0 8px #000;
     /* 设置导航栏链接文字颜色为白色 */
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover{
     /* background-color: rgba(255, 255, 255, 0.2); */
     text-shadow: 0 0 10px #128AFA;
     color: #128AFA;
@@ -32,13 +39,23 @@ nav {
     justify-content: center;
 }
 
-.typing-effect {
-    width: 485px;
-    animation: typing 1s steps(10), effect 5s step-end infinite alternate;
+.typing-effect-1 {
+    width: 195px;
+    animation: typing 1s steps(4), effect 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    /* font-family: monospace; */
+    font-family: 'RoGSan';
+    font-size: 3rem;
+}
+
+.typing-effect-2 {
+    width: 290px;
+    animation: typing 2s steps(6), effect 0.6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'RoGSan';
     font-size: 3rem;
 }
 
