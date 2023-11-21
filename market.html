@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳蚤市场</title>
+    <link rel="icon" href="./image/icon.svg">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--<script src="./js/bootstrap.min.js"></script>-->
+    <script src="./js/account.js"></script>
+</head>
+
+<body onload="account.isLogin()">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
+        <a class="navbar-brand" href="./">
+            <img src="./image/logo.png" alt="logo" height="60px">
+        </a>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./item.html">物品详情</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./market.html">跳蚤市场</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html" onclick="account.logout('./')">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 跳蚤市场页面 -->
+
+
+
+</body>
+
+</html>

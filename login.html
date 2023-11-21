@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             /* background: url(https://www.loliapi.com/acg/) no-repeat center 0px; */
             background: url(./image/netAuth.jpg) no-repeat center 0px;
             background-size: cover;
-            background-position: center 0;
+            background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             -webkit-background-size: cover;
@@ -51,7 +51,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
         <a class="navbar-brand" href="./">
             <img src="./image/logo.png" alt="logo" height="60px">
         </a>
@@ -62,7 +63,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="./item.html">物品详情</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./market.html">跳蚤市场</a>
@@ -73,7 +74,9 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+
+    <!-- 登录/注册 -->
+    <div class="container"  style="padding-top: 70px;">
         <div class="row">
             <div class="col-md-6 offset-md-5 border mt-5 rounded"
                 style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(4px);">
