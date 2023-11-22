@@ -33,20 +33,20 @@
             -moz-background-size: cover;
             -ms-background-size: cover;
         } */
-
+        
         /* .on {
             background-color: rgba(255, 255, 255, 1) !important;
             color: black;
         }
-
+        
         .on-text {
             color: #36414d !important;
         }
-
+        
         .on-text:hover {
             color: #128AFA !important;
         } */
-
+        
         .bg-1 {
             background: url(./image/netAuth.jpg) no-repeat center 0px;
             background-position: center;
@@ -54,26 +54,26 @@
             background-repeat: no-repeat;
             height: 100vh;
         }
-    </style>
+        </style>
     <script>
         // $().ready(function () {
-        //     $(window).scroll(function () {
-        //         var scrollTop = $(window).scrollTop();//获取当前滑动的位置
-        //         console.log('当前滑动的位置' + scrollTop);
+            //     $(window).scroll(function () {
+                //         var scrollTop = $(window).scrollTop();//获取当前滑动的位置
+                //         console.log('当前滑动的位置' + scrollTop);
         //         if (scrollTop > 0) {
-        //             $("nav").addClass("on");
-        //             $("nav").addClass("fixed-top");
+            //             $("nav").addClass("on");
+            //             $("nav").addClass("fixed-top");
         //             $('.nav-link').addClass("on-text");
         //         } else {
         //             $("nav").removeClass("on");
         //             $("nav").removeClass("fixed-top");
         //             $('.nav-link').removeClass("on-text");
         //         }
-
+        
         //     })
         // })
-
-    </script>
+        
+        </script>
 </head>
 
 <body>
@@ -83,27 +83,28 @@
             <img src="./image/logo.png" alt="logo" height="60px">
         </a>
         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-            data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./item.html">物品详情</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./market.html">跳蚤市场</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./login.html">登录/注册</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./item.html">物品详情</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./market.html">跳蚤市场</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./login.html">登录/注册</a>
+                <a class="nav-link nav-item-hide" onclick="logout('./')">退出登录</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- 第一页内容 -->
-    <div class="container-fluid bg-1">
-        <div class="row" style="padding-top: 100px;">
+<!-- 第一页内容 -->
+<div class="container-fluid bg-1 top-element">
+        <div class="row">
             <div class="col-md-10 offset-sm-2">
                 <h1 class="typing-effect-1 mt-5">校园二手</h1>
                 <h1 class="typing-effect-2">物品交易平台</h1>
@@ -115,18 +116,19 @@
             </div>
         </div>
     </div>
-
+    
     <!-- 第二页内容 -->
     <div class="container">
         <div class="row">
             <div class="col">
-
+                
             </div>
-
+            
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+    
 </body>
 
+<script src="./js/account.js"></script>
 </html>

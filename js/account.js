@@ -1,11 +1,12 @@
+const token = localStorage.getItem("token");
+
 function logout(target) {	// 登出并跳转到指定页面
     localStorage.removeItem("token");
     window.location.href = target;
 }
 
 function isLogin() {   // 判断当前是否为登录状态，在需要登录的页面加载时执行此函数
-    flag = localStorage.getItem("token");
-    if (!flag) {
+    if (!token) {
         window.location.href = './noLogin.html';    // 若未登录，则跳转至登录页面
 
         // document.write('
@@ -20,4 +21,9 @@ function isLogin() {   // 判断当前是否为登录状态，在需要登录的
         // }, 3000);
     }
     // document.getElementById("user").innerHTML = localStorage.getItem("usrname");
+}
+
+if (token) {
+    $(".navbar-nav > .nav-item:last > a:first").addClass("nav-item-hide");
+    $(".navbar-nav > .nav-item:last > a:last").removeClass("nav-item-hide");
 }

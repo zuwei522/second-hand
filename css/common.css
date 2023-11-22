@@ -29,6 +29,16 @@ nav {
     /* visibility:hidden; */
 }
 
+/* 隐藏导航栏项 */
+.nav-item-hide{
+    display: none;
+}
+
+/* 页面顶部元素统一上内边距 */
+.top-element{
+    padding-top: 100px;
+}
+
 /* 打字机效果 */
 .typing {
     height: 80vh;
