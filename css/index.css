@@ -1,9 +1,30 @@
 .bg-1 {
-  background: url(./image/netAuth.jpg) no-repeat center 0px;
+  background: url(../image/netAuth.jpg) no-repeat center 0px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+main::-webkit-scrollbar {
+  width: 0;
+}
+
+.page {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+}
+
+.top-element {
+  padding-top: 100px;
 }
 
 .bg-bottom-cover {
