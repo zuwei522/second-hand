@@ -17,9 +17,9 @@
   },
   {
     "id": 3,
-    "name": "名字",
-    "price": "价格",
-    "description": "描述",
+    "name": "杨俊杰",
+    "price": "114514",
+    "description": "团支书",
     "class": "分类",
     "tags": ["标签1", "标签2", "标签3"]
   },
