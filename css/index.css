@@ -18,13 +18,10 @@ main::-webkit-scrollbar {
 }
 
 .page {
+  padding-top: 100px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   height: 100vh;
-}
-
-.top-element {
-  padding-top: 100px;
 }
 
 .bg-bottom-cover {
@@ -37,10 +34,6 @@ main::-webkit-scrollbar {
   padding-left: 0;
   text-align: center;
   padding-top: 5vh;
-}
-
-.page-2 .line-1 {
-  margin-top: 70px;
 }
 
 .carousel-inner img {
@@ -57,7 +50,12 @@ main::-webkit-scrollbar {
   height: 400px;
 }
 
-.carousel-title {
-  font-size: 70px;
+.title {
+  font-size: 4rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+  line-height: 4.1rem;
+}
+
+.title-highlight {
+  color: #128afa;
 }
