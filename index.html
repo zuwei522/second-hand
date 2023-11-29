@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/wave-image.css" />
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 
@@ -31,7 +32,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./item.html">物品详情</a>
+                    <a class="nav-link random-item">随便看看</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./market.html">跳蚤市场</a>
@@ -43,9 +44,11 @@
             </ul>
         </div>
     </nav>
+
+    <!-- 主要内容 -->
     <main>
-        <!-- 第一页内容 -->
-        <div class="container-fluid bg-1 top-element page">
+        <!-- 第一页标题 -->
+        <div class="container-fluid bg-1 page">
             <div class="row">
                 <div class="col-md-10 offset-sm-2">
                     <h1 class="typing-effect-1 mt-5">校园二手</h1>
@@ -59,12 +62,11 @@
                     </button>
                 </div>
             </div>
-            <div class="bg-bottom-cover">&gt;&gt;向下翻页👇&lt;&lt;</div>
         </div>
 
-        <!-- 第二页内容 -->
-        <div class="container page top-element">
-            <div class="row line-1">
+        <!-- 第二页轮播图 -->
+        <div class="container page">
+            <div class="row">
                 <div class="col-md-6">
                     <!-- 轮播图 -->
                     <div id="demo" class="carousel slide" data-ride="carousel">
@@ -110,117 +112,73 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="carousel-title">丰富的<br />物品类别</div>
+                    <div class="title">
+                        <small class="title-highlight">丰富的</small><br />物品类别
+                    </div>
+                    <a class="btn btn-primary mt-2" href="./market.html">查看分类</a>
                 </div>
             </div>
         </div>
-        <!-- 第二页内容 -->
-        <div class="container page top-element">
-            <div class="row line-1">
-                <div class="col-md-6">
-                    <!-- 轮播图 -->
-                    <div id="demo" class="carousel slide" data-ride="carousel">
-                        <!-- 指示符 -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
 
-                        <!-- 轮播图片 -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./image/Findpiece/20.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>数码产品</h3>
-                                    <p>低价捡漏！</p>
+        <!-- 第三页波浪展示图 -->
+        <div class="bg-3 page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper">
+                            <div class="items">
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/1.jpg)">
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./image/Findpiece/9.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>二手书</h3>
-                                    <p>真的还有人在买新书吗？</p>
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/4.jpg)">
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./image/Findpiece/25.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>生活用品</h3>
-                                    <p></p>
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/7.jpg)">
                                 </div>
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/11.jpg)">
+                                </div>
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/15.jpg)">
+                                </div>
+                                <div class="item" tabindex="1" style="background-image: url(./image/Findpiece/21.jpg)">
+                                </div>
+                                <div class="item d-none d-md-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/25.jpg)"></div>
+                                <div class="item d-none d-md-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/27.jpg)"></div>
+                                <div class="item d-none d-md-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/30.jpg)"></div>
+                                <div class="item d-none d-lg-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/32.jpg)"></div>
+                                <div class="item d-none d-xl-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/36.jpg)"></div>
+                                <div class="item d-none d-xl-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/39.jpg)"></div>
+                                <div class="item d-none d-xl-block" tabindex="1"
+                                    style="background-image: url(./image/Findpiece/41.jpg)"></div>
                             </div>
                         </div>
-
-                        <!-- 左右切换按钮 -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="carousel-title">丰富的<br />物品类别</div>
-                </div>
-            </div>
-        </div>
-        <!-- 第二页内容 -->
-        <div class="container page top-element">
-            <div class="row line-1">
-                <div class="col-md-6">
-                    <!-- 轮播图 -->
-                    <div id="demo" class="carousel slide" data-ride="carousel">
-                        <!-- 指示符 -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
-
-                        <!-- 轮播图片 -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./image/Findpiece/20.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>数码产品</h3>
-                                    <p>低价捡漏！</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./image/Findpiece/9.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>二手书</h3>
-                                    <p>真的还有人在买新书吗？</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./image/Findpiece/25.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>生活用品</h3>
-                                    <p></p>
-                                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- 大于 sm 时居中 -->
+                        <div class="title text-decoration-none text-md-center">
+                            <!-- 小于或等于 md 时缩小字号且换行 -->
+                            <span class="d-none d-md-inline-block title-highlight">琳琅满目的</span><small
+                                class="d-md-none title-highlight">琳琅满目的</small><br class="d-md-none" />二手物品
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-2 offset-md-4 offset-lg-5">
+                                <a class="btn btn-primary btn-block mt-2" href="./market.html">浏览物品</a>
                             </div>
                         </div>
-
-                        <!-- 左右切换按钮 -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="carousel-title">丰富的<br />物品类别</div>
                 </div>
             </div>
         </div>
+
+        <div class="bg-bottom-cover">&gt;&gt;向下翻页👇&lt;&lt;</div>
     </main>
 </body>
 
-<script src="./js/account.js"></script>
+<script src="./js/main.js"></script>
 
 </html>
