@@ -2,6 +2,10 @@
 @import url(../font/GlowSans/font.css);
 @import url(../font/RoGSans_sliced/font.css);
 
+body {
+  background-color: skyblue;
+}
+
 /* 导航栏 */
 .navbar {
   /* background-color: rgba(255, 255, 255, 0.3); */
