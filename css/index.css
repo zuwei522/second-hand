@@ -1,3 +1,7 @@
+body {
+  background-color: skyblue;
+}
+
 .bg-1 {
   background: url(../image/netAuth.jpg) no-repeat center 0px;
   background-position: center;

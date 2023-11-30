@@ -15,7 +15,6 @@
 }
 
 .navbar-nav .nav-link {
-  transition-duration: 0.5s;
   color: #fff;
   text-shadow: 0 0 8px #000;
   /* 设置导航栏链接文字颜色为白色 */

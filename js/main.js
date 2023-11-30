@@ -33,6 +33,6 @@ if (token) {
 // 跳转随机物品详情页
 $('.random-item')[0].addEventListener("click", jumpRandomItem, false);
 function jumpRandomItem() {
-    let random = Math.floor((Math.random() * 10000000) % 50);
+    let random = Math.floor((Math.random() * 10000000) % 50) + 1;
     window.location.href = "./item.html?id=" + random;
 }
