@@ -8,5 +8,5 @@ $.getJSON("./data/item.json", function(data) {
     $("#item-name").text(item.name);
     $("#item-price").text(item.price);
     $("#item-description").text(item.description);
-    $("#item-img").attr("src", './image/Findpiece/'+item.id+'.jpg');
+    $("#item-img").attr("src", item.src);
 });
