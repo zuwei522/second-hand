@@ -40,6 +40,10 @@ nav {
   cursor: pointer;
 }
 
+#logoutBtn{
+  cursor: pointer;
+}
+
 /* 隐藏导航栏项 */
 .nav-item-hide {
   display: none;
