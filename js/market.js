@@ -125,7 +125,7 @@ $('.tech')[0].addEventListener('click', function () {
         <img src="${data[i].src}" class="img-fluid">
         <div class="text-center">${data[i].name}</div>
         <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block">查看详情</a>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
         <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
     </div></a> `;
         }
@@ -141,7 +141,7 @@ $('.Stacks')[0].addEventListener('click', function () {
         <img src="${data[i].src}" class="img-fluid">
         <div class="text-center">${data[i].name}</div>
         <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block">查看详情</a>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
         <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
     </div></a>`;
         }
@@ -157,7 +157,7 @@ $('.snacks1')[0].addEventListener('click', function () {
         <img src="${data[i].src}" class="img-fluid">
         <div class="text-center">${data[i].name}</div>
         <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block">${data[i].description}</a>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
         <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
     </div></a>`;
         }
@@ -173,7 +173,7 @@ $('.life1')[0].addEventListener('click', function () {
         <img src="${data[i].src}" class="img-fluid">
         <div class="text-center">${data[i].name}</div>
         <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block">查看详情</a>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
         <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
         </div>
         </a> `;
@@ -190,7 +190,7 @@ $('.other1')[0].addEventListener('click', function () {
         <img src="${data[i].src}" class="img-fluid">
         <div class="text-center">${data[i].name}</div>
         <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block">查看详情</a>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
         <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
     </div>
     </a> `;
