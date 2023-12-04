@@ -39,7 +39,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html">登录/注册</a>
-                    <a class="nav-link nav-item-hide" onclick="logout('./')">退出登录</a>
+                    <a class="nav-link nav-item-hide" id="logoutBtn">退出登录</a>
                 </li>
             </ul>
         </div>
@@ -80,25 +80,29 @@
                         <!-- 轮播图片 -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./image/Findpiece/20.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>数码产品</h3>
-                                    <p>低价捡漏！</p>
-                                </div>
+                                <a href="./market.html?category=1">
+                                    <img src="./image/Findpiece/20.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>数码产品</h3>
+                                        <p>低价捡漏！</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="carousel-item">
+                                <a href="./market.html?category=2">
                                 <img src="./image/Findpiece/9.jpg" />
                                 <div class="carousel-caption">
                                     <h3>二手书</h3>
                                     <p>真的还有人在买新书吗？</p>
-                                </div>
+                                </div></a>
                             </div>
                             <div class="carousel-item">
+                                <a href="./market.html?category=4">
                                 <img src="./image/Findpiece/25.jpg" />
                                 <div class="carousel-caption">
                                     <h3>生活用品</h3>
                                     <p></p>
-                                </div>
+                                </div></a>
                             </div>
                         </div>
 
@@ -177,8 +181,7 @@
 
         <div class="bg-bottom-cover">&gt;&gt;向下翻页👇&lt;&lt;</div>
     </main>
+    <script src="./js/main.js"></script>
 </body>
-
-<script src="./js/main.js"></script>
 
 </html>

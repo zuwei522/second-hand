@@ -15,7 +15,7 @@
         .likl{
             padding-top: 80px;
         }
-       
+
         .item > img{
             height: 61%;
             width:100%;
@@ -24,15 +24,15 @@
             color: brown;
             font-size: 15pt;
         }
-        .size1{
+.size1{
             color: black;
             font-size: 15pt;
         }
-        .size1:hover{
+.size1:hover{
             text-decoration: none;
             color: black;
         }
-    </style>
+            </style>
 </head>
 
 <body onload="isLogin()">
@@ -56,55 +56,56 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html">登录/注册</a>
-                    <a class="nav-link nav-item-hide" onclick="logout('./')">退出登录</a>
+                    <a class="nav-link nav-item-hide" id="logoutBtn" onclick="logout('./')">退出登录</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- 跳蚤市场页面 -->
-   <div class="container likl">
-    <div class="row">
-        <div class="col-md-2">
-            <ul class="list-group">
-                <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
-                <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
-                <!-- .align-items-center 让元素垂直对齐 -->
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 recommend"><span>为你推荐</span></a>
-                    <span class="badge badge-primary badge-pill">60</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 tech"><span>数码</span></a>
-                    <span class="badge badge-primary badge-pill">12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 Stacks"><span>书籍</span></a>
-                    <span class="badge badge-primary badge-pill">12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 snacks1"><span>零食</span></a>
-                    <span class="badge badge-primary badge-pill">12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 life1"><span>生活</span></a>
-                    <span class="badge badge-primary badge-pill">12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                    <a href="#" class="size1 other1"><span>其他</span></a>
-                    <span class="badge badge-primary badge-pill">12</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            <div class="row item-list">
-                
+    <div class="container likl">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-group">
+                    <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
+                    <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
+                    <!-- .align-items-center 让元素垂直对齐 -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 recommend"><span>为你推荐</span></a>
+                        <span class="badge badge-primary badge-pill">60</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 tech"><span>数码</span></a>
+                        <span class="badge badge-primary badge-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 Stacks"><span>书籍</span></a>
+                        <span class="badge badge-primary badge-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 snacks1"><span>零食</span></a>
+                        <span class="badge badge-primary badge-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 life1"><span>生活</span></a>
+                        <span class="badge badge-primary badge-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
+                        <a href="#" class="size1 other1"><span>其他</span></a>
+                        <span class="badge badge-primary badge-pill">12</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="row item-list">
+
+                </div>
             </div>
         </div>
-   </div>
 
 
+        <script src="./js/main.js"></script>
+        <script src="./js/market.js"></script>
 </body>
-<script src="./js/main.js"></script>
-<script src="./js/market.js"></script>
+
 </html>
