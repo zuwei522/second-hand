@@ -2,6 +2,10 @@
 @import url(../font/GlowSans/font.css);
 @import url(../font/RoGSans_sliced/font.css);
 
+body {
+  background-color: skyblue;
+}
+
 /* 导航栏 */
 .navbar {
   /* background-color: rgba(255, 255, 255, 0.3); */
@@ -15,7 +19,6 @@
 }
 
 .navbar-nav .nav-link {
-  transition-duration: 0.5s;
   color: #fff;
   text-shadow: 0 0 8px #000;
   /* 设置导航栏链接文字颜色为白色 */
@@ -31,6 +34,14 @@
 nav {
   transition-duration: 0.5s;
   /* visibility:hidden; */
+}
+
+.random-item {
+  cursor: pointer;
+}
+
+#logoutBtn{
+  cursor: pointer;
 }
 
 /* 隐藏导航栏项 */

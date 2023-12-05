@@ -1,0 +1,95 @@
+main {
+  padding-top: 90px;
+  background-color: skyblue;
+  height: 100vh;
+  overflow: auto;
+  /* background-image: url(./image/netAuth.webp); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.col-item-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  padding-top: 1rem;
+}
+
+#item-img {
+  max-height: 500px;
+}
+
+.row-item-info {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: #666 0 0 0.8rem;
+}
+
+#item-name {
+  font-size: 1.7rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+}
+
+.other-item-name {
+  color: #233;
+  font-size: 1.2rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+}
+
+#item-price,
+.other-item-price {
+  color: red;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: verdana, arial;
+}
+
+#item-price::before,
+.other-item-price::before {
+  content: "￥";
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.other-item-price {
+  font-size: 1.5rem;
+}
+
+#item-description {
+  font-size: 1.2rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+  overflow: auto;
+  /* height: 20rem; */
+  margin-bottom: 2rem;
+}
+
+.row-item-others {
+  margin-bottom: 2.5rem;
+}
+
+.other-item {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: #00000099 0 0 0.8rem;
+}
+
+.other-item:hover {
+  /* background-color: #BBB; */
+  filter: brightness(90%);
+}
+
+.reply-list {
+  background-color: #222;
+}
+
+.reply-btn:hover {
+  background-color: #fff;
+  color: #17a2b8;
+  cursor: pointer;
+}
