@@ -48,7 +48,7 @@
     "id": 6,
     "name": "易经",
     "price": "150",
-    "description": "感兴趣自学，欢迎交流，六成新。",
+    "description": "感兴趣自学，欢迎交流，个人看不明白，六成新。",
     "class": "书籍",
     "src":"./image/Findpiece/6.jpg",
     "qq":""
@@ -120,7 +120,7 @@
     "id": 14,
     "name": "头戴式耳机",
     "price": "89",
-    "description": "闲置了一个，感兴趣的伙伴私聊。",
+    "description": "闲置了一个，八成新感兴趣的伙伴私聊。",
     "class": "数码",
     "src":"./image/Findpiece/12.jpg",
     "qq":""
@@ -129,7 +129,7 @@
     "id": 15,
     "name": "充电宝",
     "price": "110",
-    "description": "五万毫安充电宝，太重了想出了。",
+    "description": "五万毫安充电宝，太重了携带不方便，出售中。",
     "class": "分类",
     "src":"./image/Findpiece/13.jpg",
     "qq":""
@@ -437,7 +437,7 @@
     "id": 49,
     "name": "巧克力",
     "price": "36",
-    "description": "香甜可口的巧克力，众享丝滑，全新包装需要的联系",
+    "description": "香甜可口的巧克力，全新包装需要的联系",
     "class": "零食",
     "src":"./image/Findpiece/41.jpg",
     "qq":""
@@ -446,7 +446,7 @@
     "id": 50,
     "name": "牛奶糖",
     "price": "6",
-    "description": "旺仔牛奶糖，6元一袋，休闲小零食，吃完还想吃。",
+    "description": "旺仔牛奶糖6元一袋，休闲小零食，吃完还想吃。",
     "class": "零食",
     "src":"./image/Findpiece/42.jpg",
     "qq":""
@@ -464,7 +464,7 @@
     "id": 52,
     "name": "椰汁",
     "price": "5",
-    "description": "椰树牌子椰汁，现在低价出售，感兴趣的同学私聊。",
+    "description": "椰树牌子椰汁现在低价出售，感兴趣的同学私聊。",
     "class": "零食",
     "src":"./image/Findpiece/44.jpg",
     "qq":""
@@ -482,7 +482,7 @@
     "id": 54,
     "name": "东方树叶",
     "price": "4",
-    "description": "个人喝不习惯，感觉没有味道货源很多，需要私聊。",
+    "description": "个人喝不习惯，货源很多，需要私聊。",
     "class": "零食",
     "src":"./image/Findpiece/46.jpg",
     "qq":""
@@ -491,8 +491,8 @@
     "id": 55,
     "name": "苹果",
     "price": "2",
-    "description": "又大又甜的脆苹果，两块钱一个东区自提需要私聊。",
-    "class": "分类",
+    "description": "又大又甜的苹果，两块钱一个自提需要私聊。",
+    "class": "零食",
     "src":"./image/Findpiece/47.jpg",
     "qq":""
   },
@@ -500,44 +500,44 @@
     "id": 56,
     "name": "酸辣粉",
     "price": "3",
-    "description": "便宜出售了，3元一桶，酸酸辣辣非常可口，适合休闲食用",
-    "class": "分类",
+    "description": "便宜出售了，3元一桶，酸酸辣辣，适合休闲食用",
+    "class": "零食",
     "src":"./image/Findpiece/48.jpg",
     "qq":""
   },
   {
     "id": 57,
-    "name": "名字",
-    "price": "价格",
-    "description": "描述",
-    "class": "分类",
+    "name": "乐事薯片",
+    "price": "8",
+    "description": "乐视薯片买得太多，吃不完便宜出售，需要私聊。",
+    "class": "零食",
     "src":"./image/Findpiece/49.jpg",
     "qq":""
   },
   {
     "id": 58,
-    "name": "名字",
-    "price": "价格",
-    "description": "描述",
+    "name": "牛肉干",
+    "price": "58",
+    "description": "一袋250g，可以吃好久，香辣可口，有嚼劲。",
     "class": "分类",
     "src":"./image/Findpiece/50.jpg",
     "qq":""
   },
   {
     "id": 59,
-    "name": "名字",
-    "price": "价格",
-    "description": "描述",
-    "class": "分类",
+    "name": "巨龙辣条",
+    "price": "1",
+    "description": "一元一包，大包装的小时候的味道，非常好吃",
+    "class": "零食",
     "src":"./image/Findpiece/50a.jpg",
     "qq":""
   },
   {
     "id": 60,
-    "name": "名字",
-    "price": "价格",
-    "description": "描述",
-    "class": "分类",
+    "name": "桂西北甜栗",
+    "price": "3",
+    "description": "桂西北特产软糯香甜，吃完还想吃。",
+    "class": "零食",
     "src":"./image/Findpiece/50b.jpg",
     "qq":""
   }

@@ -8,34 +8,47 @@
     <link rel="icon" href="./image/icon.svg">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/item.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <style>
-        .likl{
-            padding-top: 80px;
+        .likl {
+            padding-top: 90px;
         }
 
-        .item > img{
+        .item>img {
             height: 61%;
-            width:100%;
+            width: 100%;
         }
-        .sizecolor{
+
+        .sizecolor {
             color: brown;
             font-size: 15pt;
         }
-.size1{
+
+        .size1 {
             color: black;
             font-size: 15pt;
         }
-.size1:hover{
+
+        .size1:hover {
             text-decoration: none;
             color: black;
         }
-            </style>
+
+        .size-price{
+            color: rgb(236, 19, 19);
+            font-size: 20pt;
+        }
+        .img-item{
+            width: 62%;
+             height: 100%;
+        }
+    </style>
 </head>
 
-<body onload="isLogin()">
+<body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-sm fixed-top">
         <a class="navbar-brand" href="./">
@@ -99,6 +112,38 @@
             <div class="col-md-10">
                 <div class="row item-list">
 
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a class="text-decoration-none" href="">
+                            <div class="other-item">
+                                <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
+                                <div class="size-price">￥199</div>
+                                <div class="size-name">全新腕表</div>
+                                <div class="size-description">送女朋友的结果提前分手了，所以出了。</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a class="text-decoration-none" href="">
+                            <div class="other-item">
+                                <center><img src="./image/Findpiece/19.jpg" class="img-fluid img-item" /></center>
+                                <div class="size-price">￥199</div>
+                                <div class="size-name">全新腕表</div>
+                                <div class="size-description">送女朋友的结果提前分手了，所以出了。</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a class="text-decoration-none" href="">
+                            <div class="other-item">
+                                <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
+                                <div class="size-price">￥199</div>
+                                <div class="size-name">全新腕表</div>
+                                <div class="size-description">送女朋友的结果提前分手了，所以出了。</div>
+                            </div>
+                        </a>
+                    </div>
+              
+                  
                 </div>
             </div>
         </div>
