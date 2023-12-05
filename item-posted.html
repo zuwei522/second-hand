@@ -72,6 +72,72 @@
     }
   </style>
 </head>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<body background="../22Batch2-group2/image/netAuth.jpg"><!--背景图片-->
+  
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
+    <a class="navbar-brand" href="./">
+        <img src="./image/logo.png" alt="logo" height="60px">
+    </a>
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+        data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./item.html">物品详情</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./market.html">跳蚤市场</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./login.html">登录/注册</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+  <h1>商品发布</h1>
+  <form id="product-form">
+    <div class="form-group">
+      <label for="name">商品名称:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="description">商品描述:</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">价格:</label>
+      <input type="text" id="price" name="price" required>
+    </div>
+    <div class="form-group">
+      <label for="image">商品图片:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <img id="preview" src="#" alt="商品图片预览">
+    </div>
+    <button type="submit" class="btn-submit">发布</button>
+  </form>
+</div>
+
+<script>
+  // 预览图片并更新预览区域
+  document.getElementById('image').addEventListener('change', function(e) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('preview').setAttribute('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  });
+</script>
+>>>>>>> Stashed changes
 <body>
   <div class="container">
     <h1>商品发布</h1>
