@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>商品发布页面</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/item.css" />
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
   <style>
     /* CSS样式，用于美化页面布局 */
     body {
@@ -15,7 +20,7 @@
 
     .container {
       max-width: 400px;
-      margin: 0 auto;
+      margin: 5% auto;
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
@@ -72,9 +77,6 @@
     }
   </style>
 </head>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 <body background="../22Batch2-group2/image/netAuth.jpg"><!--背景图片-->
   
   <!-- 导航栏 -->
@@ -137,43 +139,4 @@
     reader.readAsDataURL(e.target.files[0]);
   });
 </script>
->>>>>>> Stashed changes
-<body>
-  <div class="container">
-    <h1>商品发布</h1>
-    <form id="product-form">
-      <div class="form-group">
-        <label for="name">商品名称:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="description">商品描述:</label>
-        <textarea id="description" name="description" required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="price">价格:</label>
-        <input type="text" id="price" name="price" required>
-      </div>
-      <div class="form-group">
-        <label for="image">商品图片:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-      </div>
-      <div class="form-group">
-        <img id="preview" src="./image/noImg.webp" alt="商品图片预览">
-      </div>
-      <button type="submit" class="btn-submit">发布</button>
-    </form>
-  </div>
-
-  <script>
-    // 预览图片并更新预览区域
-    document.getElementById('image').addEventListener('change', function(e) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        document.getElementById('preview').setAttribute('src', e.target.result);
-      }
-      reader.readAsDataURL(e.target.files[0]);
-    });
-  </script>
-</body>
 </html>
