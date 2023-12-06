@@ -1,6 +1,6 @@
 main {
   padding-top: 90px;
-  background-color: skyblue;
+  background: url(../image/netAuth.webp) no-repeat center 0px;
   height: 100vh;
   overflow: auto;
   /* background-image: url(./image/netAuth.webp); */
