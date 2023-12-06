@@ -83,6 +83,7 @@
             overflow-x: hidden;
             padding-left: 30px;
             padding-right: 30px;
+            padding-top: 10px;
         }
 
         .text-box {
@@ -109,15 +110,29 @@
             padding-bottom: 5px;
             padding-left: 10px;
             padding-right: 10px;
+            word-break: break-all;
         }
 
         .msg-left {
-            background-color: #FFF;
+            background-color: #fff;
         }
 
         .msg-right {
-            color: #FFF;
-            background-color: #007BFF;
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        .msgTime {
+            font-size: small;
+        }
+
+        .msgTime-left {
+            color: #777;
+            text-align: right;
+        }
+
+        .msgTime-right {
+            color: #eee;
         }
     </style>
     <!-- 聊天窗口 -->
@@ -156,18 +171,21 @@
                     <div class="col-12">
                         <div class="msg-box mt-3 mb-2">
                             <div id="chatBox" class="row">
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <div class="time text-center">2023-12-03 12:11:54</div>
-                                </div>
+                                </div> -->
                                 <div class="col-12">
                                     <div class="row mb-3">
                                         <div class="userAvatarInner">
-                                            <img src="./image/QQ图片20231101215640.jpg" alt="" width="60px"
-                                                class="userAvatar">
+                                            <img src="./image/othersAvatar.jpg" alt="" width="60px"
+                                                class="userAvatar" />
                                         </div>
                                         <div class="col-8">
                                             <div class="msg msg-left">
                                                 喜欢的话就抓紧时间下单吧~
+                                                <div class="msgTime msgTime-left">
+                                                    2023-12-06 15:30:00
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -175,17 +193,18 @@
                                 <div class="col-12">
                                     <div class="row mb-3 flex-row-reverse">
                                         <div class="userAvatarInner">
-                                            <img src="./image/QQ图片20231101215640.jpg" alt="" width="60px"
-                                                class="userAvatar">
+                                            <img src="./image/myAvatar.jpg" alt="" width="60px" class="userAvatar" />
                                         </div>
                                         <div class="col-8 d-flex justify-content-end">
                                             <div class="msg msg-right">
                                                 你好！
+                                                <div class="msgTime msgTime-right">
+                                                    2023-12-06 15:30:00
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -207,45 +226,78 @@
 
     <script src="./js/main.js"></script>
     <script>
-        // 获取当前时间
-        var date = new Date();
-        var year = date.getFullYear(); // 获取当前年份
-        var month = date.getMonth(); // 获取当前月份
-        var day = date.getDate(); // 获取当前日
-        var hours = date.getHours(); // 获取当前小时数(0-23)
-        var minutes = date.getMinutes(); // 获取当前分钟数(0-59)
-        var seconds = date.getSeconds(); // 获取当前秒数(0-59)
-        var week = date.getDay(); // 获取当前星期数(0-6)
-        var weekArr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-        var weekStr = weekArr[week];
-        var timeStr = year + "年" + month + "月" + day + "日" + hours + "时" + minutes + "分" + seconds + "秒" + weekStr;
-        // document.getElementById("time").innerHTML = timeStr;
-
-        $('#sendMsgBtn').on('click', function () {
-            const msg = $('#msgInput').val();
-            $('#msgInput').val('');
+        // 绑定发送按钮点击事件
+        $("#sendMsgBtn").on("click", function () {
+            const msg = $("#msgInput").val();
+            if (msg == "") {
+                return;
+            }
+            $("#msgInput").val("");
             sendMessage(msg);
         });
-        // 发送消息
-        function sendMessage(msg) {
-            output = $('#chatBox').html();
-            // console.log(output);
-            $('#chatBox').html(output + `<div class="col-12">
-                                    <div class="row mb-3 flex-row-reverse">
-                                        <div class="userAvatarInner">
-                                            <img src="./image/QQ图片20231101215640.jpg" alt="" width="60px"
-                                                class="userAvatar">
-                                        </div>
-                                        <div class="col-8 d-flex justify-content-end">
-                                            <div class="msg msg-right">
-                                                ${msg}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>`);
-            $('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+
+        // 生成消息的 HTML
+        function msgOutput(target, msg) {
+            // left 为对方发送消息，right 为自己发送消息
+            var flag = 0;
+            if (target == "left") {
+                flag = 1;
+            } else if (target == "right") {
+                flag = 0;
+            }
+            // 生成发送消息时的时间
+            var date = new Date();
+            var year = date.getFullYear(); // 获取当前年份
+            var month = date.getMonth().toString().padStart(2, "0"); // 获取当前月份
+            var day = date.getDate().toString().padStart(2, "0"); // 获取当前日
+            var hours = date.getHours().toString().padStart(2, "0"); // 获取当前小时数(0-23)
+            var minutes = date.getMinutes().toString().padStart(2, "0"); // 获取当前分钟数(0-59)
+            var seconds = date.getSeconds().toString().padStart(2, "0"); // 获取当前秒数(0-59)
+            var week = date.getDay(); // 获取当前星期数(0-6)
+            var weekArr = [
+                "星期日",
+                "星期一",
+                "星期二",
+                "星期三",
+                "星期四",
+                "星期五",
+                "星期六",
+            ];
+            var weekStr = weekArr[week];
+            // 时间格式拼串
+            var timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${weekStr}`;
+            return `<div class="col-12">
+                       <div class="row mb-3${flag ? '' : ' flex-row-reverse'}">
+                           <div class="userAvatarInner">
+                               <img src="./image/${flag ? 'othersAvatar.jpg' : 'myAvatar.jpg'}" alt="" width="60px"
+                                   class="userAvatar">
+                           </div>
+                           <div class="col-9${flag ? '' : ' d-flex justify-content-end'}">
+                               <div class="msg msg-${flag ? 'left' : 'right'}">
+                                   ${msg}
+                                   <div class="msgTime msgTime-${flag ? 'left' : 'right'}">
+                                       ${timeStr}
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>`;
         }
 
+        // 发送消息
+        function sendMessage(msg) {
+            output = $("#chatBox").html(); // 先读取已有消息
+            $("#chatBox").html(output + msgOutput("right", msg)); // 再加上新的消息
+            $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight); // 滚动条滚到最底部
+            if (msg == '在吗？' || msg == '在？' || msg == '东西还在吗？') {
+                setTimeout(2000);
+                $("#chatBox").html($("#chatBox").html() + msgOutput("left", "在的"));
+                $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight);
+            } else if (msg=='可以便宜点吗？'||msg=='可以便宜点吗') {
+                $("#chatBox").html($("#chatBox").html() + msgOutput("left", "不接刀"));
+                $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight);
+            }
+        }
     </script>
 </body>
 

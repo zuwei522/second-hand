@@ -11,7 +11,7 @@
     <title>发布物品</title>
 </head>
 
-<body onload="isLogin()">
+<body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-sm fixed-top">
         <!--fixed-top-->
@@ -43,17 +43,13 @@
             <!-- 物品信息表单 -->
             <div class="col-md-6">
                 <h2 class="mt-2"><b>发布物品</b></h2>
-                <form id="product-form" action="./market.html">
+                <form id="product-form">
                     <div class="form-group">
-                        <label for="name">名称:</label>
+                        <label for="name">商品名称:</label>
                         <input type="text" id="name" name="name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">分类:</label>
-                        <input type="text" id="category" name="category" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">描述:</label>
+                        <label for="description">商品描述:</label>
                         <textarea id="description" name="description" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
@@ -61,7 +57,7 @@
                         <input type="number" id="price" name="price" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="image">图片:</label>
+                        <label for="image">商品图片:</label>
                         <input type="file" id="image" name="image" accept="image/*" class="form-control-file" required>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block mb-3">发布</button>
