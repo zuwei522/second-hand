@@ -1,12 +1,19 @@
 main {
   padding-top: 90px;
-  background-color: skyblue;
+  background: url(../image/netAuth.webp) no-repeat center 0px;
   height: 100vh;
   overflow: auto;
   /* background-image: url(./image/netAuth.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+h1{
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  font-family: 幼圆; 
+  font-size:60px;
 }
 
 .col-item-img {
