@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./js/bootstrap.bundle.min.js">
+    <link rel="icon" href="./image/icon.svg">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/item.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,11 +24,24 @@
         </a>
     </div>
 </body>
-<script language="JavaScript" type="text/javascript">
-var loc=location.href;
-var n1=loc.length;
-var n2=loc.indexOf("=");
-var id=decodeURI(loc.substr(n2+1,n1-n2));
-$(id).append("name-item");
+
+<script>
+$('.life1')[0].addEventListener('click', function () {
+    $.getJSON("./data/item.json", function (data) {
+        let itemListOutput = '';
+        for (i = 24; i < 36; i++) {
+            itemListOutput = itemListOutput +
+                `<a href="item.html?id=${data[i].id}" class="size1 item"><div class="col-lg-3 col-sm-6 mt-4 item">
+        <img src="${data[i].src}" class="img-fluid">
+        <div class="text-center">${data[i].name}</div>
+        <div class="text-center sizecolor">￥${data[i].price}</div>
+        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
+        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
+        </div>
+        </a> `;
+        }
+        $('.item-list').html(itemListOutput);
+    })
+});
 </script>
 </html>

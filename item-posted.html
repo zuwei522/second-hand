@@ -19,12 +19,24 @@
     }
 
     .container {
-      max-width: 400px;
-      margin: 5% auto;
-      background-color: #fff;
-      padding: 20px;
+      max-width: 80%;
+      margin: 18% auto;
+      background-color: #ffffff;
+      padding: 10px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (min-width: 576px) {
+      .container {
+        margin: 14% auto;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .container {
+      margin: 5% auto;
+      }
     }
 
     h1 {
@@ -73,9 +85,9 @@
     }
 
     #preview {
-      width: 30%;
+      width: 20%;
       height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -105,6 +117,7 @@
     </div>
 </nav>
 
+<!--主体-->
 <div class="container">
   <h1>商品发布</h1>
   <form id="product-form">
@@ -126,7 +139,7 @@
     <br>
     <div class="form-group">
       <label for="description">商品描述:</label>
-      <textarea id="description" name="description" required placeholder="如：商品损坏程度如何，可刀或不刀"></textarea>
+      <textarea id="description" name="description" required placeholder="如：简单介绍一下物品，商品损坏程度如何，可刀或不刀，几成新"></textarea>
     </div>
 
     <div class="form-group">
@@ -156,5 +169,13 @@
     }
     reader.readAsDataURL(e.target.files[0]);
   });
+
+  $.ajax({
+    type:"POST",
+    async:false,
+    url:"22Batch2-group2/data/item.json",
+    data:{"name":document.getElementById('name').value},
+    success:function(data){}
+  })
 </script>
 </html>
