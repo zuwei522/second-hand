@@ -29,6 +29,8 @@
 
     h1 {
       text-align: center;
+      color: #6c9dc5;
+      text-shadow: none;
     }
 
     .form-group {
@@ -71,7 +73,7 @@
     }
 
     #preview {
-      width: 100%;
+      width: 30%;
       height: auto;
       margin-bottom: 20px;
     }
@@ -113,7 +115,7 @@
 
     <div>
       <label for="type">商品分类</label>
-      <select class="control-input custom-select" id="name" name="type" required>
+      <select class="control-input custom-select" id="type" name="type" required>
         <option value="0">数码</option>
         <option value="1">书籍</option>
         <option value="2">零食</option>
@@ -138,14 +140,14 @@
     </div>
 
     <div class="form-group">
-      <img id="preview" src="#" alt="商品图片预览">
+      <img id="preview" src="./image/20230417155238_55620.jpg" alt="商品图片预览">
     </div>
 
-    <button type="submit" class="btn-submit">发布</button>
+    <button id="go" type="submit" class="btn-submit" onclick="javascrip:jump()">发布</button>
   </form>
 </div>
 
-<script>
+<script language="JavaScript">
   // 预览图片并更新预览区域
   document.getElementById('image').addEventListener('change', function(e) {
     var reader = new FileReader();
@@ -154,8 +156,5 @@
     }
     reader.readAsDataURL(e.target.files[0]);
   });
-   $(document).ready(function(){
-      $
-   })
 </script>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./js/bootstrap.bundle.min.js">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-lg-3 col-md-4 col-6">
+        <a class="text-decoration-none" href="">
+            <div class="other-item">
+                <center><img src="" class="img-item" /></center>
+                <div class="price-item"></div>
+                <div class="name-item"></div>
+                <div class="description-item"></div>
+            </div>
+        </a>
+    </div>
+</body>
+<script language="JavaScript" type="text/javascript">
+var loc=location.href;
+var n1=loc.length;
+var n2=loc.indexOf("=");
+var id=decodeURI(loc.substr(n2+1,n1-n2));
+$(id).append("name-item");
+</script>
+</html>
