@@ -108,23 +108,39 @@
   <form id="product-form">
     <div class="form-group">
       <label for="name">商品名称:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required >
     </div>
+
+    <div>
+      <label for="type">商品分类</label>
+      <select class="control-input custom-select" id="name" name="type" required>
+        <option value="0">数码</option>
+        <option value="1">书籍</option>
+        <option value="2">零食</option>
+        <option value="3">生活</option>
+        <option value="4">其他</option>
+      </select>
+    </div>
+    <br>
     <div class="form-group">
       <label for="description">商品描述:</label>
-      <textarea id="description" name="description" required></textarea>
+      <textarea id="description" name="description" required placeholder="如："></textarea>
     </div>
+
     <div class="form-group">
       <label for="price">价格:</label>
       <input type="text" id="price" name="price" required>
     </div>
+
     <div class="form-group">
       <label for="image">商品图片:</label>
       <input type="file" id="image" name="image" accept="image/*" required>
     </div>
+
     <div class="form-group">
       <img id="preview" src="#" alt="商品图片预览">
     </div>
+
     <button type="submit" class="btn-submit">发布</button>
   </form>
 </div>
@@ -138,5 +154,6 @@
     }
     reader.readAsDataURL(e.target.files[0]);
   });
+   
 </script>
 </html>
