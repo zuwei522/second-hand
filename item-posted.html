@@ -132,6 +132,7 @@
       <div>
         <label for="type">商品分类</label>
         <select class="control-input custom-select" id="type" name="type" required>
+          <option value="">请选择物品分类</option>
           <option value="0">数码</option>
           <option value="1">书籍</option>
           <option value="2">零食</option>
@@ -155,7 +156,7 @@
         <input type="file" id="image" name="image" accept="image/*" required>
       </div><!--选择图片-->
 
-      <button id="go" type="submit" class="btn-submit">发布</button>
+      <button id="go" type="submit" class="btn-submit" onclick="show()">发布</button><!--“发布按钮”-->
     </form><!--“发布按钮”-->
 
     <div class="col-md-6">
@@ -174,6 +175,9 @@
     reader.readAsDataURL(e.target.files[0]);
   });
 
+  function show(){
+    alert("发布成功_(:3」∠)_")
+  }
 
 </script>
 </html>
