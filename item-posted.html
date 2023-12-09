@@ -19,7 +19,7 @@
     }
 
     .container {
-      max-width: 70%;
+      max-width: 75%;
       margin: 18% auto;
       background-color: #ffffff;
       padding: 10px;
@@ -156,13 +156,13 @@
       <button id="go" type="submit" class="btn-submit">发布</button>
     </form>
 
-    <div class="form-group col-md-6">
+    <div class="col-md-6">
       <img id="preview" src="./image/20230417155238_55620.jpg" alt="商品图片预览">
     </div>
   </div>
 </div>
 
-<script language="JavaScript">
+<script>
   // 预览图片并更新预览区域
   document.getElementById('image').addEventListener('change', function(e) {
     var reader = new FileReader();
@@ -171,6 +171,8 @@
     }
     reader.readAsDataURL(e.target.files[0]);
   });
+
+
 
 </script>
 </html>
