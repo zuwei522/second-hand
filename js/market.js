@@ -105,13 +105,25 @@ $('.recommend')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 0; i < 60; i++) {
             itemListOutput = itemListOutput +
-                `<a href="item.html?id=${data[i].id}" class="size1 item"><div class="col-lg-3 col-sm-6 mt-4">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-    </div></a>`;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                    <div class="other-item">
+                        <div class="cot">
+                            <img src="${data[i].src}" class="img-fluid img-item" />
+                        </div>
+                        <div class="cot-price">
+                            <div class="size-price">￥${data[i].price}</div>
+                        </div>
+                        <div class="cot-name">
+                            <div class="size-name">${data[i].name}</div>
+                        </div>
+                        <div class="cot-description">
+                            <div class="size-description">${data[i].description}</div>
+                        </div>
+                    </div>
+                </a >
+           </div >`;
+
         }
         $('.item-list').html(itemListOutput);
     })
@@ -122,13 +134,24 @@ $('.tech')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 12; i < 24; i++) {
             itemListOutput = itemListOutput +
-                `<a href="item.html?id=${data[i].id}" class="size1 item"> <div class="col-lg-3 col-sm-6 mt-4 ">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-    </div></a> `;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+            <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                <div class="other-item">
+                    <div class="cot">
+                        <img src="${data[i].src}" class="img-fluid img-item" />
+                    </div>
+                    <div class="cot-price">
+                        <div class="size-price">￥${data[i].price}</div>
+                    </div>
+                    <div class="cot-name">
+                        <div class="size-name">${data[i].name}</div>
+                    </div>
+                    <div class="cot-description">
+                        <div class="size-description">${data[i].description}</div>
+                    </div>
+                </div>
+            </a >
+       </div >`;
         }
         $('.item-list').html(itemListOutput);
     })
@@ -138,13 +161,24 @@ $('.Stacks')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 0; i < 12; i++) {
             itemListOutput = itemListOutput +
-                `<a href="item.html?id=${data[i].id}" class="size1 item"> <div class="col-lg-3 col-sm-6 mt-4 item">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-    </div></a>`;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                    <div class="other-item">
+                        <div class="cot">
+                            <img src="${data[i].src}" class="img-fluid img-item" />
+                        </div>
+                        <div class="cot-price">
+                            <div class="size-price">￥${data[i].price}</div>
+                        </div>
+                        <div class="cot-name">
+                            <div class="size-name">${data[i].name}</div>
+                        </div>
+                        <div class="cot-description">
+                            <div class="size-description">${data[i].description}</div>
+                        </div>
+                    </div>
+                </a >
+           </div >`;
         }
         $('.item-list').html(itemListOutput);
     })
@@ -154,13 +188,24 @@ $('.snacks1')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 48; i < 60; i++) {
             itemListOutput = itemListOutput +
-                `<a href="item.html?id=${data[i].id}" class="size1 item"><div class="col-lg-3 col-sm-6 mt-4 item">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-    </div></a>`;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+            <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                <div class="other-item">
+                    <div class="cot">
+                        <img src="${data[i].src}" class="img-fluid img-item" />
+                    </div>
+                    <div class="cot-price">
+                        <div class="size-price">￥${data[i].price}</div>
+                    </div>
+                    <div class="cot-name">
+                        <div class="size-name">${data[i].name}</div>
+                    </div>
+                    <div class="cot-description">
+                        <div class="size-description">${data[i].description}</div>
+                    </div>
+                </div>
+            </a >
+       </div >`;
         }
         $('.item-list').html(itemListOutput);
     })
@@ -170,14 +215,24 @@ $('.life1')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 24; i < 36; i++) {
             itemListOutput = itemListOutput +
-                `<a href="item.html?id=${data[i].id}" class="size1 item"><div class="col-lg-3 col-sm-6 mt-4 item">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-        </div>
-        </a> `;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+            <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                <div class="other-item">
+                    <div class="cot">
+                        <img src="${data[i].src}" class="img-fluid img-item" />
+                    </div>
+                    <div class="cot-price">
+                        <div class="size-price">￥${data[i].price}</div>
+                    </div>
+                    <div class="cot-name">
+                        <div class="size-name">${data[i].name}</div>
+                    </div>
+                    <div class="cot-description">
+                        <div class="size-description">${data[i].description}</div>
+                    </div>
+                </div>
+            </a >
+       </div >`;
         }
         $('.item-list').html(itemListOutput);
     })
@@ -187,15 +242,24 @@ $('.other1')[0].addEventListener('click', function () {
         let itemListOutput = '';
         for (i = 36; i < 48; i++) {
             itemListOutput = itemListOutput +
-    `<a href="item.html?id=${data[i].id}" class="size1 item"> 
-    <div class="col-lg-3 col-sm-6 mt-4 item">
-        <img src="${data[i].src}" class="img-fluid">
-        <div class="text-center">${data[i].name}</div>
-        <div class="text-center sizecolor">￥${data[i].price}</div>
-        <a href="./item.html?id=5" class="btn btn-light btn-block text-left">${data[i].description}</a>
-        <button type="button" class="btn btn-danger btn-block badge-primary">添加到购物车</button>
-    </div>
-    </a> `;
+            `<div class="col-lg-3 col-md-4 col-6 mt-3">
+            <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
+                <div class="other-item">
+                    <div class="cot">
+                        <img src="${data[i].src}" class="img-fluid img-item" />
+                    </div>
+                    <div class="cot-price">
+                        <div class="size-price">￥${data[i].price}</div>
+                    </div>
+                    <div class="cot-name">
+                        <div class="size-name">${data[i].name}</div>
+                    </div>
+                    <div class="cot-description">
+                        <div class="size-description">${data[i].description}</div>
+                    </div>
+                </div>
+            </a >
+       </div >`;
         }
         $('.item-list').html(itemListOutput);
     })
