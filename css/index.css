@@ -10,6 +10,22 @@ body {
   height: 100vh;
 }
 
+.bg-2 {
+  background: url(../image/bg2.jpg) no-repeat center 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.bg-3 {
+  background: url(../image/bg3.jpg) no-repeat center 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 main {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -57,7 +73,18 @@ main::-webkit-scrollbar {
 .title {
   font-size: 4rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
-  line-height: 4.1rem;
+  line-height: 4.3rem;
+}
+
+.title span,.title {
+  text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff, 4px 4px #fff;
+}
+
+.title-sm {
+  font-size: 3rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+  line-height: 3.3rem;
+  text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
 }
 
 .title-highlight {

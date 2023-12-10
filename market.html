@@ -12,8 +12,70 @@
     <!-- <link rel="stylesheet" href="./css/item.css"> -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <style>
+    <script>
+        $(document).ready(function () {
+            // 当文档加载完成时，执行以下函数
 
+            // 当搜索框的输入事件触发时，执行以下函数
+            $("#searchInput").on('input', function () {
+                // 如果搜索框不为空，执行以下函数
+                if (this.value.length > 0) {
+                    // 将搜索框的值转换为小写
+                    var searchText = $(this).val().toLowerCase();
+                    // 初始化一个空数组，用于存储搜索结果
+                    var searchResults = [];
+
+                    // 发送一个Ajax请求，从./data/item.json获取数据
+                    $.getJSON("./data/item.json", function (data) {
+                        // 遍历数据中的每个对象，检查它们的名称是否包含搜索文本
+                        for (name in data) {
+                            if (data[name].name.toLowerCase().indexOf(searchText) > -1) {
+                                // 如果包含，将对象添加到搜索结果数组中
+                                searchResults.push(data[name]);
+                            }
+                        }
+                        // 清空搜索结果列表
+                        $("#s").empty();
+                        // 输出搜索结果数组
+                        console.log(searchResults);
+
+                        // 遍历搜索结果数组，将每个结果添加到搜索结果列表中
+                        $.each(searchResults, function (index, abc) {
+                            console.log("现在遍历到了第 " + index + " 个搜索结果");
+                            // 将每个结果的名称和ID添加到搜索结果列表中
+                            $("#s").append(`<a class="searchResultItem list-group-item list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
+                        });
+
+                        // 绑定搜索结果列表中的每个链接，以便在单击时导航到相应的页面
+                        $('.searchResultItem').on('mousedown', function () {
+                            const target = $(this).attr('href');
+                            window.location.href = target;
+                        });
+                    });
+                } else {
+                    // 如果搜索框为空，清空搜索结果列表
+                    $("#s").empty();
+                }
+            });
+
+            // 当搜索框失去焦点时，隐藏搜索结果列表
+            $('#searchInput').on('blur', function () {
+                $("#s").addClass("d-none");
+            });
+
+            // 当搜索框获得焦点时，显示搜索结果列表
+            $('#searchInput').on('focus', function () {
+                $("#s").removeClass("d-none");
+            });
+
+        });
+    </script>
+    <style>
+        #s {
+            position: absolute;
+            top: 60px;
+            width: 205px;
+        }
     </style>
 </head>
 
@@ -30,13 +92,14 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <!-- 搜索栏 -->
-                <li class="nav-item">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="" placeholder="搜索">
+                <li class="nav-item" id="searchGroup">
+                    <form class="input-group">
+                        <input type="text" class="form-control" name="searchKey" id="searchInput" placeholder="搜索">
                         <div class="input-group-append">
-                            <button class="btn btn-primary">点击搜索</button>
+                            <button type="submit" class="btn btn-primary">点击搜索</button>
                         </div>
-                    </div>
+                    </form>
+                    <ul id="s" class="list-group" mousedown></ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link random-item">随便看看</a>

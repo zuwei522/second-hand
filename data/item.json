@@ -4,7 +4,7 @@
     "name": "倚天屠龙记",
     "price": "120",
     "description": "金庸射雕三部曲之一;九成新只看过一次。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/1.jpg",
     "qq":"1989209873"
   },
@@ -13,7 +13,7 @@
     "name": "射雕英雄传",
     "price": "120",
     "description": "金庸射雕三部曲之一;九成新只看过一次。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/2.jpg",
     "qq":""
   },
@@ -22,7 +22,7 @@
     "name": "神雕侠侣",
     "price": "120",
     "description": "金庸射雕三部曲之一;九成新只看过一次。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/3.jpg",
     "qq":""
   },
@@ -31,7 +31,7 @@
     "name": "永乐大典",
     "price": "无价",
     "description": "明朝永乐年间明成祖朱棣命令人所编著。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/4.jpg",
     "qq":""
   },
@@ -40,7 +40,7 @@
     "name": "伤寒杂病论",
     "price": "180",
     "description": "张仲景创作的医学典籍，医学生自用，八成新。",
-    "class": "书籍",    
+    "category": "书籍",    
     "src":"./image/Findpiece/5.jpg",
     "qq":""
   },
@@ -49,7 +49,7 @@
     "name": "易经",
     "price": "150",
     "description": "感兴趣自学，欢迎交流，个人看不明白，六成新。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/6.jpg",
     "qq":""
   },
@@ -58,7 +58,7 @@
     "name": "三国演义",
     "price": "200",
     "description": "小说，罗贯中所著，只看过两次。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/7.jpg",
     "qq":""
   },
@@ -67,7 +67,7 @@
     "name": "学科书籍",
     "price": "5",
     "description": "5元一本，感兴趣私聊或者需要的六栋自提。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/8.jpg",
     "qq":""
   },
@@ -76,7 +76,7 @@
     "name": "学科书籍",
     "price": "5",
     "description": "5元一本，感兴趣私聊或者需要的七栋自提。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/9.jpg",
     "qq":""
   },
@@ -85,7 +85,7 @@
     "name": "概率论与数理统计",
     "price": "25",
     "description": "这个学期刚刚买的，真正的二手书有珍贵的笔记。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/10.jpg",
     "qq":""
   },
@@ -94,7 +94,7 @@
     "name": "时间简史",
     "price": "43",
     "description": "几乎全新的小说，内容丰富需要请点击购买联系。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/10a.jpg",
     "qq":""
   },
@@ -103,7 +103,7 @@
     "name": "java从入门到精通",
     "price": "58",
     "description": "自用教材九成新，感兴趣的小伙伴私聊。",
-    "class": "书籍",
+    "category": "书籍",
     "src":"./image/Findpiece/10b.jpg",
     "qq":""
   },
@@ -112,7 +112,7 @@
     "name": "闪光机械键盘",
     "price": "99",
     "description": "自己买了新的了，旧的打算出，八成新。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/11.jpg",
     "qq":""
   },
@@ -121,7 +121,7 @@
     "name": "头戴式耳机",
     "price": "89",
     "description": "闲置了一个，八成新感兴趣的伙伴私聊。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/12.jpg",
     "qq":""
   },
@@ -130,7 +130,7 @@
     "name": "充电宝",
     "price": "110",
     "description": "五万毫安充电宝，太重了携带不方便，出售中。",
-    "class": "分类",
+    "category": "数码",
     "src":"./image/Findpiece/13.jpg",
     "qq":""
   },
@@ -139,7 +139,7 @@
     "name": "无线鼠标",
     "price": "33",
     "description": "买了一个新的旧的闲置了，需要的私聊。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/14.jpg",
     "qq":""
   },
@@ -148,7 +148,7 @@
     "name": "电子手表",
     "price": "78",
     "description": "128g内存，刚过保修期，需要私聊。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/15.jpg",
     "qq":""
   },
@@ -157,7 +157,7 @@
     "name": "手表",
     "price": "128",
     "description": "送女朋友的结果提前分手了，所以出了。",
-    "class": "分类",
+    "category": "数码",
     "src":"./image/Findpiece/16.jpg",
     "qq":""
   },
@@ -166,7 +166,7 @@
     "name": "充电式电子秤",
     "price": "68",
     "description": "可以自己调挡位，让自己瘦10斤不是梦。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/17.jpg",
     "qq":""
   },
@@ -175,7 +175,7 @@
     "name": "手机",
     "price": "1299",
     "description": "512g内存，可以玩原神也可以玩王者荣耀。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/18.jpg",
     "qq":""
   },
@@ -184,7 +184,7 @@
     "name": "手机",
     "price": "999",
     "description": "闲置手机，视频播放器很给力，看电影不卡。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/19.jpg",
     "qq":""
   },
@@ -193,7 +193,7 @@
     "name": "头戴式耳机",
     "price": "188",
     "description":"女孩子自用，闲置出，感兴趣私聊。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/20.jpg",
     "qq":""
   },
@@ -202,7 +202,7 @@
     "name": "相机",
     "price": "3999",
     "description": "佳能5D Mark III 需要的联系，八成新。",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/20a.jpg",
     "qq":""
   },
@@ -211,7 +211,7 @@
     "name": "机械式手表",
     "price": "288",
     "description": "买来闲置，使用时间短算个九五新。需要私聊",
-    "class": "数码",
+    "category": "数码",
     "src":"./image/Findpiece/20b.jpg",
     "qq":""
   },
@@ -220,7 +220,7 @@
     "name": "护衣喷雾",
     "price": "18",
     "description": "闲置了三瓶，需要的私聊低价出售了！",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/21.jpg",
     "qq":""
   },
@@ -229,7 +229,7 @@
     "name": "美的煮锅",
     "price": "121",
     "description": "当时三百买的没有用过几次闲置，感兴趣私我。",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/22.jpg",
     "qq":""
   },
@@ -238,7 +238,7 @@
     "name": "染发剂",
     "price": "28",
     "description": "需要私聊，买了还送一小瓶护发精华。",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/23.jpg",
     "qq":""
   },
@@ -247,7 +247,7 @@
     "name": "小型收纳盒",
     "price": "14",
     "description": "本人即将毕业，闲置的收纳盒低价出售。",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/24.jpg",
     "qq":""
   },
@@ -256,7 +256,7 @@
     "name": "塑料收纳盒",
     "price": "5",
     "description": "5块钱，卖了需要的私聊我，送到宿舍。",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/25.jpg",
     "qq":""
   },
@@ -265,7 +265,7 @@
     "name": "酱油和食用油",
     "price": "14",
     "description": "做的饭锅被阿姨收缴了，所以低价出售了",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/26.jpg",
     "qq":""
   },
@@ -274,7 +274,7 @@
     "name": "防脱发剂",
     "price": "18",
     "description": "生姜防止脱发，更好的呵护你的头发",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/27.jpg",
     "qq":""
   },
@@ -283,7 +283,7 @@
     "name": "口红",
     "price": "26",
     "description": "买到的不喜欢的色号了，没有使用过，感兴趣私聊",
-    "class": "圣火",
+    "category": "生活",
     "src":"./image/Findpiece/28.jpg",
     "qq":""
   },
@@ -292,7 +292,7 @@
     "name": "酒精",
     "price": "2",
     "description": "不可食用，但是可以拿来消毒，感兴趣私聊我",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/29.jpg",
     "qq":""
   },
@@ -301,7 +301,7 @@
     "name": "定型水",
     "price": "33",
     "description": "没有拆封，用不到想卖了，价格实惠哟。",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/30.jpg",
     "qq":""
   },
@@ -310,7 +310,7 @@
     "name": "木质衣架",
     "price": "3",
     "description": "三块钱一个，颜值和实用性能超级好！",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/30a.jpg",
     "qq":""
   },
@@ -319,7 +319,7 @@
     "name": "抽纸",
     "price": "2",
     "description": "2元一包，适合经常用纸巾的人使用",
-    "class": "生活",
+    "category": "生活",
     "src":"./image/Findpiece/30b.jpg",
     "qq":""
   },
@@ -328,7 +328,7 @@
     "name": "小电驴",
     "price": "1999",
     "description": "毕业了出售，有学校发放的通行证。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/31.jpg",
     "qq":""
   },
@@ -337,7 +337,7 @@
     "name": "羽毛球拍",
     "price": "400",
     "description": "大鬼斩，九成新首线不议价，感兴趣私聊。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/32.jpg",
     "qq":""
   },
@@ -346,7 +346,7 @@
     "name": "自行车",
     "price": "299",
     "description": "临近毕业了，要出售自行车，没有什么问题。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/33.jpg",
     "qq":""
   },
@@ -355,7 +355,7 @@
     "name": "老鼠包",
     "price": "23",
     "description": "新买的的，标签没有拆可爱的老鼠包，需要私聊。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/34.jpg",
     "qq":""
   },
@@ -364,7 +364,7 @@
     "name": "吉他",
     "price": "599",
     "description": "成色很好看上的私聊我，新买了一个，旧的这个出售了",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/35.jpg",
     "qq":""
   },
@@ -373,7 +373,7 @@
     "name": "挂件",
     "price": "22",
     "description": "Hello kitty限量挂件感兴趣私聊，价格面议。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/36.jpg",
     "qq":""
   },
@@ -382,7 +382,7 @@
     "name": "手机壳",
     "price": "15",
     "description": "动漫手机壳，类别很多图片只是样例，需要私聊。",
-    "class": "分类",
+    "category": "其他",
     "src":"./image/Findpiece/37.jpg",
     "qq":""
   },
@@ -392,7 +392,7 @@
     "name": "锯子",
     "price": "30",
     "description": "临近毕业，闲置物品出售，锯子要出售需要的私。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/38.jpg",
     "qq":""
   },
@@ -401,7 +401,7 @@
     "name": "跳绳",
     "price": "6",
     "description": "体测完后多的，需要使用的同学私聊我，低价出售。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/39.jpg",
     "qq":""
   },
@@ -410,7 +410,7 @@
     "name": "呼啦圈",
     "price": "22",
     "description": "健身爱好者专属物品，有两个库存，看上的请私聊。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/40.jpg",
     "qq":""
   },
@@ -419,7 +419,7 @@
     "name": "高达手办",
     "price": "599",
     "description": "仿真1：10制作，做工精细，官方正版授权看上私聊。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/40a.jpg",
     "qq":""
   },
@@ -429,7 +429,7 @@
     "name": "电竞靠椅",
     "price": "78",
     "description": "199买的便宜出售了，八成新没有塌陷外观良好。",
-    "class": "其他",
+    "category": "其他",
     "src":"./image/Findpiece/40b.jpg",
     "qq":""
   },
@@ -438,7 +438,7 @@
     "name": "巧克力",
     "price": "36",
     "description": "香甜可口的巧克力，全新包装需要的联系",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/41.jpg",
     "qq":""
   },
@@ -447,7 +447,7 @@
     "name": "牛奶糖",
     "price": "6",
     "description": "旺仔牛奶糖6元一袋，休闲小零食，吃完还想吃。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/42.jpg",
     "qq":""
   },
@@ -456,7 +456,7 @@
     "name": "汽水",
     "price": "12",
     "description": "咱们种花家自产的汽水，比外国那个好喝几十倍",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/43.jpg",
     "qq":""
   },
@@ -465,7 +465,7 @@
     "name": "椰汁",
     "price": "5",
     "description": "椰树牌子椰汁现在低价出售，感兴趣的同学私聊。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/44.jpg",
     "qq":""
   },
@@ -474,7 +474,7 @@
     "name": "蒙牛真果粒",
     "price": "50",
     "description": "正品蒙牛果奶，自己买的喝不完50一箱出售了",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/45.jpg",
     "qq":""
   },
@@ -483,7 +483,7 @@
     "name": "东方树叶",
     "price": "4",
     "description": "个人喝不习惯，货源很多，需要私聊。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/46.jpg",
     "qq":""
   },
@@ -492,7 +492,7 @@
     "name": "苹果",
     "price": "2",
     "description": "又大又甜的苹果，两块钱一个自提需要私聊。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/47.jpg",
     "qq":""
   },
@@ -501,7 +501,7 @@
     "name": "酸辣粉",
     "price": "3",
     "description": "便宜出售了，3元一桶，酸酸辣辣，适合休闲食用",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/48.jpg",
     "qq":""
   },
@@ -510,7 +510,7 @@
     "name": "乐事薯片",
     "price": "8",
     "description": "乐视薯片买得太多，吃不完便宜出售，需要私聊。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/49.jpg",
     "qq":""
   },
@@ -519,7 +519,7 @@
     "name": "牛肉干",
     "price": "58",
     "description": "一袋250g，可以吃好久，香辣可口，有嚼劲。",
-    "class": "分类",
+    "category": "零食",
     "src":"./image/Findpiece/50.jpg",
     "qq":""
   },
@@ -528,7 +528,7 @@
     "name": "巨龙辣条",
     "price": "1",
     "description": "一元一包，大包装的小时候的味道，非常好吃",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/50a.jpg",
     "qq":""
   },
@@ -537,7 +537,7 @@
     "name": "桂西北甜栗",
     "price": "3",
     "description": "桂西北特产软糯香甜，吃完还想吃。",
-    "class": "零食",
+    "category": "零食",
     "src":"./image/Findpiece/50b.jpg",
     "qq":""
   }

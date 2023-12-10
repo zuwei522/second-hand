@@ -38,7 +38,7 @@
                     <a class="nav-link" href="./market.html">跳蚤市场</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./login.html">登录/注册</a>
+                    <a class="btn btn-success" href="./login.html">登录/注册</a>
                     <a class="nav-link nav-item-hide" id="logoutBtn">退出登录</a>
                 </li>
             </ul>
@@ -65,61 +65,88 @@
         </div>
 
         <!-- 第二页轮播图 -->
-        <div class="container page">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- 轮播图 -->
-                    <div id="demo" class="carousel slide" data-ride="carousel">
-                        <!-- 指示符 -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
+        <div class="page bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- 轮播图 -->
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- 指示符 -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
 
-                        <!-- 轮播图片 -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="./market.html?category=1">
-                                    <img src="./image/Findpiece/20.jpg" />
-                                    <div class="carousel-caption">
-                                        <h3>数码产品</h3>
-                                        <p>低价捡漏！</p>
-                                    </div>
-                                </a>
+                            <!-- 轮播图片 -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="./market.html?category=1">
+                                        <img src="./image/Findpiece/20.jpg" />
+                                        <div class="carousel-caption">
+                                            <h3>数码产品</h3>
+                                            <p>低价捡漏！</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="./market.html?category=2">
+                                        <img src="./image/Findpiece/9.jpg" />
+                                        <div class="carousel-caption">
+                                            <h3>二手书</h3>
+                                            <p>真的还有人在买新书吗？</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="./market.html?category=3">
+                                        <img src="./image/Findpiece/25.jpg" />
+                                        <div class="carousel-caption">
+                                            <h3>生活用品</h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="./market.html?category=4">
+                                        <img src="./image/Findpiece/25.jpg" />
+                                        <div class="carousel-caption">
+                                            <h3>生活用品</h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="./market.html?category=5">
+                                        <img src="./image/Findpiece/25.jpg" />
+                                        <div class="carousel-caption">
+                                            <h3>生活用品</h3>
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <a href="./market.html?category=2">
-                                <img src="./image/Findpiece/9.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>二手书</h3>
-                                    <p>真的还有人在买新书吗？</p>
-                                </div></a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="./market.html?category=4">
-                                <img src="./image/Findpiece/25.jpg" />
-                                <div class="carousel-caption">
-                                    <h3>生活用品</h3>
-                                    <p></p>
-                                </div></a>
-                            </div>
+
+                            <!-- 左右切换按钮 -->
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
                         </div>
-
-                        <!-- 左右切换按钮 -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="title">
-                        <small class="title-highlight">丰富的</small><br />物品类别
+                    <div class="col-md-6">
+                        <div class="title d-none d-md-block">
+                            <small class="title-highlight pl-1 pr-1" style="background-color: #FFF; border-radius: 1rem;">丰富的</small><br />
+                            <span>物品类别</span>
+                        </div>
+                        <div class="title-sm d-md-none mb-2">
+                            <small class="">丰富的</small><br />
+                            <span class="pl-1 pr-1 title-highlight" style="background-color: #FFF; border-radius: 1rem;">物品类别</span>
+                        </div>
+                        <a class="btn btn-primary mt-2" href="./market.html">查看分类</a>
                     </div>
-                    <a class="btn btn-primary mt-2" href="./market.html">查看分类</a>
                 </div>
             </div>
         </div>
