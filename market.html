@@ -36,14 +36,23 @@
             color: black;
         }
 
-        .size-price{
+        .size-price {
             color: rgb(236, 19, 19);
             font-size: 20pt;
         }
-        .img-item{
-            width: 62%;
-             height: 100%;
+
+        .img-item {
+            max-height: 200px;
+            max-width: 190px;
         }
+    .cot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .size-name{
+        font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+    }
     </style>
 </head>
 
@@ -114,7 +123,21 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <a class="text-decoration-none" href="">
                             <div class="other-item">
-                                <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
+                                <div class="cot" style=" height: 200px; width: 190px;">
+                                    <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
+                                </div>
+                                <div class="size-price">￥199</div>
+                                <div class="size-name">全新腕表</div>
+                                <div class="size-description">送女朋友的结果提前分手了，所以出了。</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a class="text-decoration-none" href="">
+                            <div class="other-item">
+                                <div class="cot" style=" height: 200px; width: 190px;">
+                                    <img src="./image/Findpiece/12.jpg" class="img-fluid img-item" />
+                                </div>
                                 <div class="size-price">￥199</div>
                                 <div class="size-name">全新腕表</div>
                                 <div class="size-description">送女朋友的结果提前分手了，所以出了。</div>
@@ -141,8 +164,8 @@
                             </div>
                         </a>
                     </div>
-              
-                  
+
+<!-- 尝试把外框架设置为固定值或者百分比样例，后续再调整。 -->
                 </div>
             </div>
         </div>
