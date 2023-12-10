@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/chat.css">
     <link rel="icon" href="./image/icon.svg" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -38,104 +39,6 @@
             </ul>
         </div>
     </nav>
-
-    <style>
-        #msgWindow {
-            background-color: #fff;
-            border-radius: 1rem;
-        }
-
-        .boxTitle {
-            font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
-            font-size: 1.5rem;
-        }
-
-        #item-name {
-            font-size: 1.2rem;
-            font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
-        }
-
-        #item-price {
-            color: red;
-            font-size: 1.4rem;
-            font-weight: 700;
-            font-family: verdana, arial;
-        }
-
-        #item-price::before {
-            content: "￥";
-            font-weight: normal;
-            font-size: 1.5rem;
-        }
-
-        #item-description {
-            font-size: 1rem;
-            font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
-            overflow: auto;
-            /* height: 20rem; */
-            margin-bottom: 2rem;
-        }
-
-        .msg-box {
-            height: 60vh;
-            min-height: 300px;
-            max-height: 500px;
-            background-color: #eee;
-            overflow-x: hidden;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 10px;
-        }
-
-        .text-box {
-            height: 10vh;
-            min-height: 100px;
-        }
-
-        #msgInput {
-            background-color: #eee;
-        }
-
-        .userAvatarinner {
-            /* padding-left: 30px; */
-        }
-
-        .userAvatar {
-            border-radius: 50%;
-        }
-
-        .msg {
-            border-radius: 1rem;
-            width: fit-content;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
-            word-break: break-all;
-        }
-
-        .msg-left {
-            background-color: #fff;
-        }
-
-        .msg-right {
-            color: #fff;
-            background-color: #007bff;
-        }
-
-        .msgTime {
-            font-size: small;
-        }
-
-        .msgTime-left {
-            color: #777;
-            text-align: right;
-        }
-
-        .msgTime-right {
-            color: #eee;
-        }
-    </style>
     <!-- 聊天窗口 -->
     <div class="container top-element">
         <div class="row" id="msgWindow">
@@ -296,6 +199,10 @@
                 $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight);
             } else if (msg=='可以便宜点吗？'||msg=='可以便宜点吗') {
                 $("#chatBox").html($("#chatBox").html() + msgOutput("left", "不接刀"));
+                $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight);
+            }
+            else if (msg=='你好'||msg=='哟西') {
+                $("#chatBox").html($("#chatBox").html() + msgOutput("left", "好好好"));
                 $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight);
             }
         }

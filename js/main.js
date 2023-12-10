@@ -28,3 +28,32 @@ function jumpRandomItem() {
     let random = Math.floor((Math.random() * 10000000) % 60) + 1;
     window.location.href = "./item.html?id=" + random;
 }
+
+// 定义一个函数，用于打印商品列表
+function printItems(data, targetCategory) {
+    // 遍历数据中的每个商品
+    for (category in data) {
+        // 如果商品的类别等于目标类别，则将商品添加到列表中
+        if (data[category].category == targetCategory) {
+            // 创建一个包含商品信息的HTML元素
+            $('.item-list').append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
+               <a class="text-decoration-none" href = "item.html?id=${data[category].id}" >
+                   <div class="other-item">
+                       <div class="cot">
+                           <img src="${data[category].src}" class="img-fluid img-item" />
+                       </div>
+                       <div class="cot-price">
+                           <div class="size-price">￥${data[category].price}</div>
+                       </div>
+                       <div class="cot-name">
+                           <div class="size-name">${data[category].name}</div>
+                       </div>
+                       <div class="cot-description">
+                           <div class="size-description">${data[category].description}</div>
+                       </div>
+                   </div>
+               </a >
+          </div >`);
+        }
+    }
+}
