@@ -8,7 +8,7 @@ window.onload = () => {
             case 1:
                 for (i = 12; i < 24; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -32,7 +32,7 @@ window.onload = () => {
             case 2:
                 for (i = 0; i < 12; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -49,14 +49,14 @@ window.onload = () => {
                             </div>
                         </div>
                     </a >
-               </div >`;
+               </div >`;    
                 }
                 $('.item-list').html(itemListOutput);
                 break;
             case 3:
                 for (i = 48; i < 60; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -73,14 +73,14 @@ window.onload = () => {
                             </div>
                         </div>
                     </a >
-               </div >`;
+               </div >`;    
                 }
                 $('.item-list').html(itemListOutput);
                 break;
             case 4:
                 for (i = 24; i < 36; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -97,14 +97,14 @@ window.onload = () => {
                             </div>
                         </div>
                     </a >
-               </div >`;
+               </div >`;    
                 }
                 $('.item-list').html(itemListOutput);
                 break;
             case 5:
                 for (i = 36; i < 48; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -121,14 +121,14 @@ window.onload = () => {
                             </div>
                         </div>
                     </a >
-               </div >`;
+               </div >`;    
                 }
                 $('.item-list').html(itemListOutput);
                 break;
             default:
                 for (i = 0; i < 60; i++) {
                     itemListOutput = itemListOutput +
-                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                    `<div class="col-lg-3 col-md-4 col-6 mt-3">
                     <a class="text-decoration-none" href = "item.html?id=${data[i].id}" >
                         <div class="other-item">
                             <div class="cot">
@@ -146,7 +146,7 @@ window.onload = () => {
                         </div>
                     </a >
                </div >`;
-
+    
                 }
                 $('.item-list').html(itemListOutput);
         }
