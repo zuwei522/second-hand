@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>商品发布页面</title>
+  <link rel="icon" href="./image/icon.svg" />
   <!--引用Bootstrap-->
   <link rel="stylesheet" href="./css/item-posted.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -16,26 +18,25 @@
   <!-- 导航栏 -->
   <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
     <a class="navbar-brand" href="./">
-        <img src="./image/logo.png" alt="logo" height="60px">
+      <img src="./image/logo.png" alt="logo" height="60px">
     </a>
-    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-        data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="./item.html">物品详情</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./market.html">跳蚤市场</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./login.html">登录/注册</a>
-            </li>
-        </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./item.html">物品详情</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./market.html">跳蚤市场</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">登录/注册</a>
+        </li>
+      </ul>
     </div>
-</nav>
+  </nav>
 
 <!--主体-->
 <div class="container">
@@ -47,55 +48,58 @@
         <input type="text" id="name" name="name" required >
       </div><!--名字-->
 
-      <div>
-        <label for="type">商品分类</label>
-        <select class="control-input custom-select" id="type" name="type" required>
-          <option value="">请选择物品分类</option>
-          <option value="0">数码</option>
-          <option value="1">书籍</option>
-          <option value="2">零食</option>
-          <option value="3">生活</option>
-          <option value="4">其他</option>
-        </select>
-      </div><!--分类-->
-      <br>
-      <div class="form-group">
-        <label for="description">商品描述:</label>
-        <textarea id="description" name="description" required placeholder="如：简单介绍一下物品，商品损坏程度如何，可刀或不刀，几成新"></textarea>
-      </div><!--描述-->
+        <div>
+          <label for="type">商品分类</label>
+          <select class="control-input custom-select" id="type" name="type" required>
+            <option value="">请选择物品分类</option>
+            <option value="0">数码</option>
+            <option value="1">书籍</option>
+            <option value="2">零食</option>
+            <option value="3">生活</option>
+            <option value="4">其他</option>
+          </select>
+        </div><!--分类-->
+        <br>
+        <div class="form-group">
+          <label for="description">商品描述:</label>
+          <textarea id="description" name="description" required placeholder="如：简单介绍一下物品，商品损坏程度如何，可刀或不刀，几成新"></textarea>
+        </div><!--描述-->
 
-      <div class="form-group">
-        <label for="price">价格:</label>
-        <input type="text" id="price" name="price" required>
-      </div><!--价钱-->
+        <div class="form-group">
+          <label for="price">价格:</label>
+          <input type="text" id="price" name="price" required>
+        </div><!--价钱-->
 
-      <div class="form-group">
-        <label for="image">商品图片:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-      </div><!--选择图片-->
+        <div class="form-group">
+          <label for="image">商品图片:</label>
+          <input type="file" id="image" name="image" accept="image/*" required>
+        </div><!--选择图片-->
 
-      <button id="go" type="submit" class="btn-submit" onclick="show()">发布</button><!--“发布按钮”-->
-    </form><!--“发布按钮”-->
+        <button id="go" type="submit" class="btn-submit" onclick="show()">发布</button><!--“发布按钮”-->
+      </form><!--“发布按钮”-->
 
-    <div class="col-md-6">
-      <img id="preview" src="./image/20230417155238_55620.jpg" alt="商品图片预览">
-    </div><!--图片预览-->
+      <div class="col-md-6">
+        <img id="preview" src="./image/20230417155238_55620.jpg" alt="商品图片预览">
+      </div><!--图片预览-->
+    </div>
   </div>
-</div>
 
-<script>
-  // 预览图片并更新预览区域
-  document.getElementById('image').addEventListener('change', function(e) {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('preview').setAttribute('src', e.target.result);
+  <script>
+    // 预览图片并更新预览区域
+    document.getElementById('image').addEventListener('change', function (e) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById('preview').setAttribute('src', e.target.result);
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    });
+
+    function show() {
+      alert("发布成功_(:3」∠)_")
     }
-    reader.readAsDataURL(e.target.files[0]);
-  });
 
   function show(){
     alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")
   }
 
-</script>
 </html>
