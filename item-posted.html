@@ -84,24 +84,24 @@
       </div><!--图片预览-->
     </div>
   </div>
-</body>
-<script>
-  // 预览图片并更新预览区域
-  document.getElementById('image').addEventListener('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById('preview').setAttribute('src', e.target.result);
+  <script>
+    // 预览图片并更新预览区域
+    document.getElementById('image').addEventListener('change', function (e) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById('preview').setAttribute('src', e.target.result);
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    });
+
+    function show() {
+      alert("发布成功_(:3」∠)_")
     }
-    reader.readAsDataURL(e.target.files[0]);
-  });
 
-  function show() {
-    alert("发布成功_(:3」∠)_")
-  }
-
-  function show() {
-    alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")
-  }
-</script>
+    function show() {
+      alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")
+    }
+  </script>
+</body>
 
 </html>

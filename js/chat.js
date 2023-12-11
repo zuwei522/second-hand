@@ -57,15 +57,14 @@ function msgOutput(target, msg) {
     var weekStr = weekArr[week];
     // 时间格式拼串
     var timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${weekStr}`;
-    return `
-    <div class="col-12">
+    return `<div class="col-12">
     <div class="row mb-3${flag ? "" : " flex-row-reverse"}">
         <div class="userAvatarInner">
-            <img src="./image/${flag ? " othersAvatar.jpg" : "myAvatar.jpg" }" alt="" width="60px"
+            <img src="./image/${flag ? "othersAvatar.jpg" : "myAvatar.jpg" }" alt="" width="60px"
                 class="userAvatar">
         </div>
         <div class="col-9${flag ? "" : " d-flex justify-content-end" }">
-            <div class="msg msg-${flag ? " left" : "right" }">
+            <div class="msg msg-${flag ? "left" : "right" }">
                 ${msg}
                 <div class="msgTime msgTime-${flag ? " left" : "right" }">
                     ${timeStr}
@@ -73,8 +72,7 @@ function msgOutput(target, msg) {
             </div>
         </div>
     </div>
-</div>
-    `;
+</div>`;
 }
 
 // 发送消息
