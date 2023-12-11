@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>测试</title>
+
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on('input', function () {
+                if (this.value.length > 0) {
+                    var searchText = $(this).val().toLowerCase();
+                    var searchResults = [];
+                    $.getJSON("./data/item.json", function (data) {
+                        const searchKey = $("#searchInput").val();
+                        // console.log(data);
+                        for (name in data) {
+                            if (data[name].name.toLowerCase().indexOf(searchText) > -1) {
+                                searchResults.push(data[name]);
+                                // console.log(data[name]);
+                            }
+                        }
+                        $("#s").empty();
+                        console.log(searchResults);
+                        $.each(searchResults, function (index, abc) {
+                            console.log("现在遍历到了第 "+index+" 个搜索结果");
+                            // $("#s").append("<div class='item'><img src='" + this.src + "'><p>" + this.name + "</p></div>");
+                            $("#s").append(`<a href='./item.html?id=${this.id}'><li>${this.name}</li><a/>`);
+                        });
+                    });
+                }else{
+                    // 搜索框为空时，清空搜索结果
+                    $("#s").empty();
+                }
+            })
+        });
+    </script>
+    <style>
+        #searchInput {
+            width: 20rem;
+            height: 2rem;
+            border: 1px solid #DDD;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        #s{
+            padding: 0;
+            position: absolute;
+            top: 2rem;
+            /* background-color: #DDD; */
+            margin-left: 10px;
+            width: 20rem;
+            list-style-type: none;
+            /* border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem; */
+            
+        }
+        #s li{
+            background-color: #DDD;
+            padding: 10px;
+            border-bottom: 1px solid #DDD;
+            cursor: pointer;
+
+        }
+        #s li:hover{
+            background-color: #CCC;
+        }
+        /* li:last-child{
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        } */
+    </style>
+</head>
+
+<body>
+    <form action="./test.html" method="get">
+        <input type="text" name="searchkey" id="searchInput" placeholder="搜索">
+        <button type="submit" id="searchBtn">🔍搜索</button>
+        <ul id="s"></ul>
+    </form>
+
+    <!-- <div id="s"></div> -->
+</body>
+
+</html>
