@@ -12,7 +12,7 @@ $.getJSON("./data/item.json", function (data) {
     $("#item-price").text(Number(item.price).toFixed(2));
     $("#item-description").text(item.description);
     $("#item-img").attr("src", item.src);
-    $("#class").text(item.class);
+    $("#class").text(item.category);
     $("#condition").text(item.condition);
     $("#function").text(item.function);
     const category=data[id-1].category;//获得刚刚随机到的id-1的对应数据库中的产品类型区间

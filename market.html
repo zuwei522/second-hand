@@ -13,69 +13,10 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // 当文档加载完成时，执行以下函数
 
-            // 当搜索框的输入事件触发时，执行以下函数
-            $("#searchInput").on('input', function () {
-                // 如果搜索框不为空，执行以下函数
-                if (this.value.length > 0) {
-                    // 将搜索框的值转换为小写
-                    var searchText = $(this).val().toLowerCase();
-                    // 初始化一个空数组，用于存储搜索结果
-                    var searchResults = [];
-
-                    // 发送一个Ajax请求，从./data/item.json获取数据
-                    $.getJSON("./data/item.json", function (data) {
-                        // 遍历数据中的每个对象，检查它们的名称是否包含搜索文本
-                        for (name in data) {
-                            if (data[name].name.toLowerCase().indexOf(searchText) > -1) {
-                                // 如果包含，将对象添加到搜索结果数组中
-                                searchResults.push(data[name]);
-                            }
-                        }
-                        // 清空搜索结果列表
-                        $("#s").empty();
-                        // 输出搜索结果数组
-                        console.log(searchResults);
-
-                        // 遍历搜索结果数组，将每个结果添加到搜索结果列表中
-                        $.each(searchResults, function (index, abc) {
-                            console.log("现在遍历到了第 " + index + " 个搜索结果");
-                            // 将每个结果的名称和ID添加到搜索结果列表中
-                            $("#s").append(`<a class="searchResultItem list-group-item list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
-                        });
-
-                        // 绑定搜索结果列表中的每个链接，以便在单击时导航到相应的页面
-                        $('.searchResultItem').on('mousedown', function () {
-                            const target = $(this).attr('href');
-                            window.location.href = target;
-                        });
-                    });
-                } else {
-                    // 如果搜索框为空，清空搜索结果列表
-                    $("#s").empty();
-                }
-            });
-
-            // 当搜索框失去焦点时，隐藏搜索结果列表
-            $('#searchInput').on('blur', function () {
-                $("#s").addClass("d-none");
-            });
-
-            // 当搜索框获得焦点时，显示搜索结果列表
-            $('#searchInput').on('focus', function () {
-                $("#s").removeClass("d-none");
-            });
-
-        });
     </script>
     <style>
-        #s {
-            position: absolute;
-            top: 60px;
-            width: 205px;
-        }
+
     </style>
 </head>
 
@@ -93,19 +34,26 @@
             <ul class="navbar-nav">
                 <!-- 搜索栏 -->
                 <li class="nav-item" id="searchGroup">
-                    <form class="input-group">
-                        <input type="text" class="form-control" name="searchKey" id="searchInput" placeholder="搜索">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-primary">点击搜索</button>
+                    <div class="container" style="width:270px;">
+                        <div class="row Search-table">
+                            <form class="input-group">
+                                <input type="text" class="form-control" name="searchKey" id="searchInput"
+                                    placeholder="搜索">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">点击搜索</button>
+                                </div>
+                                <!-- 表单展开栏 -->
+                                <ul id="s" class="list-group" mousedown></ul>
+                            </form>
                         </div>
-                    </form>
-                    <ul id="s" class="list-group" mousedown></ul>
+                    </div>
                 </li>
+                <!-- 跳转导航栏 -->
                 <li class="nav-item">
                     <a class="nav-link random-item">随便看看</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./market.html">跳蚤市场</a>
+                    <a class="nav-link" href="./market.html?category=0">跳蚤市场</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html">登录/注册</a>
@@ -118,40 +66,48 @@
     <!-- 跳蚤市场页面 -->
     <div class="container likl">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 classify">
                 <ul class="list-group">
                     <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
                     <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
                     <!-- .align-items-center 让元素垂直对齐 -->
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=0" class="size1 recommend"><span>为你推荐</span></a>
+                    <!-- a标签里面的size1控制点击后的颜色，span里的size1控制本身颜色 -->
+                    <a href="./market.html?category=6"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1 ">
+                        <span class="size1" style="font-size: smaller;">为你推荐</span>
                         <span class="badge badge-primary badge-pill">60</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=1" class="size1 tech"><span>数码</span></a>
+                    </a>
+                    <a href="./market.html?category=1"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1 ">
+                       <span class="size1">数码</span>
                         <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=2" class="size1 Stacks"><span>书籍</span></a>
+                    </a>
+                    <a href="./market.html?category=2"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
+                        <span class="size1">书籍</span>
                         <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=3" class="size1 snacks1"><span>零食</span></a>
+                    </a>
+                    <a href="./market.html?category=3"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
+                        <span class="size1">零食</span>
                         <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=4" class="size1 life1"><span>生活</span></a>
+                    </a>
+                    <a href="./market.html?category=4"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
+                        <span class="size1">生活</span>
                         <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="./market.html?category=5" class="size1 other1"><span>其他</span></a>
+                    </a>
+                    <a href="./market.html?category=5"
+                        class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
+                        <span class="size1">其他</span>
                         <span class="badge badge-primary badge-pill">12</span>
-                    </li>
+                    </a>
                 </ul>
             </div>
             <div class="col-md-10">
                 <div class="row item-list bot">
-                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                    <!-- 商品块元素的样例 -->
+                    <!-- <div class="col-lg-3 col-md-4 col-6 ">
                         <a class="text-decoration-none" href="">
                             <div class="other-item">
                                 <div class="cot">
@@ -169,13 +125,10 @@
                             </div>
                         </a>
                     </div> 块元素样例-->
-
                     <!-- 尝试把外框架设置为固定值或者百分比样例，后续再调整。 -->
                 </div>
             </div>
         </div>
-
-
         <script src="./js/main.js"></script>
         <script src="./js/market.js"></script>
 </body>

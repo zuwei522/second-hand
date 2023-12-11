@@ -1,6 +1,9 @@
 .likl {
     padding-top: 90px;
 }
+.classify{
+    padding-top: 25px;
+}
 
 .item>img {
     height: 61%;
@@ -75,7 +78,7 @@
 .bot {
     padding-top: 10px;
 }
-
+/* 物品外部样式框架 */
 .other-item {
     background-color: #fff;
     padding: 0.5rem;
@@ -83,3 +86,16 @@
     border-radius: 0.5rem;
     box-shadow: #00000099 0 0 0.8rem;
 }
+#s {
+    position: absolute;
+     top: 100%;
+    width: 68%; 
+}
+
+/* 导航栏格子移动单位 */
+.Search-table {
+    padding-right: 5%;
+}
+/* .Expand-bar{
+   margin-top: 10px;
+} */
