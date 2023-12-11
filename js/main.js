@@ -1,7 +1,23 @@
 const token = localStorage.getItem("token");
 
-$("#logoutBtn").click(function () {
-    logout("./");
+$(document).ready(() => {
+    // 若当前为已登录状态，隐藏导航栏的登录按钮，并显示退出登录按钮
+    if (token) {
+        $(".navbar-nav > .nav-item:last > a:first").addClass("nav-item-hide");
+        $(".navbar-nav > .nav-item:last > a:last").removeClass("nav-item-hide");
+    }
+
+    // 监听退出登录按钮的点击事件
+    $("#logoutBtn").click(function () {
+        logout("./");
+    });
+
+    // 跳转随机物品详情页
+    $(".random-item")[0].addEventListener("click", jumpRandomItem, false);
+    function jumpRandomItem() {
+        let random = Math.floor((Math.random() * 10000000) % 60) + 1;
+        window.location.href = "./item.html?id=" + random;
+    }
 });
 
 function logout(target) {
@@ -15,18 +31,6 @@ function isLogin() {
     if (!token) {
         window.location.href = "./noLogin.html"; // 若未登录，则跳转至登录页面
     }
-}
-
-if (token) {
-    $(".navbar-nav > .nav-item:last > a:first").addClass("nav-item-hide");
-    $(".navbar-nav > .nav-item:last > a:last").removeClass("nav-item-hide");
-}
-
-// 跳转随机物品详情页
-$(".random-item")[0].addEventListener("click", jumpRandomItem, false);
-function jumpRandomItem() {
-    let random = Math.floor((Math.random() * 10000000) % 60) + 1;
-    window.location.href = "./item.html?id=" + random;
 }
 
 // 定义一个函数，用于打印商品列表
