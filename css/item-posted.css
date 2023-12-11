@@ -31,8 +31,7 @@ body {
 }
 /*设置断点*/
 
-h1 {
-  text-align: center;
+.top {
   color: #6c9dc5;
   text-shadow: none;
 }
