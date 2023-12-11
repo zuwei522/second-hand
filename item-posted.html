@@ -14,6 +14,7 @@
   <script src="./js/jquery-3.7.1.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
   <!-- 导航栏 -->
   <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
@@ -38,15 +39,15 @@
     </div>
   </nav>
 
-<!--主体-->
-<div class="container">
-  <h1><b>商品发布</b></h1>
-  <div class="row"><!--分成左数据右图片-->
-    <form id="product-form" class="col-md-6">
-      <div class="form-group">
-        <label for="name">商品名称:</label>
-        <input type="text" id="name" name="name" required >
-      </div><!--名字-->
+  <!--主体-->
+  <div class="container">
+    <h1><b>商品发布</b></h1>
+    <div class="row"><!--分成左数据右图片-->
+      <form id="product-form" class="col-md-6">
+        <div class="form-group">
+          <label for="name">商品名称:</label>
+          <input type="text" id="name" name="name" required>
+        </div><!--名字-->
 
         <div>
           <label for="type">商品分类</label>
@@ -83,23 +84,24 @@
       </div><!--图片预览-->
     </div>
   </div>
-
-  <script>
-    // 预览图片并更新预览区域
-    document.getElementById('image').addEventListener('change', function (e) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        document.getElementById('preview').setAttribute('src', e.target.result);
-      }
-      reader.readAsDataURL(e.target.files[0]);
-    });
-
-    function show() {
-      alert("发布成功_(:3」∠)_")
+</body>
+<script>
+  // 预览图片并更新预览区域
+  document.getElementById('image').addEventListener('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById('preview').setAttribute('src', e.target.result);
     }
+    reader.readAsDataURL(e.target.files[0]);
+  });
 
-  function show(){
+  function show() {
+    alert("发布成功_(:3」∠)_")
+  }
+
+  function show() {
     alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")
   }
+</script>
 
 </html>
