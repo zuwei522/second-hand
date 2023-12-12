@@ -32,4 +32,13 @@ $.getJSON("./data/item.json", function (data) {
 
     // 将 data 中相同分类的物品渲染在页面下方
     printItems(data, category);
+
+    // 留言功能
+    $("#sendMsgBtn").click(() => {
+        msg = $("#msgInput").val();
+        if (msg != "") {
+            $('#msgList').append(`<li class="list-group-item list-group-item-info">蒋祖为：${msg}</li>`);
+            $("#msgInput").val(null);
+        }
+    });
 }); 

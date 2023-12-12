@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>请先登录~</title>
-    <meta http-equiv="refresh" content="3;url=./login.html">
     <link rel="icon" href="./image/icon.svg">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            // 从 URL 中提取参数
+            const params = new URLSearchParams(location.search);
+            // 获取跳转目标 URL
+            const target = params.get("target");
+            setTimeout(()=>{
+                window.location.href = "./login.html?target=" + target;
+            }, 3000);
+        });
+    </script>
 </head>
 
 <body>

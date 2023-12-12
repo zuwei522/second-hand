@@ -29,7 +29,8 @@ function logout(target) {
 function isLogin() {
     // 判断当前是否为登录状态，在需要登录的页面加载时执行此函数
     if (!token) {
-        window.location.href = "./noLogin.html"; // 若未登录，则跳转至登录页面
+        var target = window.location.href;
+        window.location.href = "./noLogin.html?target=" + target; // 若未登录，则跳转至登录页面
     }
 }
 
