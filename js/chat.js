@@ -2,6 +2,8 @@
 const params = new URLSearchParams(location.search);
 // 获取要显示在详情页的物品 id
 const id = params.get("id");
+// 初始化购买状态
+let purchased = false;
 
 // 当页面加载完毕后，执行以下函数
 $(document).ready(() => {
@@ -25,6 +27,43 @@ $(document).ready(() => {
         $("#msgInput").val("");
         sendMessage(msg);
     });
+
+    // 绑定购买按钮点击事件
+    $('#purchaseBtn').on('click', () => {
+        if (!purchased) {
+            $("#chatBox").append(`<div class="col-12">
+            <div class="alert alert-success text-sm-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="green" height="20" width="20"
+            viewBox="0 0 512 512">
+            <path
+            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
+            </svg>
+            <strong>购买成功!</strong> 请尽快联系卖家交易。
+            </div>
+            </div>`);
+            purchased = true;
+
+            $('#purchaseBtn').removeClass("btn-danger").addClass("btn-outline-success disabled").text("已购买");
+        }
+    });
+
+    setTimeout(() => {
+        $("#chatBox").append(`<div class="col-12">
+        <div class="alert alert-primary text-center">
+            <strong>卖家当前处于在线状态</strong>，可直接发起聊天。
+        </div>
+    </div>`);
+    }, 1500);
+
+    setTimeout(() => {
+        $("#chatBox").append(`
+        <div class="col-12">
+            <div class="alert alert-danger text-center">
+                涉及资金交易，请确认对方身份，<strong>谨防诈骗</strong>。
+            </div>
+        </div>`);
+    }, 2000);
+
 });
 
 // 生成消息的 HTML
@@ -60,13 +99,13 @@ function msgOutput(target, msg) {
     return `<div class="col-12">
     <div class="row mb-3${flag ? "" : " flex-row-reverse"}">
         <div class="userAvatarInner">
-            <img src="./image/${flag ? "othersAvatar.jpg" : "myAvatar.jpg" }" alt="" width="60px"
+            <img src="./image/${flag ? "othersAvatar.jpg" : "myAvatar.jpg"}" alt="" width="60px"
                 class="userAvatar">
         </div>
-        <div class="col-9${flag ? "" : " d-flex justify-content-end" }">
-            <div class="msg msg-${flag ? "left" : "right" }">
+        <div class="col-9${flag ? "" : " d-flex justify-content-end"}">
+            <div class="msg msg-${flag ? "left" : "right"}">
                 ${msg}
-                <div class="msgTime msgTime-${flag ? " left" : "right" }">
+                <div class="msgTime msgTime-${flag ? " left" : "right"}">
                     ${timeStr}
                 </div>
             </div>
@@ -79,6 +118,7 @@ function msgOutput(target, msg) {
 function sendMessage(msg) {
     $("#chatBox").append(msgOutput("right", msg)); // 在尾部插入新发送的消息
     $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight); // 滚动条滚到最底部
+
     if (msg == "在吗？" || msg == "在？" || msg == "东西还在吗？") {
         setTimeout(() => {
             $("#chatBox").append(msgOutput("left", '在的'));
