@@ -1,0 +1,89 @@
+body {
+  padding-top: 90px;
+  background: url(../image/netAuth.webp) no-repeat center 0px;
+  height: 100vh;
+  overflow: auto;
+  /* background-image: url(./image/netAuth.webp); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 80%;
+  margin: 18% auto;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    margin: 14% auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+  margin: 5% auto;
+  }
+}
+/*设置断点*/
+
+.top {
+  color: #6c9dc5;
+  text-shadow: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+#preview {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.h1{
+  color: rgb(0, 195, 255);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  font-family: 幼圆; 
+  font-size:60px;
+}

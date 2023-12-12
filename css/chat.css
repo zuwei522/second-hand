@@ -1,0 +1,99 @@
+#msg-window {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.box-title {
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+  font-size: 1.5rem;
+}
+
+#item-name {
+  font-size: 1.2rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+}
+
+#item-price {
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: verdana, arial;
+}
+
+#item-price::before {
+  content: "￥";
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+#item-description {
+  font-size: 1rem;
+  font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+  overflow: auto;
+  margin-bottom: 2rem;
+}
+
+.msg-box {
+  height: 60vh;
+  min-height: 50vh;
+  max-height: 80vh;
+  background-color: #eee;
+  overflow-x: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.text-box {
+  height: 10vh;
+  min-height: 100px;
+}
+
+#msgInput {
+  background-color: #eee;
+}
+
+.user-avatar {
+  border-radius: 50%;
+}
+
+.msg {
+  border-radius: 1rem;
+  width: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-break: break-all;
+}
+
+.msg-left {
+  background-color: #fff;
+}
+
+.msg-right {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.msg-time {
+  font-size: small;
+}
+
+.msg-time-left {
+  color: #777;
+  text-align: right;
+}
+
+.msg-time-right {
+  color: #eee;
+}
+
+main {
+  height: 100vh;
+  overflow: auto;
+  background-image: url(../image/netAuth.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

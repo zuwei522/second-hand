@@ -1,6 +1,7 @@
+/*背景设置*/
 main {
   padding-top: 90px;
-  background-color: skyblue;
+  background: url(../image/netAuth.webp) no-repeat center 0px;
   height: 100vh;
   overflow: auto;
   /* background-image: url(./image/netAuth.webp); */
@@ -9,6 +10,15 @@ main {
   background-size: cover;
 }
 
+/*设置 “更多商品” 的字体”*/
+h1{
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  font-family: 幼圆; 
+  font-size:60px;
+}
+
+/*对物品的详细页面图片所在的块元素进行设置*/
 .col-item-img {
   display: flex;
   flex-wrap: wrap;
@@ -18,10 +28,12 @@ main {
   padding-top: 1rem;
 }
 
+/*设置图片的最大高度*/
 #item-img {
   max-height: 500px;
 }
-
+ 
+/*对物品的详细页面所在的区块进行设置*/
 .row-item-info {
   background-color: #fff;
   margin-bottom: 1rem;
@@ -29,17 +41,20 @@ main {
   box-shadow: #666 0 0 0.8rem;
 }
 
+/*设置详细物品名字的大小与字体*/
 #item-name {
   font-size: 1.7rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
 }
 
+/*设置更多商品名字的大小与字体*/
 .other-item-name {
   color: #233;
   font-size: 1.2rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
 }
 
+/*物品售价的字体设置*/
 #item-price,
 .other-item-price {
   color: red;
@@ -48,6 +63,7 @@ main {
   font-family: verdana, arial;
 }
 
+/*人民币的字体设置*/
 #item-price::before,
 .other-item-price::before {
   content: "￥";
@@ -55,10 +71,12 @@ main {
   font-size: 1.5rem;
 }
 
+/*字体大小*/
 .other-item-price {
   font-size: 1.5rem;
 }
 
+/*物品介绍字体设置*/
 #item-description {
   font-size: 1.2rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
@@ -67,10 +85,12 @@ main {
   margin-bottom: 2rem;
 }
 
+/*对更多商品所在的区块设置一个内下边距*/
 .row-item-others {
   margin-bottom: 2.5rem;
 }
 
+/*设置每一个小区块*/
 .other-item {
   background-color: #fff;
   padding: 0.5rem;
@@ -78,7 +98,8 @@ main {
   border-radius: 0.5rem;
   box-shadow: #00000099 0 0 0.8rem;
 }
-
+ 
+/**/
 .other-item:hover {
   /* background-color: #BBB; */
   filter: brightness(90%);
@@ -92,4 +113,11 @@ main {
   background-color: #fff;
   color: #17a2b8;
   cursor: pointer;
+}
+
+/*使更多商品的图片更安定*/
+.guding{
+  height: 239px;
+  width: 100%;
+  object-fit: cover;
 }

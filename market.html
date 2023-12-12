@@ -8,36 +8,21 @@
     <link rel="icon" href="./image/icon.svg">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/market.css">
+    <!-- <link rel="stylesheet" href="./css/item.css"> -->
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <style>
-        .likl{
-            padding-top: 80px;
-        }
+    <script>
 
-        .item > img{
-            height: 61%;
-            width:100%;
-        }
-        .sizecolor{
-            color: brown;
-            font-size: 15pt;
-        }
-.size1{
-            color: black;
-            font-size: 15pt;
-        }
-.size1:hover{
-            text-decoration: none;
-            color: black;
-        }
-            </style>
+    </script>
+    <style>
+
+    </style>
 </head>
 
-<body onload="isLogin()">
+<body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top">
         <a class="navbar-brand" href="./">
             <img src="./image/logo.png" alt="logo" height="60px">
         </a>
@@ -45,14 +30,30 @@
             data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="" class="size1"></a>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
+                <!-- 搜索栏 -->
+                <li class="nav-item" id="searchGroup">
+                    <div class="container" style="width:270px;">
+                        <div class="row search-table">
+                            <form class="input-group">
+                                <input type="text" class="form-control" name="searchKey" id="searchInput"
+                                    placeholder="搜索" required>
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">点击搜索</button>
+                                </div>
+                                <!-- 表单展开栏 -->
+                                <ul id="search_results" class="list-group" mousedown></ul>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <!-- 跳转导航栏 -->
                 <li class="nav-item">
                     <a class="nav-link random-item">随便看看</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./market.html">跳蚤市场</a>
+                    <a class="nav-link" href="./market.html?category=0">跳蚤市场</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html">登录/注册</a>
@@ -63,47 +64,74 @@
     </nav>
 
     <!-- 跳蚤市场页面 -->
-    <div class="container likl">
-        <div class="row">
-            <div class="col-md-2">
-                <ul class="list-group">
-                    <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
-                    <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
-                    <!-- .align-items-center 让元素垂直对齐 -->
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 recommend"><span>为你推荐</span></a>
-                        <span class="badge badge-primary badge-pill">60</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 tech"><span>数码</span></a>
-                        <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 Stacks"><span>书籍</span></a>
-                        <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 snacks1"><span>零食</span></a>
-                        <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 life1"><span>生活</span></a>
-                        <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center btn-outline-success">
-                        <a href="#" class="size1 other1"><span>其他</span></a>
-                        <span class="badge badge-primary badge-pill">12</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-10">
-                <div class="row item-list">
-
+    <div class="bg-2">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-2 category_bar">
+                    <ul class="list-group">
+                        <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
+                        <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
+                        <!-- .align-items-center 让元素垂直对齐 -->
+                        <!-- a标签里面的sizecategory_bar控制点击后的颜色，span里的sizeCategory_bar控制本身颜色 -->
+                        <a href="./market.html?category=6"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar ">
+                            <span class="sizeCategory_bar">为你推荐</span>
+                            <span class="badge badge-primary badge-pill">60</span>
+                        </a>
+                        <a href="./market.html?category=1"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar ">
+                            <span class="sizecategory_bar">数码</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                        <a href="./market.html?category=2"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">书籍</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                        <a href="./market.html?category=3"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">零食</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                        <a href="./market.html?category=4"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">生活</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                        <a href="./market.html?category=5"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">其他</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <div class="row item-list product_display_area">
+                        <!-- 商品块元素的样例 -->
+                        
+                        <!-- <div class="col-lg-3 col-md-4 col-6 ">
+                        <a class="text-decoration-none" href="">
+                            <div class="other-item">
+                                <div class="picture_frame">
+                                    <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
+                                </div>
+                                <div class="commodity-price">
+                                    <div class="size-price">￥199</div>
+                                </div>
+                                <div class="commodity-name">
+                                    <div class="size-name">全新腕表</div>
+                                </div>
+                                <div class="commodity-description">
+                                    <div class="size-description">送女朋友的结果提前hguuy分手了，所以出了。</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 块元素样例-->
+                        <!-- 尝试把外框架设置为固定值或者百分比样例，后续再调整。 -->
+                    </div>
                 </div>
             </div>
         </div>
-
-
         <script src="./js/main.js"></script>
         <script src="./js/market.js"></script>
 </body>

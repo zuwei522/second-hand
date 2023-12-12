@@ -21,13 +21,13 @@ body {
 .navbar-nav .nav-link {
   color: #fff;
   text-shadow: 0 0 8px #000;
-  /* 设置导航栏链接文字颜色为白色 */
+  transition-duration: 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
   /* background-color: rgba(255, 255, 255, 0.2); */
   text-shadow: 0 0 10px #128afa;
-  color: #128afa;
+  /* color: #128afa; */
   /* 设置导航栏链接鼠标悬停时的背景色和透明度 */
 }
 

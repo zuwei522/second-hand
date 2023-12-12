@@ -1,17 +1,6 @@
-/* .bg-3 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-} */
 :root {
 	--index: calc(1vw + 1vh);
 	--transition: cubic-bezier(.1, .7, 0, 1);
-}
-.bg-3 {
-	/* background-color: #141414; */
-}
-.bg-3 .row {
-	/* justify-content: center; */
 }
 .wrapper {
 	display: flex;
