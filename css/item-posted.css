@@ -1,20 +1,20 @@
 body {
-  padding-top: 90px;
-  background-image: url(../image/netAuth.webp);
-  height: 100vh;
-  overflow: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding-top: 90px;/*页面的顶部*/
+  background-image: url(../image/netAuth.webp);/*页面的背景图片*/
+  height: 100vh;/*页面的高度*/
+  overflow: auto;/*内容超出页面时，允许自动滚动*/
+  background-repeat: no-repeat;/*背景图片不重复*/
+  background-position: center;/*背景图片的位置居中*/
+  background-size: cover;/*背景图片的大小会自动调整，以完全覆盖容器的宽度、高度*/
 }
 
 .container {
-  max-width: 80%;
-  margin: 18% auto;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;/*容器的最大宽度为80%*/
+  margin: 18% auto;/*容器的左右外边距为18%，上下外边距为自动*/
+  background-color: #ffffff;/*容器的背景颜色为白色*/
+  padding: 10px;/*容器的内边距为10像素*/
+  border-radius: 5px;/*容器的边框半径为5像素*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*容器的阴影为水平、垂直、半径为10像素的黑色阴影，阴影的透明度为10%*/
 }
 
 @media screen and (min-width: 576px) {
@@ -32,57 +32,56 @@ body {
 
 .top {
   color: #6c9dc5;
-  text-shadow: none;
+  text-shadow: none;/*清除文本阴影*/
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px;/*容器的底部外边距*/
 }
 
 label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+  display: block;/*容器的显示类型为块级元素*/
+  font-weight: bold;/*字体加粗*/
+  margin-bottom: 5px;/*器的底部外边距增加5像素*/
 }
 
 input[type="text"], textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  width: 100%;/*元素的宽度*/
+  padding: 10px;/*元素的内边距设置为10像素*/
+  border: 1px solid #ccc;/*元素的边框设置为1像素宽，颜色为#ccc*/
+  border-radius: 3px;/*素的边框半径设置为3像素*/
 }
 
 textarea {
-  height: 100px;
+  height: 100px;/*元素的固定高度*/
 }
 
 .btn-submit {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 3px;
-  width: 100%;
-  cursor: pointer;
+  background-color: #4CAF50;/*按钮的背景颜色*/
+  color: white;/*按钮的文本颜色*/
+  border: none;/*移除了按钮的边框*/
+  padding: 10px;/*按钮的内边距设置为10像素*/
+  text-align: center;/*按钮的文本居中*/
+  text-decoration: none;/*移除了按钮文本的下划线*/
+  display: inline-block;/*将按钮设置为内联块元素，使其占据整个宽度*/
+  font-size: 16px;/*钮的字体大小*/
+  border-radius: 3px;/*按钮的边框半径*/
+  width: 100%;/*按钮的宽度设置*/
+  cursor: pointer;/*按钮的鼠标光标设置为指针形状*/
 }
 
 .btn-submit:hover {
-  background-color: #45a049;
+  background-color: #45a049;/*鼠标悬停在提交按钮上时，按钮的背景颜色将变为绿色*/
 }
 
 #preview {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%;/*容器的宽度*/
+  height: auto;/*容器的固定高度设置为自动*/
+  margin-bottom: 10px;/*容器的底部外边距增加10像素*/
 }
 
 .h1{
   color: rgb(0, 195, 255);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
-  font-family: 幼圆; 
-  font-size:60px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*h1标签的阴影效果*/
+  font-family: 幼圆; /*标签的字体*/
 }
