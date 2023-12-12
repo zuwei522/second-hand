@@ -34,7 +34,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html">登录/注册</a>
-                    <a class="nav-link nav-item-hide" onclick="logout('./')">退出登录</a>
+                    <a class="nav-link nav-item-hide" id="logoutBtn">退出登录</a>
                 </li>
             </ul>
         </div>
@@ -75,7 +75,7 @@
                     <a id="iWantItBtn_1" class="btn btn-danger mb-3 d-none d-sm-block">我想要</a>
                     <a href="./chat.html" id="iWantItBtn_2" class="btn btn-danger d-sm-none fixed-bottom">我想要</a>
 
-                    <ul class="list-group mb-3">
+                    <ul class="list-group" id="msgList">
                         <li class="list-group-item list-group-item-info"><b>留言</b></li>
                         <li class="list-group-item list-group-item-info">
                             张三：50包邮解君愁
@@ -89,11 +89,13 @@
                         <li class="list-group-item list-group-item-info">
                             user114514：这个好用吗？<span class="badge badge-info reply-btn">回复</span>
                         </li>
+                    </ul>
+                    <ul class="list-group mb-3">
                         <li class="list-group-item list-group-item-info">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="看对眼就留言，问问更多细节~" />
+                                <input id="msgInput" type="text" class="form-control" placeholder="看对眼就留言，问问更多细节~" />
                                 <div class="input-group-append">
-                                    <button class="btn btn-info" type="button">发送</button>
+                                    <button id="sendMsgBtn" class="btn btn-info" type="button">发送</button>
                                 </div>
                             </div>
                         </li>

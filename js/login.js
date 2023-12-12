@@ -50,7 +50,18 @@ loginBtn.onclick = function () {
             if (usr_passwd === md5(loginPasswd.value)) {
                 localStorage.setItem("token", true);
                 msgBox("login-msg", "success", true, "登录成功！");
-                window.location.href = "./";
+                setTimeout(() => {
+                    // 从 URL 中提取参数
+                    const params = new URLSearchParams(location.search);
+                    // 获取跳转目标 URL
+                    const target = params.get("target");
+                    // 跳转至目标 URL
+                    if (target) {
+                        window.location.href = target;
+                    } else {
+                        window.location.href = "/";
+                    }
+                }, 1000);
             } else {
                 // 密码错误
                 msgBox(
