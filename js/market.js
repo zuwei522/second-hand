@@ -40,7 +40,8 @@ $(document).ready(function () {
                 $('.searchResultItem').on('mousedown', function () {
                     //从列表对应的a标签获取链接
                     const target = $(this).attr('href');
-                    window.location.href = target;
+                    // 新窗口打开
+                    window.open(target);
                 });
             });
         } else {

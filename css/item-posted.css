@@ -3,6 +3,7 @@ body {
   background-image: url(../image/netAuth.webp);/*页面的背景图片*/
   height: 100vh;/*页面的高度*/
   overflow: auto;/*内容超出页面时，允许自动滚动*/
+  background-attachment: fixed;
   background-repeat: no-repeat;/*背景图片不重复*/
   background-position: center;/*背景图片的位置居中*/
   background-size: cover;/*背景图片的大小会自动调整，以完全覆盖容器的宽度、高度*/
@@ -45,7 +46,7 @@ label {
   margin-bottom: 5px;/*器的底部外边距增加5像素*/
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="number"], textarea {
   width: 100%;/*元素的宽度*/
   padding: 10px;/*元素的内边距设置为10像素*/
   border: 1px solid #ccc;/*元素的边框设置为1像素宽，颜色为#ccc*/
