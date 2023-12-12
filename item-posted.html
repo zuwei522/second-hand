@@ -19,13 +19,17 @@
   <nav class="navbar navbar-expand-sm fixed-top"><!--fixed-top-->
     <a class="navbar-brand" href="./">
       <img src="./image/logo.png" alt="logo" height="60px">
-    </a>
+    </a><!--导航栏图标-->
     <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
+    <!--navbar-toggler是导航栏可折叠-->
+    <!--data-toggle="collapse"点击时收起或展开-->
+    <!--data-target="#collapsibleNavbar"创建折叠导航栏-->
+    <!--class="navbar-toggler-icon"折叠后的图标-->
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar"><!--collapse navbar-collapse使以下元素可折叠-->
+      <ul class="navbar-nav"><!--用于全高和轻型导航-->
+        <li class="nav-item"><!--导航栏元素-->
           <a class="nav-link" href="./item.html">物品详情</a>
         </li>
         <li class="nav-item">
@@ -40,18 +44,18 @@
 
   <!--主体-->
   <div class="container">
-    <h1><span class="top" style="text-align: center;display:block;">商品发布</span></h1>
+    <h1><span class="top" style="text-align: center;display:block;">商品发布</span></h1><!--style="text-align: center;display:block;"水平居中-->
     <div class="row"><!--分成左数据右图片-->
-      <form id="product-form" class="col-md-6">
-        <div class="form-group">
-          <label for="name">商品名称:</label>
-          <input type="text" id="name" name="name" required>
+      <form id="product-form" class="col-md-6"><!--表单标签-->
+        <div class="form-group"><!--表单内元素块-->
+          <label for="name">商品名称:</label><!--表单项标题-->
+          <input type="text" id="name" name="name" required><!--输入标签-->
         </div><!--名字-->
 
         <div>
-          <label for="type">商品分类</label>
-          <select class="control-input custom-select" id="type" name="type" required>
-            <option value="">请选择物品分类</option>
+          <label for="type">商品分类</label><!--表单项标题-->
+          <select class="control-input custom-select" id="type" name="type" required><!--创建下拉选择--><!--control-input custom-select为boostrap里的css样式-->
+            <option value="">请选择物品分类</option><!--下列选项中的元素-->
             <option value="0">数码</option>
             <option value="1">书籍</option>
             <option value="2">零食</option>
@@ -61,8 +65,8 @@
         </div><!--分类-->
         <br>
         <div class="form-group">
-          <label for="description">商品描述:</label>
-          <textarea id="description" name="description" required placeholder="如：简单介绍一下物品，商品损坏程度如何，可刀或不刀，几成新"></textarea>
+          <label for="description">商品描述:</label><!--表单项标题-->
+          <textarea id="description" name="description" required placeholder="如：简单介绍一下物品，商品损坏程度如何，可刀或不刀，几成新"></textarea><!--一个多行文本输入控件-->
         </div><!--描述-->
 
         <div class="form-group">
@@ -71,12 +75,16 @@
         </div><!--价钱-->
 
         <div class="form-group">
-          <label for="image">商品图片:</label>
+          <label for="image">商品图片:</label><!--表单项标题-->
           <input type="file" id="image" name="image" accept="image/*" required>
+          <!--type="file"  指定了输入控件的类型-->
+          <!--accept="image/*"  只接受以 "image/" 为前缀的文件类型-->
         </div><!--选择图片-->
 
         <button id="go" type="submit" class="btn-submit" onclick="show()">发布</button><!--“发布按钮”-->
-      </form><!--“发布按钮”-->
+        <!--type="submit"按钮类型  class="btn-submit"按钮类名-->
+        <!--onclick="show()"点击时触发，js实现弹窗-->
+      </form>
 
       <div class="col-md-6">
         <img id="preview" src="./image/20230417155238_55620.jpg" alt="商品图片预览">
@@ -85,20 +93,16 @@
   </div>
   <script>
     // 预览图片并更新预览区域
-    document.getElementById('image').addEventListener('change', function (e) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        document.getElementById('preview').setAttribute('src', e.target.result);
+    document.getElementById('image').addEventListener('change', function (e) {/*当 id 为 "image" 的文件上传输入控件的 "change" 事件触发时,将执行后续的代码块*/
+      var reader = new FileReader();/*这是创建一个 FileReader 对象,用于读取上传的文件*/
+      reader.onload = function (e) {/*这是为 FileReader 对象的 "load" 事件绑定一个处理函数。当文件被成功读取后,将触发该事件,并传递一个包含文件数据的对象作为参数*/
+        document.getElementById('preview').setAttribute('src', e.target.result);/*将读取到的文件数据设置为 id 为 "preview" 的图片标签的 "src" 属性值*/
       }
-      reader.readAsDataURL(e.target.files[0]);
+      reader.readAsDataURL(e.target.files[0]);/*这是调用 FileReader 对象的 "readAsDataURL" 方法,将上传的文件以 DataURL 格式读取。DataURL 是 URL 编码的文件数据,可以作为 "src" 属性值使用在 HTML 图片标签中*/
     });
 
-    function show() {
-      alert("发布成功_(:3」∠)_")
-    }
-
-    function show() {
-      alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")
+    function show() { /*函数名为 "show"*/
+      alert("发布成功_(:3」∠)_    物品正在审核，审核成功后就可以啦~~~~~~")/*当函数被调用时,将弹出一个提示框*/
     }
   </script>
 </body>
