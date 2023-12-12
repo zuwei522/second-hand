@@ -15,6 +15,7 @@ $(document).ready(function () {
             $.getJSON("./data/item.json", function (data) {
                 // 遍历数据中的每个对象，检查它们的名称是否包含搜索文本
                 for (name in data) {
+                    //
                     if (data[name].name.toLowerCase().indexOf(searchText) > -1) {
                         // 如果包含，将对象添加到搜索结果数组中
                         searchResults.push(data[name]);
@@ -27,9 +28,9 @@ $(document).ready(function () {
 
                 // 遍历搜索结果数组，将每个结果添加到搜索结果列表中
                 $.each(searchResults, function (index, abc) {
-                    console.log("现在遍历到了第 " + index + " 个搜索结果");
+                    console.log("现在遍历到了第 " + index + " 个搜索结果");//控制面板能看到
                     // 将每个结果的名称和ID添加到搜索结果列表中
-                    $("#s").append(`<a class="searchResultItem list-group-item list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
+                    $("#search_results").append(`<a class="searchResultItem list-group-item list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
                 });
 
                 // 绑定搜索结果列表中的每个链接，以便在单击时导航到相应的页面
@@ -40,18 +41,18 @@ $(document).ready(function () {
             });
         } else {
             // 如果搜索框为空，清空搜索结果列表
-            $("#s").empty();
+            $("#search_results").empty();
         }
     });
 
     // 当搜索框失去焦点时，隐藏搜索结果列表
     $('#searchInput').on('blur', function () {
-        $("#s").addClass("d-none");
+        $("#search_results").addClass("d-none");
     });
 
     // 当搜索框获得焦点时，显示搜索结果列表
     $('#searchInput').on('focus', function () {
-        $("#s").removeClass("d-none");
+        $("#search_results").removeClass("d-none");
     });
 
 });
@@ -62,9 +63,9 @@ $(document).ready(function () {
 $(document).ready(function () {
     $.getJSON("./data/item.json", function (data) {
         // 获取URL中的参数，获取当前要显示的类别
-        const params = new URLSearchParams(location.search);
-        const category = params.get('category');
-        const searchKey = params.get('searchKey');
+        const params = new URLSearchParams(location.search);//从地址搜索参数
+        const category = params.get('category');//
+        const searchKey = params.get('searchKey');//从地址栏中提取搜索框中searchkey的关键词
 
         // 根据参数值判断要显示的类别
         console.log(category);
@@ -114,7 +115,7 @@ $(document).ready(function () {
                         $.each(searchResults, function (index, abc) {
                             console.log("现在遍历到了第 " + index + " 个搜索结果");
                             // 将每个结果的名称和ID添加到搜索结果列表中
-                            $(".bot").append(
+                            $(".product_display_area").append(
                         `<div class="col-lg-3 col-md-4 col-6 mt-3">
                               <a class="text-decoration-none" href = "item.html?id=${this.id}" >
                                  <div class="other-item">

@@ -34,12 +34,14 @@ function isLogin() {
 }
 
 // 定义一个函数，用于打印商品列表
+//传入一个数据，data是一个形参，在此处可以将他比喻为一个微型数据存储的地方，例如传入一个“零食”，targetCategory==“零食”
 function printItems(data, targetCategory) {
-    // 遍历数据中的每个商品
+    // 相当于遍历data里边的category（分类）
     for (category in data) {
         // 如果商品的类别等于目标类别，则将商品添加到列表中
         if (data[category].category == targetCategory) {
-            // 创建一个包含商品信息的HTML元素
+            //在class为item-list的div标签内创建一个包含商品信息的HTML元素
+            //函数继续循环
             $('.item-list').append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
                <a class="text-decoration-none" href = "item.html?id=${data[category].id}" >
                    <div class="other-item">
