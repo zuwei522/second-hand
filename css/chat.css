@@ -1,9 +1,9 @@
-#msgWindow {
+#msg-window {
   background-color: #fff;
   border-radius: 1rem;
 }
 
-.boxTitle {
+.box-title {
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
   font-size: 1.5rem;
 }
@@ -30,14 +30,13 @@
   font-size: 1rem;
   font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
   overflow: auto;
-  /* height: 20rem; */
   margin-bottom: 2rem;
 }
 
 .msg-box {
   height: 60vh;
-  min-height: 300px;
-  max-height: 500px;
+  min-height: 50vh;
+  max-height: 80vh;
   background-color: #eee;
   overflow-x: hidden;
   padding-left: 30px;
@@ -54,11 +53,7 @@
   background-color: #eee;
 }
 
-.userAvatarinner {
-  /* padding-left: 30px; */
-}
-
-.userAvatar {
+.user-avatar {
   border-radius: 50%;
 }
 
@@ -81,20 +76,20 @@
   background-color: #007bff;
 }
 
-.msgTime {
+.msg-time {
   font-size: small;
 }
 
-.msgTime-left {
+.msg-time-left {
   color: #777;
   text-align: right;
 }
 
-.msgTime-right {
+.msg-time-right {
   color: #eee;
 }
 
-body {
+main {
   height: 100vh;
   overflow: auto;
   background-image: url(../image/netAuth.webp);

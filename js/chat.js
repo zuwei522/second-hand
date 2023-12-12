@@ -33,7 +33,7 @@ $(document).ready(() => {
         if (!purchased) {
             $("#chatBox").append(`<div class="col-12">
             <div class="alert alert-success text-sm-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="green" height="20" width="20"
+            <svg xmlns="http://www.w3.org/2000/svg" fill="green" height="16" width="16"
             viewBox="0 0 512 512">
             <path
             d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
@@ -49,7 +49,8 @@ $(document).ready(() => {
 
     setTimeout(() => {
         $("#chatBox").append(`<div class="col-12">
-        <div class="alert alert-primary text-center">
+        <div class="alert alert-primary text-sm-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="green" height="16" width="20" viewBox="0 0 640 512"><path d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
             <strong>卖家当前处于在线状态</strong>，可直接发起聊天。
         </div>
     </div>`);
@@ -58,7 +59,8 @@ $(document).ready(() => {
     setTimeout(() => {
         $("#chatBox").append(`
         <div class="col-12">
-            <div class="alert alert-danger text-center">
+            <div class="alert alert-danger text-sm-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#CC3545" height="16" width="20" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
                 涉及资金交易，请确认对方身份，<strong>谨防诈骗</strong>。
             </div>
         </div>`);
@@ -98,14 +100,14 @@ function msgOutput(target, msg) {
     var timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${weekStr}`;
     return `<div class="col-12">
     <div class="row mb-3${flag ? "" : " flex-row-reverse"}">
-        <div class="userAvatarInner">
+        <div class="user-avatarInner">
             <img src="./image/${flag ? "othersAvatar.jpg" : "myAvatar.jpg"}" alt="" width="60px"
-                class="userAvatar">
+                class="user-avatar">
         </div>
         <div class="col-9${flag ? "" : " d-flex justify-content-end"}">
             <div class="msg msg-${flag ? "left" : "right"}">
                 ${msg}
-                <div class="msgTime msgTime-${flag ? " left" : "right"}">
+                <div class="msg-time msg-time-${flag ? " left" : "right"}">
                     ${timeStr}
                 </div>
             </div>
