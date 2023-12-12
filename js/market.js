@@ -117,7 +117,7 @@ $(document).ready(function () {
                             // 将每个结果的名称和ID添加到搜索结果列表中
                             $(".product_display_area").append(
                         `<div class="col-lg-3 col-md-4 col-6 mt-3">
-                              <a class="text-decoration-none" href = "item.html?id=${this.id}" >
+                              <a class="text-decoration-none" href = "item.html?id=${this.id}" target="_blank">
                                  <div class="other-item">
                                      <div class="picture_frame">
                                        <img src="${this.src}" class="img-fluid img-item" />

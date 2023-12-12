@@ -43,7 +43,7 @@ function printItems(data, targetCategory) {
             //在class为item-list的div标签内创建一个包含商品信息的HTML元素
             //函数继续循环
             $('.item-list').append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
-               <a class="text-decoration-none" href = "item.html?id=${data[category].id}" >
+               <a class="text-decoration-none" href = "item.html?id=${data[category].id}" target="_blank">
                    <div class="other-item">
                        <div class="picture_frame">
                            <img src="${data[category].src}" class="img-fluid img-item" />
