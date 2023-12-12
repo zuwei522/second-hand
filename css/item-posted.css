@@ -3,7 +3,6 @@ body {
   background-image: url(../image/netAuth.webp);/*页面的背景图片*/
   height: 100vh;/*页面的高度*/
   overflow: auto;/*内容超出页面时，允许自动滚动*/
-  background-attachment: fixed;
   background-repeat: no-repeat;/*背景图片不重复*/
   background-position: center;/*背景图片的位置居中*/
   background-size: cover;/*背景图片的大小会自动调整，以完全覆盖容器的宽度、高度*/
@@ -88,5 +87,6 @@ textarea {
 }
 
 .span{
-  style:"text-align: center; display: block"; /*span标签的样式*/
+text-align: center; 
+display: block; /*span标签的样式*/
 }
