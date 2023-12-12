@@ -35,7 +35,7 @@
                 <!-- 搜索栏 -->
                 <li class="nav-item" id="searchGroup">
                     <div class="container" style="width:270px;">
-                        <div class="row Search-table">
+                        <div class="row search-table">
                             <form class="input-group">
                                 <input type="text" class="form-control" name="searchKey" id="searchInput"
                                     placeholder="搜索" required>
@@ -43,7 +43,7 @@
                                     <button type="submit" class="btn btn-primary">点击搜索</button>
                                 </div>
                                 <!-- 表单展开栏 -->
-                                <ul id="s" class="list-group" mousedown></ul>
+                                <ul id="search_results" class="list-group" mousedown></ul>
                             </form>
                         </div>
                     </div>
@@ -65,62 +65,67 @@
 
     <!-- 跳蚤市场页面 -->
     <div class="bg-2">
-        <div class="container likl">
+        <div class="container main">
             <div class="row">
-                <div class="col-md-2 classify">
+                <div class="col-md-2 category_bar">
                     <ul class="list-group">
                         <!-- .d-flex 可以让一个非 flexbox 变成 flexbox -->
                         <!-- .justify-content-between 可以让盒子内的元素平均分布 -->
                         <!-- .align-items-center 让元素垂直对齐 -->
-                        <!-- a标签里面的size1控制点击后的颜色，span里的size1控制本身颜色 -->
+                        <!-- a标签里面的sizecategory_bar控制点击后的颜色，span里的sizeCategory_bar控制本身颜色 -->
                         <a href="./market.html?category=6"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1 ">
-                            <span class="size1" style="font-size: smaller;">为你推荐</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar ">
+                            <span class="sizeCategory_bar">为你推荐</span>
                             <span class="badge badge-primary badge-pill">60</span>
                         </a>
                         <a href="./market.html?category=1"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1 ">
-                            <span class="size1">数码</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar ">
+                            <span class="sizecategory_bar">数码</span>
                             <span class="badge badge-primary badge-pill">12</span>
                         </a>
                         <a href="./market.html?category=2"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
-                            <span class="size1">书籍</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">书籍</span>
                             <span class="badge badge-primary badge-pill">12</span>
                         </a>
                         <a href="./market.html?category=3"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
-                            <span class="size1">零食</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">零食</span>
                             <span class="badge badge-primary badge-pill">12</span>
                         </a>
                         <a href="./market.html?category=4"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
-                            <span class="size1">生活</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">生活</span>
                             <span class="badge badge-primary badge-pill">12</span>
                         </a>
                         <a href="./market.html?category=5"
-                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success size1">
-                            <span class="size1">其他</span>
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">其他</span>
+                            <span class="badge badge-primary badge-pill">12</span>
+                        </a>
+                        <a href="./market.html?category=10"
+                            class="list-group-item d-flex justify-content-between align-items-center btn-outline-success sizecategory_bar">
+                            <span class="sizecategory_bar">物品求购</span>
                             <span class="badge badge-primary badge-pill">12</span>
                         </a>
                     </ul>
                 </div>
                 <div class="col-md-10">
-                    <div class="row item-list bot">
+                    <div class="row item-list product_display_area">
                         <!-- 商品块元素的样例 -->
                         <!-- <div class="col-lg-3 col-md-4 col-6 ">
                         <a class="text-decoration-none" href="">
                             <div class="other-item">
-                                <div class="cot">
+                                <div class="picture_frame">
                                     <img src="./image/Findpiece/16.jpg" class="img-fluid img-item" />
                                 </div>
-                                <div class="cot-price">
+                                <div class="commodity-price">
                                     <div class="size-price">￥199</div>
                                 </div>
-                                <div class="cot-name">
+                                <div class="commodity-name">
                                     <div class="size-name">全新腕表</div>
                                 </div>
-                                <div class="cot-description">
+                                <div class="commodity-description">
                                     <div class="size-description">送女朋友的结果提前hguuy分手了，所以出了。</div>
                                 </div>
                             </div>

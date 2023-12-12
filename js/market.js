@@ -90,6 +90,7 @@ $(document).ready(function () {
                 printItems(data, '其他');
                 console.log('其他');
                 break;
+            case 10:
             default:
                 if (searchKey != null) {
                     $('#searchInput').val(searchKey);
@@ -113,24 +114,26 @@ $(document).ready(function () {
                         $.each(searchResults, function (index, abc) {
                             console.log("现在遍历到了第 " + index + " 个搜索结果");
                             // 将每个结果的名称和ID添加到搜索结果列表中
-                            $(".bot").append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
-<a class="text-decoration-none" href = "item.html?id=${this.id}" >
-<div class="other-item">
-   <div class="cot">
-       <img src="${this.src}" class="img-fluid img-item" />
-   </div>
-   <div class="cot-price">
-       <div class="size-price">￥${this.price}</div>
-   </div>
-   <div class="cot-name">
-       <div class="size-name">${this.name}</div>
-   </div>
-   <div class="cot-description">
-       <div class="size-description">${this.description}</div>
-   </div>
-</div>
-</a >
-</div >`)
+                            $(".bot").append(
+                        `<div class="col-lg-3 col-md-4 col-6 mt-3">
+                              <a class="text-decoration-none" href = "item.html?id=${this.id}" >
+                                 <div class="other-item">
+                                     <div class="picture_frame">
+                                       <img src="${this.src}" class="img-fluid img-item" />
+                                     </div>
+                                    <div class="commodity-price">
+                                        <div class="size-price">￥${this.price}</div>
+                                    </div>
+                                     <div class="commodity-name">
+                                        <div class="size-name">${this.name}</div>
+                                     </div>
+                                     <div class="commodity-description">
+                                        <div class="size-description">${this.description}</div>
+                                     </div>
+                                 </div>
+                                </a >
+                        </div >`
+                            )
                         });
                     });
                 } else {

@@ -43,16 +43,16 @@ function printItems(data, targetCategory) {
             $('.item-list').append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
                <a class="text-decoration-none" href = "item.html?id=${data[category].id}" >
                    <div class="other-item">
-                       <div class="cot">
+                       <div class="picture_frame">
                            <img src="${data[category].src}" class="img-fluid img-item" />
                        </div>
-                       <div class="cot-price">
+                       <div class="commodity-price">
                            <div class="size-price">￥${data[category].price}</div>
                        </div>
-                       <div class="cot-name">
+                       <div class="commodity-name">
                            <div class="size-name">${data[category].name}</div>
                        </div>
-                       <div class="cot-description">
+                       <div class="commodity-description">
                            <div class="size-description">${data[category].description}</div>
                        </div>
                    </div>

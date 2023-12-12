@@ -6,88 +6,29 @@
     height: 100vh;
     overflow: auto
 }
-
-.likl {
+/* 主框架格子css样式 */
+.main{
     padding-top: 90px;
 }
-.classify{
+/* 列表单格子css样式 */
+.category_bar{
     padding-top: 25px;
 }
 
-.item>img {
-    height: 61%;
-    width: 100%;
-}
-
-.sizecolor {
-    color: brown;
-    font-size: 15pt;
-}
-
-.size1 {
+/* 列表单字体样式 */
+.sizecategory_bar{
     color: black;
     font-size: 15pt;
 }
 
-.size1:hover {
+.sizecategory_bar:hover {
+    /* 无下划线 */
     text-decoration: none;
+    /* 点击时字体是黑色 */
     color: black;
 }
 
-.size-price {
-    color: rgb(236, 19, 19);
-    font-size: 20pt;
-}
-
-/* .img-item {
-    max-height: 200px;
-    max-width: 190px;
-} */
-.cot {
-    width: 100%;
-    height: 180px;
-}
-
-.cot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.cot-price {
-    height: 40px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.cot-name {
-    height: 25px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.cot-description {
-    width: 100%;
-    height: 45px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* white-space: nowrap; */
-}
-.size-name{
-    color: black;
-}
-.size-description{
-    color: black;
-    
-}
-.size-name {
-    font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
-}
-
-.bot {
-    padding-top: 10px;
-}
-/* 物品外部样式框架 */
+/* 图片框js Picture_frame */
 .other-item {
     background-color: #fff;
     padding: 0.5rem;
@@ -95,16 +36,70 @@
     border-radius: 0.5rem;
     box-shadow: #00000099 0 0 0.8rem;
 }
-#s {
+/* 图片框的格式大小 */
+.picture_frame {
+    width: 100%;
+    height: 180px;
+}
+/* 图片的css样式 */
+.picture_frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* commodity商品的各个属性外框的css */
+/* 价格外部边框的格子大小 */
+.commodity-price {
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+/* 名字外部边框的大小 */
+.commodity-name {
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+}
+/* 详细边框的格式大小 */
+.commodity-description {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+}
+/* 价格字体css样式 */
+.size-price {
+    color: rgb(236, 19, 19);
+    font-size: 20pt;
+}
+/* 物品名字字体css样式 */
+.size-name{
+    color: black;
+}
+/* 详细介绍字体css样式 */
+.size-description{
+    color: black;
+    
+}
+/* 物品名字字体引入*/
+.size-name {
+    font-family: RoGSanSrfStd-Bd, GlowSansSC-Normal-Heavy_diff;
+}
+/* 商品块区域边距 */
+.product_display_area{
+    padding-top: 10px;
+}
+/* 物品外部样式框架 */
+
+/* 搜索结果样式 */
+#search_results {
     position: absolute;
      top: 100%;
     width: 68%; 
 }
 
-/* 导航栏格子移动单位 */
-.Search-table {
+/* 搜索栏格子样式 */
+.search-table {
     padding-right: 5%;
 }
-/* .Expand-bar{
-   margin-top: 10px;
-} */
