@@ -1,9 +1,8 @@
 body {
   padding-top: 90px;
-  background: url(../image/netAuth.webp) no-repeat center 0px;
+  background-image: url(../image/netAuth.webp);
   height: 100vh;
   overflow: auto;
-  /* background-image: url(./image/netAuth.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

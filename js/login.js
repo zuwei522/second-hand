@@ -1,7 +1,9 @@
+// 登录
 const loginUsrname = document.querySelector("#login-usrname");
 const loginPasswd = document.querySelector("#login-passwd");
 const loginBtn = document.querySelector("#login-btn");
 
+// 登录用户名输入框失焦时执行以下函数
 loginUsrname.onblur = function () {
     if (loginUsrname.value != "") {
         loginUsrname.style.border = "1px solid #ced4da";
@@ -9,6 +11,7 @@ loginUsrname.onblur = function () {
     }
 };
 
+// 登录密码输入框失焦时执行以下函数
 loginPasswd.onblur = function () {
     if (loginPasswd.value != "") {
         loginPasswd.style.border = "1px solid #ced4da";
@@ -16,8 +19,8 @@ loginPasswd.onblur = function () {
     }
 };
 
+// 点击登录按钮时执行以下函数
 loginBtn.onclick = function () {
-    // 登录
     flag = true;
     if (!checkInput(loginUsrname)) {
         // 确保用户名与密码为非空
@@ -40,7 +43,7 @@ loginBtn.onclick = function () {
         }
 
         const users_string = localStorage.getItem("users") || {};
-        const users = JSON.parse(users_string); // 将存储在 localStorage 中的 json 对象转换为 js 对象
+        const users = JSON.parse(users_string); // 将存储在 localStorage 中的 json 字符串转换为 js 对象
 
         const usr_passwd = users[loginUsrname.value];
         if (usr_passwd) {
@@ -69,6 +72,7 @@ loginBtn.onclick = function () {
     }
 };
 
+// 注册
 const usrname = document.querySelector("#signup-usrname");
 const phone = document.querySelector("#signup-phone");
 const qq = document.querySelector("#signup-qq");
@@ -166,6 +170,8 @@ passwd.onblur = function () {
 passwdTwice.onblur = function () {
     checkPasswdTwice();
 };
+
+// 验证两次密码是否一致
 function checkPasswdTwice() {
     if (passwd.value == "") {
         return false;

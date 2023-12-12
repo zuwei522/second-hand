@@ -4,44 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
     <link rel="icon" href="./image/icon.svg">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <style>
-        /* 背景图片 */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background: url(./image/netAuth.webp) no-repeat center 0px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            -webkit-background-size: cover;
-            -o-background-size: cover;
-            -moz-background-size: cover;
-            -ms-background-size: cover;
-        }
-
-        /* 必填红点 */
-        .red-star::before {
-            content: "*";
-            color: red;
-        }
-
-        .red-text {
-            color: red;
-            font-size: 80%;
-        }
-
-        .rounded {
-            margin-bottom: 5rem;
-        }
-    </style>
+    <title>登录</title>
 </head>
 
 <body>
@@ -70,110 +39,110 @@
     </nav>
 
     <!-- 登录/注册 -->
-    <div class="container top-element">
-        <div class="row">
-            <div class="col-5 offset-1 d-none d-md-block">
-                <h1 class="typing-effect-1 mt-5">校园二手</h1>
-                <h1 class="typing-effect-2">物品交易平台</h1>
-            </div>
-            <div class="col-md-6 border mt-5 rounded"
-                style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(4px);">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs mt-3" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#signin-page">登录</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#signup-page">注册</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#find-passwd">找回密码</a>
-                    </li>
-                </ul>
+    <main>
+        <div class="container top-element">
+            <div class="row">
+                <div class="col-5 offset-1 d-none d-md-block">
+                    <h1 class="typing-effect-1 mt-5">校园二手</h1>
+                    <h1 class="typing-effect-2">物品交易平台</h1>
+                </div>
+                <div class="col-md-6 border mt-5 rounded"
+                    style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(4px);">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs mt-3" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#signin-page">登录</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#signup-page">注册</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#find-passwd">找回密码</a>
+                        </li>
+                    </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div id="signin-page" class="container tab-pane active mb-3"><br>
-                        <div id="login-msg"></div>
-                        <!-- <form> -->
-                        <div class="form-group">
-                            <label for="login-usrname">用户名:</label>
-                            <input type="text" class="form-control" placeholder="请输入用户名" id="login-usrname" required>
-                            <p class="red-text"></p>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div id="signin-page" class="container tab-pane active mb-3"><br>
+                            <div id="login-msg"></div>
+                            <div class="form-group">
+                                <label for="login-usrname">用户名:</label>
+                                <input type="text" class="form-control" placeholder="请输入用户名" id="login-usrname"
+                                    required>
+                                <p class="red-text"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-passwd">密码:</label>
+                                <input type="password" class="form-control" placeholder="请输入密码" id="login-passwd"
+                                    required>
+                                <p class="red-text"></p>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> 记住密码
+                                </label>
+                            </div>
+                            <button class="btn btn-primary" id="login-btn">登录</button>
                         </div>
-                        <div class="form-group">
-                            <label for="login-passwd">密码:</label>
-                            <input type="password" class="form-control" placeholder="请输入密码" id="login-passwd" required>
-                            <p class="red-text"></p>
-                        </div>
-                        <div class="form-group form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox"> 记住密码
-                            </label>
-                        </div>
-                        <button class="btn btn-primary" id="login-btn">登录</button>
-                        <!-- </form> -->
-                    </div>
-                    <div id="signup-page" class="container tab-pane fade mb-3"><br>
-                        <div id="signup-msg"></div>
-                        <!-- <form action=""> -->
-                        <div class="form-group red-star">
-                            <label for="signup-usrname">用户名:</label>
-                            <!-- 5-15位非数字开头的字母与数字组合，可使用下划线 -->
-                            <input type="text" class="form-control" placeholder="请输入用户名" id="signup-usrname" required
-                                pattern="[a-zA-Z][a-zA-Z0-9_]{3,15}">
-                            <p class="red-text"></p>
-                        </div>
+                        <div id="signup-page" class="container tab-pane fade mb-3"><br>
+                            <div id="signup-msg"></div>
+                            <div class="form-group red-star">
+                                <label for="signup-usrname">用户名:</label>
+                                <!-- 5-15位非数字开头的字母与数字组合，可使用下划线 -->
+                                <input type="text" class="form-control" placeholder="请输入用户名" id="signup-usrname"
+                                    required pattern="[a-zA-Z][a-zA-Z0-9_]{3,15}">
+                                <p class="red-text"></p>
+                            </div>
 
-                        <div class="form-group red-star">
-                            <label for="signup-phone">手机号:</label>
-                            <input type="tel" class="form-control" placeholder="请输入手机号" id="signup-phone" required
-                                pattern="(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}">
-                            <p class="red-text"></p>
-                        </div>
+                            <div class="form-group red-star">
+                                <label for="signup-phone">手机号:</label>
+                                <input type="tel" class="form-control" placeholder="请输入手机号" id="signup-phone" required
+                                    pattern="(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}">
+                                <p class="red-text"></p>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="signup-qq">QQ:</label>
-                            <input type="num" class="form-control" placeholder="请输入QQ号" id="signup-qq"
-                                pattern="[1-9][0-9]\d{4,9}">
-                            <p class="red-text"></p>
-                        </div>
+                            <div class="form-group">
+                                <label for="signup-qq">QQ:</label>
+                                <input type="num" class="form-control" placeholder="请输入QQ号" id="signup-qq"
+                                    pattern="[1-9][0-9]\d{4,9}">
+                                <p class="red-text"></p>
+                            </div>
 
-                        <div class="form-group red-star">
-                            <label for="signup-passwd">密码:</label>
-                            <!-- 8-16个字符，至少1个大写字母，1个小写字母和1个数字 -->
-                            <input type="password" class="form-control" placeholder="请输入密码" id="signup-passwd" required
-                                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}">
-                            <p class="red-text"></p>
-                        </div>
+                            <div class="form-group red-star">
+                                <label for="signup-passwd">密码:</label>
+                                <!-- 8-16个字符，至少1个大写字母，1个小写字母和1个数字 -->
+                                <input type="password" class="form-control" placeholder="请输入密码" id="signup-passwd"
+                                    required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}">
+                                <p class="red-text"></p>
+                            </div>
 
-                        <div class="form-group red-star">
-                            <label for="signup-passwd-twice">确认密码:</label>
-                            <input type="password" class="form-control" placeholder="请输入确认密码" id="signup-passwd-twice"
-                                required>
-                            <p class="red-text"></p>
+                            <div class="form-group red-star">
+                                <label for="signup-passwd-twice">确认密码:</label>
+                                <input type="password" class="form-control" placeholder="请输入确认密码"
+                                    id="signup-passwd-twice" required>
+                                <p class="red-text"></p>
+                            </div>
+                            <button class="btn btn-primary" id="signup-btn">立即注册</button>
                         </div>
-                        <button class="btn btn-primary" id="signup-btn">立即注册</button>
-                        <!-- </form> -->
-                    </div>
-                    <div id="find-passwd" class="container tab-pane fade mb-3"><br>
-                        <h3>请联系管理员找回账号</h3>
-                        <p>QQ：123456789</p>
-                        <details>
-                            <summary>开发者选项</summary>
-                            <button class="btn btn-primary"
-                                onclick="localStorage.removeItem('users');localStorage.removeItem('token');console.log('已清除用户数据')">清除用户数据</button>
-                        </details>
+                        <div id="find-passwd" class="container tab-pane fade mb-3"><br>
+                            <h3>请联系管理员找回账号</h3>
+                            <p>QQ：123456789</p>
+                            <details>
+                                <summary>开发者选项</summary>
+                                <button class="btn btn-primary"
+                                    onclick="localStorage.removeItem('users');localStorage.removeItem('token');console.log('已清除用户数据')">清除用户数据</button>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="./js/main.js"></script>
     <script>
         // 若处于登录状态，自动跳转至首页
-        if(token){
+        if (token) {
             window.location.href = "./";
         }
     </script>

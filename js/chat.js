@@ -16,6 +16,7 @@ $(document).ready(() => {
         $("#item-price").text(Number(item.price).toFixed(2));   // 物品价格，保留两位小数
         $("#item-description").text(item.description);  // 物品描述
         $("#item-img").attr("src", item.src);   // 物品图片路径
+        $("#item-img-link").attr("href", "./item.html?id=" + currentId);   // 图片点击跳转链接
     });
 
     // 绑定发送按钮点击事件
@@ -47,6 +48,7 @@ $(document).ready(() => {
         }
     });
 
+    // 显示卖家在线状态
     setTimeout(() => {
         $("#chatBox").append(`<div class="col-12">
         <div class="alert alert-primary text-sm-center">
@@ -56,6 +58,7 @@ $(document).ready(() => {
     </div>`);
     }, 1500);
 
+    // 显示防诈骗提示
     setTimeout(() => {
         $("#chatBox").append(`
         <div class="col-12">
@@ -121,6 +124,7 @@ function sendMessage(msg) {
     $("#chatBox").append(msgOutput("right", msg)); // 在尾部插入新发送的消息
     $(".msg-box").scrollTop($(".msg-box")[0].scrollHeight); // 滚动条滚到最底部
 
+    // 模拟卖家回复
     if (msg == "在吗？" || msg == "在？" || msg == "东西还在吗？") {
         setTimeout(() => {
             $("#chatBox").append(msgOutput("left", '在的'));

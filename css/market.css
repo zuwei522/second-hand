@@ -103,3 +103,7 @@
 .search-table {
     padding-right: 5%;
 }
+
+.other-item:hover {
+    filter: brightness(90%);
+}

@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/market.css">
-    <!-- <link rel="stylesheet" href="./css/item.css"> -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script>
-
-    </script>
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -38,9 +31,17 @@
                         <div class="row search-table">
                             <form class="input-group">
                                 <input type="text" class="form-control" name="searchKey" id="searchInput"
-                                    placeholder="搜索" required>
+                                    placeholder="搜索物品" required>
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn btn-primary">点击搜索</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <!-- 搜索图标 -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                        </svg>
+                                        搜索
+                                    </button>
                                 </div>
                                 <!-- 表单展开栏 -->
                                 <ul id="search_results" class="list-group" mousedown></ul>
@@ -108,7 +109,7 @@
                 <div class="col-md-10">
                     <div class="row item-list product_display_area">
                         <!-- 商品块元素的样例 -->
-                        
+
                         <!-- <div class="col-lg-3 col-md-4 col-6 ">
                         <a class="text-decoration-none" href="链接" target="_blank">
                             <div class="other-item">

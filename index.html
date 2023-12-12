@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/wave-image.css" />
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 
     <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
@@ -21,7 +22,6 @@
 <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-sm fixed-top">
-        <!--fixed-top-->
         <a class="navbar-brand" href="./">
             <img src="./image/logo.png" alt="logo" height="60px" />
         </a>
@@ -47,7 +47,7 @@
 
     <!-- 主要内容 -->
     <main>
-        <!-- 第一页标题 -->
+        <!-- 第一页 标题 -->
         <div class="container-fluid bg-1 page">
             <div class="row">
                 <div class="col-md-10 offset-sm-2">
@@ -64,14 +64,14 @@
             </div>
         </div>
 
-        <!-- 第二页轮播图 -->
+        <!-- 第二页 轮播图 -->
         <div class="page bg-2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
                         <!-- 轮播图 -->
                         <div id="demo" class="carousel slide" data-ride="carousel">
-                            <!-- 指示符 -->
+                            <!-- 轮播图指示器 -->
                             <ul class="carousel-indicators">
                                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                                 <li data-target="#demo" data-slide-to="1"></li>
@@ -129,7 +129,7 @@
                                 </div>
                             </div>
 
-                            <!-- 左右切换按钮 -->
+                            <!-- 轮播图切换按钮 -->
                             <a class="carousel-control-prev" href="#demo" data-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </a>
@@ -153,7 +153,7 @@
             </div>
         </div>
 
-        <!-- 第三页波浪展示图 -->
+        <!-- 第三页 波浪展示图 -->
         <div class="bg-3 page">
             <div class="container">
                 <div class="row">
@@ -192,9 +192,9 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <!-- 大于 sm 时居中 -->
+                        <!-- 大于 sm 断点时居中 -->
                         <div class="title text-decoration-none text-md-center">
-                            <!-- 小于或等于 md 时缩小字号且换行 -->
+                            <!-- 小于或等于 md 断点时缩小字号且换行 -->
                             <span class="d-none d-md-inline-block title-highlight">琳琅满目的</span><small
                                 class="d-md-none title-highlight">琳琅满目的</small><br class="d-md-none" />二手物品
                         </div>
@@ -210,7 +210,6 @@
 
         <div class="bg-bottom-cover">&gt;&gt;向下翻页👇&lt;&lt;</div>
     </main>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>
