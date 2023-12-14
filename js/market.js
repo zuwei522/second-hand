@@ -7,15 +7,24 @@ $(document).ready(function () {
     $("#searchInput").on('input', function () {
         // 如果搜索框不为空，执行以下函数
         if (this.value.length > 0) {
-            // 将搜索框的值转换为小写
-            var searchText = $(this).val().toLowerCase();
+            // 将搜索框的值转换为小写，这里this指代json里的数据块即
+            //     {
+            //     "id": 例子,
+            //     "name": "例子",
+            //     "price": "2例子",
+            //     "description": "例子。",
+            //     "category": "例子",
+            //     "src":"例子",
+            //     "qq":"例子"
+            //   },
+            var searchText = $(this).val().toLowerCase();//toLowerCase()将字符串转化成小写
             // 初始化一个空数组，用于存储搜索结果
             var searchResults = [];
             // 发送一个Ajax请求，从./data/item.json获取数据
             $.getJSON("./data/item.json", function (data) {
                 // 遍历数据中的每个对象，检查它们的名称是否包含搜索文本
                 for (name in data) {
-                    //
+                    //遍历所有与关键字有关json文件
                     if (data[name].name.toLowerCase().indexOf(searchText) > -1) {
                         // 如果包含，将对象添加到搜索结果数组中
                         //相当于当前结构含有的所有内容添加到数组searchResults[]中
@@ -33,7 +42,8 @@ $(document).ready(function () {
                 $.each(searchResults, function (index) {
                     console.log("现在遍历到了第 " + index + " 个搜索结果");//控制面板能看到
                     // 将每个结果的名称和ID添加到搜索结果列表中
-                    $("#search_results").append(`<a class="searchResultItem list-group-item 
+                    $("#search_results").append(
+                        `<a class="searchResultItem list-group-item 
                     list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
                 });
 
@@ -100,8 +110,9 @@ $(document).ready(function () {
                 break;
             default:
                 if (searchKey != null) {
+                    //利用val传递数据使得搜索框里的数据不改变
                     $('#searchInput').val(searchKey);
-                    // 将搜索框的值转换为小写
+                    //传递searchKe的值给
                     var searchText = searchKey;
                     // 初始化一个空数组，用于存储搜索结果
                     var searchResults = [];
@@ -116,8 +127,7 @@ $(document).ready(function () {
                         }
                         // 输出搜索结果数组
                         console.log(searchResults);
-                        if (searchResults.length > 0){
-                           
+                        if (searchResults.length > 0) {
                             // 遍历搜索结果数组，将每个结果添加到搜索结果列表中
                             $.each(searchResults, function (index, abc) {
                                 //控制面板打印的内容
@@ -144,10 +154,10 @@ $(document).ready(function () {
                                 </a >
                         </div >`
                                 )
-                            }); 
+                            });
                         }
                         //未搜索成功时候弹出的界面
-                        else{
+                        else {
                             $(".product_display_area").append(
                                 `<div class="alert alert-info alert-dismissible fade show">
                                 <strong style="font-size: 25pt;"><svg xmlns="http://www.w3.org/2000/svg" fill="#CC3545" height="50" width="50" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
