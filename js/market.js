@@ -33,7 +33,8 @@ $(document).ready(function () {
                 $.each(searchResults, function (index) {
                     console.log("现在遍历到了第 " + index + " 个搜索结果");//控制面板能看到
                     // 将每个结果的名称和ID添加到搜索结果列表中
-                    $("#search_results").append(`<a class="searchResultItem list-group-item list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
+                    $("#search_results").append(`<a class="searchResultItem list-group-item 
+                    list-group-item-light list-group-item-action text-decoration-none" href='./item.html?id=${this.id}'>${this.name}<a/>`);
                 });
 
                 // 绑定搜索结果列表中的每个链接，以便在左键单击时导航到相应的页面
@@ -71,11 +72,10 @@ $(document).ready(function () {
     $.getJSON("./data/item.json", function (data) {
         // 获取URL中的参数，获取当前要显示的类别
         const params = new URLSearchParams(location.search);//从地址搜索参数
-        const category = params.get('category');//
-        const searchKey = params.get('searchKey');//从地址栏中提取搜索框中searchkey的关键词
-
+        const category = params.get('category');//从地址栏中提取category的关键词
+        const searchKey = params.get('searchKey');//从搜索栏中提取搜索框中searchkey的关键词
         // 根据参数值判断要显示的类别
-        console.log(category);
+        console.log(category);//在控制面板里检验读取的数据是否正确。
         switch (Number(category)) {
             case 1:
                 // 如果类别为1，则只显示数码类商品
@@ -98,7 +98,6 @@ $(document).ready(function () {
                 printItems(data, '其他');
                 console.log('其他');
                 break;
-            case 10:
             default:
                 if (searchKey != null) {
                     $('#searchInput').val(searchKey);
@@ -122,7 +121,7 @@ $(document).ready(function () {
                             // 遍历搜索结果数组，将每个结果添加到搜索结果列表中
                             $.each(searchResults, function (index, abc) {
                                 //控制面板打印的内容
-                                console.log("现在遍历到了第 " + index + " 个搜索结果");
+                                console.log("现在遍历到了第 " + index + " 个搜索结果");//浏览器检查搜索结果是否正确
                                 // 将每个结果的名称和ID添加到搜索结果列表中
                                 //jquery里的一个方法，在元素的末尾插入内容（html）
                                 $(".product_display_area").append(
