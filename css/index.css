@@ -3,7 +3,7 @@ body {
 }
 
 .bg-1 {
-  background: url(../image/netAuth.webp) no-repeat center 0px;
+  background-image: url(../image/netAuth.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ body {
 }
 
 .bg-2 {
-  background: url(../image/bg2.jpg) no-repeat center 0px;
+  background-image: url(../image/bg2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ body {
 }
 
 .bg-3 {
-  background: url(../image/bg3.jpg) no-repeat center 0px;
+  background-image: url(../image/bg3.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,7 +72,9 @@ main::-webkit-scrollbar {
   line-height: 4.3rem;
 }
 
-.title span,.title {
+.title span,
+.title,
+.typing-effect-2 {
   text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff, 4px 4px #fff;
 }
 

@@ -12,34 +12,68 @@
     <link rel="stylesheet" href="./css/wave-image.css" />
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-
-    <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
-    <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <!--fixed-top-->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <!-- 网站 Logo -->
         <a class="navbar-brand" href="./">
             <img src="./image/logo.png" alt="logo" height="60px" />
         </a>
+        <!-- 导航栏折叠按钮 -->
         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- 导航栏链接 -->
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link random-item">随便看看</a>
+                    <a class="nav-link" id="randomItemBtn">
+                        <!-- SVG 图标 -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160H352c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V416H352c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8h32V320c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z" />
+                        </svg>
+                        随便看看</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./market.html?">跳蚤市场</a>
+                    <a class="nav-link" href="./market.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 576 512">
+                            <path
+                                d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" />
+                        </svg>
+                        跳蚤市场</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-success" href="./login.html">登录/注册</a>
-                    <a class="nav-link nav-item-hide" id="logoutBtn">退出登录</a>
+                    <a class="nav-link" href="./item-posted.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                        </svg>
+                        物品发布</a>
+                </li>
+                <li class="nav-item">
+                    <!-- 登录后，隐藏“登录/注册”按钮，显示“退出登录”按钮 -->
+                    <a class="btn btn-success" href="./login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+                        </svg>
+                        登录/注册</a>
+                    <a class="nav-link nav-item-hide" id="logoutBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                        </svg>
+                        退出登录</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +81,7 @@
 
     <!-- 主要内容 -->
     <main>
-        <!-- 第一页标题 -->
+        <!-- 第一页 标题 -->
         <div class="container-fluid bg-1 page">
             <div class="row">
                 <div class="col-md-10 offset-sm-2">
@@ -58,20 +92,25 @@
             <div class="row">
                 <div class="col-md-10 offset-sm-2">
                     <button class="btn btn-primary mt-4 ml-2" onclick="window.open('./item-posted.html')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                        </svg>
                         立即发布
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- 第二页轮播图 -->
+        <!-- 第二页 轮播图 -->
         <div class="page bg-2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
                         <!-- 轮播图 -->
                         <div id="demo" class="carousel slide" data-ride="carousel">
-                            <!-- 指示符 -->
+                            <!-- 轮播图指示器 -->
                             <ul class="carousel-indicators">
                                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                                 <li data-target="#demo" data-slide-to="1"></li>
@@ -87,7 +126,7 @@
                                         <img src="./image/Findpiece/20.jpg" />
                                         <div class="carousel-caption">
                                             <h3>数码产品</h3>
-                                            <p>低价捡漏！</p>
+                                            <p>不是全新买不起，而是二手的更有性价比~</p>
                                         </div>
                                     </a>
                                 </div>
@@ -102,34 +141,34 @@
                                 </div>
                                 <div class="carousel-item">
                                     <a href="./market.html?category=3">
-                                        <img src="./image/Findpiece/50.jpg" />
+                                        <img src="./image/Findpiece/48.jpg" />
                                         <div class="carousel-caption">
                                             <h3>零食</h3>
-                                            <p></p>
+                                            <p>一不小心就买多惹 QAQ</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="./market.html?category=4">
-                                        <img src="./image/Findpiece/25.jpg" />
+                                        <img src="./image/Findpiece/26.jpg" />
                                         <div class="carousel-caption">
                                             <h3>生活用品</h3>
-                                            <p></p>
+                                            <p>骚年，想在宿舍里做饭吗？</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="./market.html?category=5">
-                                        <img src="./image/Findpiece/31.jpg" />
+                                        <img src="./image/Findpiece/40b.jpg" />
                                         <div class="carousel-caption">
                                             <h3>其他</h3>
-                                            <p></p>
+                                            <p>确定不来看看吗？说不定有你需要的</p>
                                         </div>
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- 左右切换按钮 -->
+                            <!-- 轮播图切换按钮 -->
                             <a class="carousel-control-prev" href="#demo" data-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </a>
@@ -140,20 +179,24 @@
                     </div>
                     <div class="col-md-5">
                         <div class="title d-none d-md-block">
-                            <small class="title-highlight pl-1 pr-1" style="background-color: #FFF; border-radius: 1rem;">丰富的</small><br />
+                            <small class="title-highlight pl-1 pr-1"
+                                style="background-color: #fff; border-radius: 1rem">丰富的</small><br />
                             <span>物品类别</span>
                         </div>
                         <div class="title-sm d-md-none mb-2">
                             <small class="">丰富的</small><br />
-                            <span class="pl-1 pr-1 title-highlight" style="background-color: #FFF; border-radius: 1rem;">物品类别</span>
+                            <span class="pl-1 pr-1 title-highlight"
+                                style="background-color: #fff; border-radius: 1rem">物品类别</span>
                         </div>
-                        <a class="btn btn-primary mt-2" href="./market.html">查看分类</a>
+                        <a class="btn btn-primary mt-2" href="./market.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16" viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+                            查看分类</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 第三页波浪展示图 -->
+        <!-- 第三页 波浪展示图 -->
         <div class="bg-3 page">
             <div class="container">
                 <div class="row">
@@ -185,22 +228,24 @@
                                 <div class="item d-none d-xl-block" tabindex="1"
                                     style="background-image: url(./image/Findpiece/39.jpg)"></div>
                                 <div class="item d-none d-xl-block" tabindex="1"
-                                    style="background-image: url(./image/Findpiece/41.jpg)"></div>
+                                    style="background-image: url(./image/Findpiece/40b.jpg)"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <!-- 大于 sm 时居中 -->
+                        <!-- 大于 sm 断点时居中 -->
                         <div class="title text-decoration-none text-md-center">
-                            <!-- 小于或等于 md 时缩小字号且换行 -->
+                            <!-- 小于或等于 md 断点时缩小字号且换行 -->
                             <span class="d-none d-md-inline-block title-highlight">琳琅满目的</span><small
                                 class="d-md-none title-highlight">琳琅满目的</small><br class="d-md-none" />二手物品
                         </div>
                         <div class="row">
                             <div class="col-6 col-md-4 col-lg-2 offset-md-4 offset-lg-5">
-                                <a class="btn btn-primary btn-block mt-2" href="./market.html">浏览物品</a>
+                                <a class="btn btn-primary btn-block mt-2" href="./market.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="18" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
+                                    浏览物品</a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +255,6 @@
 
         <div class="bg-bottom-cover">&gt;&gt;向下翻页👇&lt;&lt;</div>
     </main>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>

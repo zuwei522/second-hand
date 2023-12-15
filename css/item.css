@@ -99,9 +99,7 @@ h1{
   box-shadow: #00000099 0 0 0.8rem;
 }
  
-/**/
 .other-item:hover {
-  /* background-color: #BBB; */
   filter: brightness(90%);
 }
 

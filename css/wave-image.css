@@ -1,90 +1,153 @@
+/* 设置全局根元素的样式 */
 :root {
+	/* 计算变量，用于根据视口大小调整布局 */
 	--index: calc(1vw + 1vh);
-	--transition: cubic-bezier(.1, .7, 0, 1);
+	/* 贝塞尔曲线，用于定义过渡效果的速度和曲线形状 */
+	--transition: cubic-bezier(0.1, 0.7, 0, 1);
 }
+
+/* 设置整个布局的样式 */
 .wrapper {
+	/* 居中显示 */
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* 设置布局高度为视口高度的50% */
 	height: 50vh;
 }
+
+/* 设置项目列表的样式 */
 .items {
+	/* 使用Flexbox布局 */
 	display: flex;
-	gap: .4rem;
+	/* 设置项目之间的间距 */
+	gap: 0.4rem;
+	/* 设置perspective属性，用于控制3D旋转的视野 */
 	perspective: calc(var(--index) * 35);
 }
+
+/* 设置每个项目的样式 */
 .item {
+	/* 设置项目背景颜色 */
 	background-color: #222;
+	/* 设置项目宽度为视口宽度的1/3，高度为视口高度的12% */
 	width: calc(var(--index) * 3);
 	height: calc(var(--index) * 12);
+	/* 设置项目背景图片，使用cover模式，填充整个容器 */
 	background-size: cover;
 	background-position: center;
+	/* 设置鼠标悬停时的效果，包括背景颜色、阴影、旋转、过滤 */
 	cursor: pointer;
-	transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+	/* 设置过渡效果，包括transform、filter和width属性，延迟1.25秒，使用自定义的曲线 */
+	transition: transform 1.25s var(--transition), filter 3s var(--transition),
+		width 1.25s var(--transition);
+	/* 设置will-change属性，表示项目可能需要进行3D旋转、过滤等操作 */
 	will-change: transform, filter;
-	filter: grayscale() brightness(.5);
+	/* 设置过滤器，使图片灰度、亮度降低 */
+	filter: grayscale() brightness(0.5);
 }
-.item::before, .item::after {
-	content: '';
+
+.item::before,
+.item::after {
+	content: "";
 	position: absolute;
+	/* 设置边框的宽度和高度 */
 	width: 20px;
 	height: 100%;
+	/* 设置边框的right值，使边框与项目重合 */
 	right: calc(var(--index) * -1);
 }
+
 .item::after {
+	/* 设置边框的left值，使边框与项目重合 */
 	left: calc(var(--index) * -1);
 }
+
+/* 当鼠标悬停在项目上时，设置项目的样式 */
 .items .item:hover {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
 	transform: translateZ(calc(var(--index) * 10));
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
 }
 
 /* Right */
 
-.items .item:hover + * {
+.items .item:hover+* {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
 	transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
+	/* 设置z-index属性，使右侧项目覆盖在左侧项目之上 */
 	z-index: -1;
 }
-.items .item:hover + * + * {
+
+.items .item:hover+*+* {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
 	transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
+	/* 设置z-index属性，使右侧项目覆盖在左侧项目之上 */
 	z-index: -2;
 }
-.items .item:hover + * + * + * {
+
+.items .item:hover+*+*+* {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
 	transform: translateZ(calc(var(--index) * 2.4)) rotateY(30deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
+	/* 设置z-index属性，使右侧项目覆盖在左侧项目之上 */
 	z-index: -3;
 }
-.items .item:hover + * + * + * + * {
-	transform: translateZ(calc(var(--index) * .6)) rotateY(14deg);
+
+.items .item:hover+*+*+*+* {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
+	transform: translateZ(calc(var(--index) * 0.6)) rotateY(14deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
+	/* 设置z-index属性，使右侧项目覆盖在左侧项目之上 */
 	z-index: -4;
 }
 
 /* Left */
 
 .item:has(+ :hover) {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
 	transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
-	filter: inherit;
-}
-.item:has(+ * + :hover) {
-	transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
-	filter: inherit;
-}
-.item:has(+ * + * + :hover) {
-	transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
-	filter: inherit;
-}
-.item:has(+ * + * + * + :hover) {
-	transform: translateZ(calc(var(--index) * .6)) rotateY(-14deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
 }
 
-.items .item:active, .items .item:focus {
-	width: 28vw;
-	transform: translateZ(calc(var(--index) * 10));
+.item:has(+ * + :hover) {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
+	transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+	/* 清除之前的过滤器效果 */
 	filter: inherit;
+}
+
+.item:has(+ * + * + :hover) {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
+	transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
+	/* 清除之前的过滤器效果 */
+	filter: inherit;
+}
+
+.item:has(+ * + * + * + :hover) {
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
+	transform: translateZ(calc(var(--index) * 0.6)) rotateY(-14deg);
+	/* 清除之前的过滤器效果 */
+	filter: inherit;
+}
+
+.items .item:active,
+.items .item:focus {
+	/* 设置项目宽度为视口宽度的1/3 */
+	width: 28vw;
+	/* 设置项目3D旋转角度和perspective属性，使项目悬停时产生3D效果 */
+	transform: translateZ(calc(var(--index) * 10));
+	/* 清除之前的过滤器效果 */
+	filter: inherit;
+	/* 设置z-index属性，使悬停项目*/
 	z-index: 100;
-	margin: 0 .45vw;
+	margin: 0 0.45vw;
 }

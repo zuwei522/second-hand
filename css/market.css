@@ -28,7 +28,7 @@
     color: black;
 }
 
-/* 图片框js Picture_frame */
+/* 物品展示框外部大盒子样式js Picture_frame（） */
 .other-item {
     background-color: #fff;
     padding: 0.5rem;
@@ -102,4 +102,8 @@
 /* 搜索栏格子样式 */
 .search-table {
     padding-right: 5%;
+}
+
+.other-item:hover {
+    filter: brightness(90%);
 }

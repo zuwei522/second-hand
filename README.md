@@ -10,7 +10,5 @@
 |登录/注册|`login.html`|
 |跳蚤市场|`market.html`|
 |物品详情页|`item.html`|
-
-<!-- ## 文件路径
-
-所有图片直接存放在`/image/`下，其他页面的图片请在`/image/`路径下创建与页面文件名同名的子文件夹。 -->
+|物品发布页|`item-posted.html`|
+|聊天页面|`chat.html`|

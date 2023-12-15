@@ -1,7 +1,8 @@
+// 模拟检查登录状态
 const token = localStorage.getItem("token");
 
 $(document).ready(() => {
-    // 若当前为已登录状态，隐藏导航栏的登录按钮，并显示退出登录按钮
+    // 若当前为已登录状态，隐藏导航栏的“登录/注册”按钮，并显示“退出登录”按钮
     if (token) {
         $(".navbar-nav > .nav-item:last > a:first").addClass("nav-item-hide");
         $(".navbar-nav > .nav-item:last > a:last").removeClass("nav-item-hide");
@@ -12,13 +13,15 @@ $(document).ready(() => {
         logout("./");
     });
 
-    // 跳转随机物品详情页
-    $(".random-item")[0].addEventListener("click", jumpRandomItem, false);
-    function jumpRandomItem() {
-        let random = Math.floor((Math.random() * 10000000) % 60) + 1;
-        window.location.href = "./item.html?id=" + random;
-    }
+    // 绑定导航栏“随机看看”按钮点击事件
+    $("#randomItemBtn").on("click", jumpRandomItem);
 });
+
+// 随机跳转详情页
+function jumpRandomItem() {
+    let random = Math.floor((Math.random() * 10000000) % 60) + 1;
+    window.location.href = "./item.html?id=" + random;
+}
 
 function logout(target) {
     // 登出并跳转到指定页面
@@ -29,7 +32,8 @@ function logout(target) {
 function isLogin() {
     // 判断当前是否为登录状态，在需要登录的页面加载时执行此函数
     if (!token) {
-        window.location.href = "./noLogin.html"; // 若未登录，则跳转至登录页面
+        var target = window.location.href;
+        window.location.href = "./noLogin.html?target=" + target; // 若未登录，则跳转至登录页面
     }
 }
 
@@ -42,8 +46,9 @@ function printItems(data, targetCategory) {
         if (data[category].category == targetCategory) {
             //在class为item-list的div标签内创建一个包含商品信息的HTML元素
             //函数继续循环
-            $('.item-list').append(`<div class="col-lg-3 col-md-4 col-6 mt-3">
-               <a class="text-decoration-none" href = "item.html?id=${data[category].id}" >
+            $('.item-list').append(`
+            <div class="col-lg-3 col-md-4 col-6 mt-3">
+               <a class="text-decoration-none" href = "item.html?id=${data[category].id}" target="_blank">
                    <div class="other-item">
                        <div class="picture_frame">
                            <img src="${data[category].src}" class="img-fluid img-item" />
