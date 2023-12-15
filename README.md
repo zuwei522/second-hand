@@ -11,3 +11,4 @@
 |跳蚤市场|`market.html`|
 |物品详情页|`item.html`|
 |物品发布页|`item-posted.html`|
+|聊天页面|`chat.html`|
