@@ -47,16 +47,13 @@
 	filter: grayscale() brightness(0.5);
 }
 
-/* 为每个项目添加左右两个半圆形边框 */
 .item::before,
 .item::after {
+	content: "";
+	position: absolute;
 	/* 设置边框的宽度和高度 */
 	width: 20px;
 	height: 100%;
-	/* 设置边框的颜色和透明度 */
-	background-color: #fff;
-	/* 设置边框的圆角半径 */
-	border-radius: 20px;
 	/* 设置边框的right值，使边框与项目重合 */
 	right: calc(var(--index) * -1);
 }
@@ -119,8 +116,6 @@
 	transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
 	/* 清除之前的过滤器效果 */
 	filter: inherit;
-	/* 设置z-index属性，使左侧项目覆盖在右侧项目之上 */
-	z-index: -1;
 }
 
 .item:has(+ * + :hover) {
@@ -128,8 +123,6 @@
 	transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
 	/* 清除之前的过滤器效果 */
 	filter: inherit;
-	/* 设置z-index属性，使左侧项目覆盖在右侧项目之上 */
-	z-index: -2;
 }
 
 .item:has(+ * + * + :hover) {
@@ -137,8 +130,6 @@
 	transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
 	/* 清除之前的过滤器效果 */
 	filter: inherit;
-	/* 设置z-index属性，使左侧项目覆盖在右侧项目之上 */
-	z-index: -3;
 }
 
 .item:has(+ * + * + * + :hover) {
@@ -146,8 +137,6 @@
 	transform: translateZ(calc(var(--index) * 0.6)) rotateY(-14deg);
 	/* 清除之前的过滤器效果 */
 	filter: inherit;
-	/* 设置z-index属性，使左侧项目覆盖在右侧项目之上 */
-	z-index: -4;
 }
 
 .items .item:active,

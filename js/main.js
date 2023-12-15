@@ -1,7 +1,8 @@
+// 模拟检查登录状态
 const token = localStorage.getItem("token");
 
 $(document).ready(() => {
-    // 若当前为已登录状态，隐藏导航栏的登录按钮，并显示退出登录按钮
+    // 若当前为已登录状态，隐藏导航栏的“登录/注册”按钮，并显示“退出登录”按钮
     if (token) {
         $(".navbar-nav > .nav-item:last > a:first").addClass("nav-item-hide");
         $(".navbar-nav > .nav-item:last > a:last").removeClass("nav-item-hide");
@@ -12,13 +13,15 @@ $(document).ready(() => {
         logout("./");
     });
 
-    // 跳转随机物品详情页
-    $(".random-item")[0].addEventListener("click", jumpRandomItem, false);
-    function jumpRandomItem() {
-        let random = Math.floor((Math.random() * 10000000) % 60) + 1;
-        window.location.href = "./item.html?id=" + random;
-    }
+    // 绑定导航栏“随机看看”按钮点击事件
+    $("#randomItemBtn").on("click", jumpRandomItem);
 });
+
+// 随机跳转详情页
+function jumpRandomItem() {
+    let random = Math.floor((Math.random() * 10000000) % 60) + 1;
+    window.location.href = "./item.html?id=" + random;
+}
 
 function logout(target) {
     // 登出并跳转到指定页面

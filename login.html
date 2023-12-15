@@ -4,29 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
     <link rel="icon" href="./image/icon.svg">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/login.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <title>登录</title>
 </head>
 
 <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-md fixed-top">
+        <!-- 网站 Logo -->
         <a class="navbar-brand" href="./">
-            <img src="./image/logo.png" alt="logo" height="60px">
+            <img src="./image/logo.png" alt="logo" height="60px" />
         </a>
+        <!-- 导航栏折叠按钮 -->
         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- 导航栏链接 -->
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link random-item random-icon">
+                    <a class="nav-link" id="randomItemBtn">
+                        <!-- SVG 图标 -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
                             viewBox="0 0 512 512">
                             <path
@@ -36,7 +40,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./market.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="18"
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
                             viewBox="0 0 576 512">
                             <path
                                 d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" />
@@ -53,6 +57,7 @@
                         物品发布</a>
                 </li>
                 <li class="nav-item">
+                    <!-- 登录后，隐藏“登录/注册”按钮，显示“退出登录”按钮 -->
                     <a class="btn btn-success" href="./login.html">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" height="16" width="16"
                             viewBox="0 0 512 512">
@@ -97,19 +102,36 @@
 
                     <!-- Tab panes -->
                     <div class="tab-content">
+                        <!-- 登录 -->
                         <div id="signin-page" class="container tab-pane active mb-3"><br>
-                            <div id="login-msg"></div>
+                            <div id="login-msg">
+                                <!-- 显示登录成功/失败提示
+                                <div class="alert alert-danger alert-dismissible fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <b>用户名或密码错误</b>，请重试！
+                                </div>
+                                <div class="alert alert-success alert-dismissible fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <b>登录成功！</b>
+                                </div> -->
+                            </div>
                             <div class="form-group">
                                 <label for="login-usrname">用户名:</label>
                                 <input type="text" class="form-control" placeholder="请输入用户名" id="login-usrname"
                                     required>
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    请输入<b>用户名</b>！ -->
+                                </p>
                             </div>
                             <div class="form-group">
                                 <label for="login-passwd">密码:</label>
                                 <input type="password" class="form-control" placeholder="请输入密码" id="login-passwd"
                                     required>
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    请输入<b>密码</b>！ -->
+                                </p>
                             </div>
                             <div class="form-group form-check">
                                 <label class="form-check-label">
@@ -118,28 +140,43 @@
                             </div>
                             <button class="btn btn-primary" id="login-btn">登录</button>
                         </div>
+                        <!-- 注册 -->
                         <div id="signup-page" class="container tab-pane fade mb-3"><br>
-                            <div id="signup-msg"></div>
+                            <div id="signup-msg">
+                                <!-- 显示注册成功提示
+                                <div class="alert alert-success alert-dismissible fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <b>注册成功！</b>
+                                </div> -->
+                            </div>
                             <div class="form-group red-star">
                                 <label for="signup-usrname">用户名:</label>
-                                <!-- 5-15位非数字开头的字母与数字组合，可使用下划线 -->
                                 <input type="text" class="form-control" placeholder="请输入用户名" id="signup-usrname"
-                                    required pattern="[a-zA-Z][a-zA-Z0-9_]{3,15}">
-                                <p class="red-text"></p>
+                                    required pattern="[a-zA-Z][a-zA-Z0-9_]{3,15}"><!-- 5-15位非数字开头的字母与数字组合，可使用下划线 -->
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    用户名应为<b>4-15位非数字开头的字母与数字组合</b>，可使用下划线 -->
+                                </p>
                             </div>
 
                             <div class="form-group red-star">
                                 <label for="signup-phone">手机号:</label>
                                 <input type="tel" class="form-control" placeholder="请输入手机号" id="signup-phone" required
                                     pattern="(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}">
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    请输入正确的<b>11位手机号</b>！ -->
+                                </p>
                             </div>
 
                             <div class="form-group">
                                 <label for="signup-qq">QQ:</label>
                                 <input type="num" class="form-control" placeholder="请输入QQ号" id="signup-qq"
                                     pattern="[1-9][0-9]\d{4,9}">
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    请输入正确的<b>QQ号</b>！ -->
+                                </p>
                             </div>
 
                             <div class="form-group red-star">
@@ -147,17 +184,24 @@
                                 <!-- 8-16个字符，至少1个大写字母，1个小写字母和1个数字 -->
                                 <input type="password" class="form-control" placeholder="请输入密码" id="signup-passwd"
                                     required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}">
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    密码应为<b>8-16个字符，至少1个大写字母，1个小写字母和1个数字</b> -->
+                                </p>
                             </div>
 
                             <div class="form-group red-star">
                                 <label for="signup-passwd-twice">确认密码:</label>
                                 <input type="password" class="form-control" placeholder="请输入确认密码"
                                     id="signup-passwd-twice" required>
-                                <p class="red-text"></p>
+                                <p class="red-text">
+                                    <!-- 在输入框下显示红色提示信息
+                                    两次输入的密码<b>不一致</b>！ -->
+                                </p>
                             </div>
                             <button class="btn btn-primary" id="signup-btn">立即注册</button>
                         </div>
+                        <!-- 找回密码 -->
                         <div id="find-passwd" class="container tab-pane fade mb-3"><br>
                             <div id="find-msg"></div>
                             <div class="input-group">
@@ -168,7 +212,8 @@
                                     pattern="(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}"
                                     required>
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-primary" id="verificationCodeBtn">获取验证码</button>
+                                    <button type="button" class="btn btn-primary"
+                                        id="verificationCodeBtn">获取验证码</button>
                                 </div>
                                 <p class="red-text"></p>
                             </div>
@@ -176,13 +221,14 @@
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="find-tel">验证码:</label>
                                 </div>
-                                <input type="password" class="form-control" placeholder="请输入验证码" id="login-passwd"
+                                <input type="password" class="form-control" placeholder="请输入验证码" id="find-code"
                                     required>
                                 <p class="red-text"></p>
                             </div>
                             <button class="btn btn-primary mt-4" id="login-btn">下一步</button>
                             <details>
                                 <summary>开发者选项</summary>
+                                <!-- 清除存储在 LocalStorage 的用户名与密码 -->
                                 <button class="btn btn-primary"
                                     onclick="localStorage.removeItem('users');localStorage.removeItem('token');console.log('已清除用户数据')">清除浏览器用户数据</button>
                             </details>

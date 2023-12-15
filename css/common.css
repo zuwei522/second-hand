@@ -36,7 +36,7 @@ nav {
   /* visibility:hidden; */
 }
 
-.random-item {
+#randomItemBtn {
   cursor: pointer;
 }
 

@@ -1,3 +1,4 @@
+isLogin();
 // 从 URL 中提取参数
 const params = new URLSearchParams(location.search);
 // 获取要显示在详情页的物品 id
@@ -22,16 +23,17 @@ $(document).ready(() => {
     // 绑定发送按钮点击事件
     $("#sendMsgBtn").on("click", function () {
         const msg = $("#msgInput").val();
-        if (msg == "") {
+        if (msg == "") {    // 判断消息是否为空
             return;
         }
-        $("#msgInput").val("");
-        sendMessage(msg);
+        $("#msgInput").val(""); // 清空输入框内容
+        sendMessage(msg);   // 执行发送操作
     });
 
     // 绑定购买按钮点击事件
     $('#purchaseBtn').on('click', () => {
-        if (!purchased) {
+        if (!purchased) {   // 判断是否已经购买过
+            // 聊天框内显示“购买成功”提示
             $("#chatBox").append(`<div class="col-12">
             <div class="alert alert-success text-sm-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="green" height="16" width="16"
@@ -42,8 +44,8 @@ $(document).ready(() => {
             <strong>购买成功!</strong> 请尽快联系卖家交易。
             </div>
             </div>`);
-            purchased = true;
-
+            purchased = true;   // 设置购买状态为已购买
+            // 修改购买按钮样式
             $('#purchaseBtn').removeClass("btn-danger").addClass("btn-outline-success disabled").text("已购买");
         }
     });
@@ -101,6 +103,7 @@ function msgOutput(target, msg) {
     var weekStr = weekArr[week];
     // 时间格式拼串
     var timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${weekStr}`;
+    // 返回 HTML 格式消息
     return `<div class="col-12">
     <div class="row mb-3${flag ? "" : " flex-row-reverse"}">
         <div class="user-avatarInner">
@@ -110,7 +113,7 @@ function msgOutput(target, msg) {
         <div class="col-9${flag ? "" : " d-flex justify-content-end"}">
             <div class="msg msg-${flag ? "left" : "right"}">
                 ${msg}
-                <div class="msg-time msg-time-${flag ? " left" : "right"}">
+                <div class="msg-time msg-time-${flag ? "left" : "right"}">
                     ${timeStr}
                 </div>
             </div>
