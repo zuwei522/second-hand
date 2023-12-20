@@ -19,6 +19,10 @@ body {
     content: "*";
     color: red;
 }
+/* div:has(> input:required)::before {
+    content: "*";
+    color: red;
+} */
 
 .red-text {
     color: red;
